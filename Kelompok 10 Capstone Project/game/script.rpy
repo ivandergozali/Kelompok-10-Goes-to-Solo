@@ -1,5 +1,4 @@
 ﻿# The script of the game goes in this file.
-# This code made by Ivan
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
