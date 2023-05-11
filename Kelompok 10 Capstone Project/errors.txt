@@ -1,0 +1,14 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 13: expected '=' not found.
+    define R&S = Character("Radjiman & Soekarno", color="#55c023", who_bold=True, who_outlines=[(1, "#000")])
+            ^
+
+File "game/script.rpy", line 103: expected statement.
+    R&S "Selamat malam bung."
+     ^
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Thu May 11 18:13:20 2023
