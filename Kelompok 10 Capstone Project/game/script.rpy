@@ -132,7 +132,7 @@ label scene6:
     "Pada jamuan ini juga Soekarno bertanya pada Terauchi."
     S "Terauchi-san, kapankah keputusan Dai Nippon ini dapat kami beritahu kepada rakyat Indonesia?"
     T "Terserah kepada Tuan-tuan Panitia Persiapan, kapan saja boleh, itu sudah menjadi urusan Tuan.
-    Setelah itu Terauchi menghampiriku dan bertanya.""
+    Setelah itu Terauchi menghampiriku dan bertanya."
     T "Hatta-san, Indonesia sebentar lagi merdeka, apakah Hatta-san sudah memiliki rencana untuk menikah?"
     "Aku terkejut mendengar pertanyaan Terauchi itu, aku sama sekali belum memikirkan hal itu."
     H "Untuk hal itu belum saya pikirkan Terauchi-san."
