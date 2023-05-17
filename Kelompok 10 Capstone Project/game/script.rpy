@@ -131,6 +131,71 @@ label scene6:
     "Dalam jamuan ini muka Terauchi terlihat lemas, apakah itu karena sakit lumpuhnya? Atau karena kondisi perang bagi Dai Nippon? Atau keduanya?"
     "Pada jamuan ini juga Soekarno bertanya pada Terauchi."
     S "Terauchi-san, kapankah keputusan Dai Nippon ini dapat kami beritahu kepada rakyat Indonesia?"
+    T "Terserah kepada Tuan-tuan Panitia Persiapan, kapan saja boleh, itu sudah menjadi urusan Tuan.
+    Setelah itu Terauchi menghampiriku dan bertanya.""
+    T "Hatta-san, Indonesia sebentar lagi merdeka, apakah Hatta-san sudah memiliki rencana untuk menikah?"
+    "Aku terkejut mendengar pertanyaan Terauchi itu, aku sama sekali belum memikirkan hal itu."
+    H "Untuk hal itu belum saya pikirkan Terauchi-san."
+    "Semua tertawa mendengar jawabanku itu."
+    "Kami untuk terakhir kalinya bersalaman dengan Terauchi dan kembali ke Saigon sebelum pukul 12.00 dan kembali ke tempat peristirahatan kami di Saigon."
+    jump scene7
+
+label scene7:
+    "Pada pukul 16:30, Nomura datang menghampiri tempat kami."
+    N "Hatta-san, bisakah saya berbicara dengan Soekarno-san?"
+    H "Maaf Nomura-san, Soekarno sedang mandi sekarang."
+    H "Silahkan duduk selagi menunggunya Nomura-san."
+    N "Baik Hatta-san, saya berbicara dengan Hatta-san saja."
+    N "Bagaimana perjalanan anda sejauh ini Hatta-san?"
+    H "Sejauh ini baik Nomura-san, terima kasih sudah menemani kami dalam perjalanan ini."
+    N "Sudah menjadi janji Dai Nippon untuk memberikan kemerdekaan bangsa Tuan."
+    "Nomura akhirnya membicarakan apa yang sebenarnya ingin ia bicarakan."
+    N "Hatta-san, tentara Rusia sudah menyerang Manchuko, akan tetapi Tuan tenang saja, tentara Dai Nippon cukup kuat untuk menahannya."
+    "Aku tahu itu adalah sebuah kebohongan."
+    H "Bagaimana caranya Dai Nippon bisa bertahan dari serangan Rusia itu Nomura-san?"
+    N "Kami sudah yakin dari awal cepat atau lambat Rusia akan menyerang Dai Nippon, maka dari itu Dai Nippon sudah membuat fortifikasi-fortifikasi yang tidak dapat mereka tembus sebesar apapun kekuatan serangan mereka di Manchuko."
+    N "Tuan juga jangan melupakan semangat juang tentara Dai Nippon yang tak terpatahkan, dengan dua hal ini serangan Rusia sebesar apapun dapat kami halau."
+    "Lagi-lagi Nomura berbohong."
+    S "Selamat sore Nomura-san."
+    scene bg 11
+    N "Ah Soekarno-san, selamat sore."
+    "Nomura mengulang berita invasi Rusia tadi ke Soekarno dan kebohogannya tentang pertahanan Dai Nippon."
+    "Setelah itu Nomura pergi karena ingin bertemu beberapa petinggi Dai Nippon di Saigon,"
+    scene bg 12
+    H "Saya yakin Nomura berbohong tentang kuatnya pertahanan Dai Nippon di Mancuko."
+    S "Bung tidak sendirian."
+    H "Dengan gempuran McArthur dan Nimitz dari selatan dan Rusia dari utara, saya yakin bung Dai Nippon akan tunduk kurang dari dua minggu."
+    S "Kita harus dapat manfaatkan keadaan ini bung."
+    H "Saya setuju bung, kita harus cepat-cepat menyelesaikan persiapan kemerdekaan Indonesia."
+    "Kami mengulangi pembicaraan kita saat dr. Radjiman masuk ke ruangan kami."
+    "Beliau juga setuju bahwa dua minggu adalah waktu maksimal Dai Nippon dapat bertahan."
+    "Malam ini kami bermalam di Saigon, besok kami kembali ke Singapura."
+    jump scene8
+
+label scene8:
+    scene black
+    with dissolve
+    "Paginya pukul 08:00, kami berangkat menuju Singapura"
+    "Disana kami menginap lagi semalam."
+    "Kami akhirnya berangkat kembali ke Jakarta dari Singapura pukul 09:00 lewat."
+    jump scene9
+
+label scene9:
+    "Sudah banyak petinggi Jepang dan rakyat Indonesia yang menunggu kedatangan kami sesampainya kami di bandara."
+    "Rakyat Indonesia meminta Soekarno berkata sesuatu."
+    S "Apabila dulu saya katakan bahwa Indonesia akan merdeka sebelum jagung berbuah, sekarang dapat dikatakan Indonesia akan merdeka sebelum jagung berbunga,"
+    "Seperti biasa, suara Soekarno lantang dan menggelegar."
+    "Respon rakyat juga tidak kalah menggelegar."
+    "“Hidup Indonesia!”, “Merdeka!”, “Indonesia Merdeka!”, dan masih banyak lagi."
+    "Sebenarnya kami ingin pulang, tetapi petinggi Dai Nippon menyuruh kami ke Istana Gunseireikan terlebih dahulu."
+    jump scene10
+
+label scene10:
+    "Sesampainya kami disana, kami mendapat sambutan dan juga selamat dari petinggi-petinggi disana sekaligus makan siang."
+    "Mereka juga mengulang lagi bahwa apa yang disampaikan Terauchi merupakan keputusan Tokyo dan PPKI diperbolehkan bekerja sampai memerdekakan Indonesia."
+    "Pidato itu dapat sambutan meriah dari sesama petinggi Dai Nippon."
+    "Setelah makan siang kami diizinkan pulang."
+
 
 label end:
     return
