@@ -109,7 +109,7 @@ label scene3:
     "Pesawat tak lama kemudian lepas landas."
     jump end
 
-label scene4:
+label scene3a:
     "Sesampainya di rumah, aku langsung mempersiapkan diriku untuk berangkat nanti malam."
     "Adzhan Maghrib berkumandang tak lama aku menyelesaikan persiapanku."
     "Aku segera keluar untuk berbuka puasa"
