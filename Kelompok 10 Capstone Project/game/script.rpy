@@ -109,5 +109,27 @@ label scene3:
     "Pesawat tak lama kemudian lepas landas."
     jump end
 
+label scene4:
+    "Sesampainya di rumah, aku langsung mempersiapkan diriku untuk berangkat nanti malam."
+    "Adzhan Maghrib berkumandang tak lama aku menyelesaikan persiapanku."
+    "Aku segera keluar untuk berbuka puasa"
+    "Setelah berbuka puasa sholat Maghrib, Sjahrir ingin berbicara denganku."
+    scene black
+    with dissolve
+    Sj "Ada keperluan apa bung pergi ke Dalat?"
+    H "Saya akan bertemu dengan Marsekal Terauchi disana, 
+    Nomura bilang beliau memiliki hal penting yang ingin beliau bicarakan tentang kemerdekaan Indonesia."
+    Sj "Saya heran dengan dirimu bung, Nippon itu sudah semakin terjepit, 
+    lebih baik kita yang menentukan kapan Indonesia merdeka, bukan Dai Nippon."
+    H "Saya paham dengan kegelisahan bung, tapi bersabarlah sedikit, 
+    kita tidak bisa melakukan hal gegabah tanpa persetujuan PPKI."
+    Sj "PPKI? Bung masih yakin Dai Nippon akan menepati janjinya? Organisasi itu tetap saja organisasi buatan Nippon."
+    H  "Bung, jangan lupakan BPUPKI organisasi buatan Dai Nippon itu, 
+    BPUPKI membantu kita dalam mempersiapkan pondasi negara kita jika Indonesia merdeka nanti."
+    H "Percayalah bahwa saya bawa berita tanggal kemerdekaan saat pulang dari Dalat nanti, 
+    bung lanjutkan saja perkerjaan bung selama ini dan pantau terus radio sekutu."
+    Sj "Sudahlah terserah bung saja!"
+    "Sjahrir meninggalkanku setelah tidak terlihat tidak puas dengan jawabanku."
+
 label end:
     return
