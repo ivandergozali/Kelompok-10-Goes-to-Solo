@@ -11,6 +11,7 @@ define D = Character("Driver", color="#99DAEC", who_bold=True, who_outlines=[(1,
 define S = Character("Soekarno", color="#F18E76", who_bold=True, who_outlines=[(1, "#000")])
 define R = Character("Radjiman", color="#af2c40", who_bold=True, who_outlines=[(1, "#000")])
 define RnS = Character("Radjiman & Soekarno", color="#55c023", who_bold=True, who_outlines=[(1, "#000")])
+define T = Character("Terauchi", color="#5fb9c9", who_bold=True, who_outlines=[(1, "#000")])
 
 # The game starts here.
 style screentext:
@@ -40,9 +41,9 @@ label start:
     "Hatta meninggalkan ruang kelas"
     scene black
     with dissolve
-    jump scene1
+    jump scene2
 
-label scene1:
+label scene2:
     scene bg 3
     "Saat aku keluar asrama, ternyata sudah ada Letnan Kolonel Nomura yang menungguku, Nomura pasti ada keperluan denganku, maka dari itu aku menghampirinya."
     scene bg 4
@@ -60,7 +61,7 @@ label scene1:
     with dissolve
     jump scene2
 
-label scene2:
+label scene3:
     scene bg 5
     "Sesampainya di rumah, aku langsung mempersiapkan diriku untuk berangkat nanti malam."
     "Adzhan Maghrib berkumandang tak lama aku menyelesaikan persiapanku."
@@ -87,7 +88,7 @@ label scene2:
     with dissolve
     jump scene3
 
-label scene3:
+label scene4:
     scene bg 8
     "Kami akhirnya sampai di Bandara Kemayoran."
     "Aku segera dituntun ke ruang tunggu bandara."
@@ -107,29 +108,29 @@ label scene3:
     scene black
     with dissolve
     "Pesawat tak lama kemudian lepas landas."
-    jump end
+    jump scene5
 
-label scene3a:
-    "Sesampainya di rumah, aku langsung mempersiapkan diriku untuk berangkat nanti malam."
-    "Adzhan Maghrib berkumandang tak lama aku menyelesaikan persiapanku."
-    "Aku segera keluar untuk berbuka puasa"
-    "Setelah berbuka puasa sholat Maghrib, Sjahrir ingin berbicara denganku."
-    scene black
-    with dissolve
-    Sj "Ada keperluan apa bung pergi ke Dalat?"
-    H "Saya akan bertemu dengan Marsekal Terauchi disana, 
-    Nomura bilang beliau memiliki hal penting yang ingin beliau bicarakan tentang kemerdekaan Indonesia."
-    Sj "Saya heran dengan dirimu bung, Nippon itu sudah semakin terjepit, 
-    lebih baik kita yang menentukan kapan Indonesia merdeka, bukan Dai Nippon."
-    H "Saya paham dengan kegelisahan bung, tapi bersabarlah sedikit, 
-    kita tidak bisa melakukan hal gegabah tanpa persetujuan PPKI."
-    Sj "PPKI? Bung masih yakin Dai Nippon akan menepati janjinya? Organisasi itu tetap saja organisasi buatan Nippon."
-    H  "Bung, jangan lupakan BPUPKI organisasi buatan Dai Nippon itu, 
-    BPUPKI membantu kita dalam mempersiapkan pondasi negara kita jika Indonesia merdeka nanti."
-    H "Percayalah bahwa saya bawa berita tanggal kemerdekaan saat pulang dari Dalat nanti, 
-    bung lanjutkan saja perkerjaan bung selama ini dan pantau terus radio sekutu."
-    Sj "Sudahlah terserah bung saja!"
-    "Sjahrir meninggalkanku setelah tidak terlihat tidak puas dengan jawabanku."
+label scene5:
+    "Perjalanan kami ke Dalat tidaklah lancar."
+    "Perjalanan kami dipenuhi dengan kegelisahan, kecemasan, dan penundaan."
+    "Selama perjalanan kami, kami menginap semalam di Singapura dan semalam di Saigon."
+    "Dari sini juga aku dapat mengetahui bahwa situasi Dai Nippon semakin terpojok."
+    "Setelah bermalam di Saigon, kami berangkat dari pagi untuk akhirnya ke Dalat."
+    jump scene6
+
+label scene6:
+    "Pada tepat pukul 10:00 kami bertemu dengan Marsekal Terauchi."
+    "Setelah kami semua bersalaman dengan Terauchi, beliau memberikan pidato singkat."
+    "Pidato tersebut berisi tentang bagaimana besarnya peran Indonesia dalam membantu Dai Nippon sehingga akhirnya Dai Nippon memutuskan untuk memberikan Indonesia kemerdekaan dan juga secara simbolis melantik aku dan Soekarno sebagai ketua dan wakil PPKI."
+    T "Selamat!"
+    S "Atas nama bangsa Indonesia, saya ucapkan terima kasih."
+    "Terauchi mengucapkan selamat kepada kami bertiga sambil bersalaman dengan kami sekali lagi."
+    "Hatiku senang sekali mendengar Indonesia merdeka, hari ini sekaligus hari ulang tahunku,"
+    "Aku merasa ini adalah hadiah ulang tahun yang membuktikan bahwa perjuangan aku selama ini tidak sia-sia."
+    "Setelah Terauchi memberikat selamat pada kami, kami didatangkan kue-kue untuk disantap bersama sebagai perayaan."
+    "Dalam jamuan ini muka Terauchi terlihat lemas, apakah itu karena sakit lumpuhnya? Atau karena kondisi perang bagi Dai Nippon? Atau keduanya?"
+    "Pada jamuan ini juga Soekarno bertanya pada Terauchi."
+    S "Terauchi-san, kapankah keputusan Dai Nippon ini dapat kami beritahu kepada rakyat Indonesia?"
 
 label end:
     return
