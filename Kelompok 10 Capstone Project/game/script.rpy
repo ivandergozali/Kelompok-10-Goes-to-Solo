@@ -196,6 +196,5 @@ label scene10:
     "Pidato itu dapat sambutan meriah dari sesama petinggi Dai Nippon."
     "Setelah makan siang kami diizinkan pulang."
 
-
 label end:
     return
