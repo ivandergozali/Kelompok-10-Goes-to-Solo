@@ -513,7 +513,7 @@ label scene2:
     "Nomura masuk ke mobilnya dan pergi sedangkan aku pulang ke rumahku."
     scene black
     with dissolve
-    jump scene2
+    jump scene3
 
 label scene3:
     scene bg 5
@@ -540,7 +540,7 @@ label scene3:
     "Aku segera memasuki mobil dan dengan ini kami pergi menuju Bandara Kemayoran."
     scene black
     with dissolve
-    jump scene3
+    jump scene4
 
 label scene4:
     scene bg 8
@@ -649,6 +649,7 @@ label scene10:
     "Mereka juga mengulang lagi bahwa apa yang disampaikan Terauchi merupakan keputusan Tokyo dan PPKI diperbolehkan bekerja sampai memerdekakan Indonesia."
     "Pidato itu dapat sambutan meriah dari sesama petinggi Dai Nippon."
     "Setelah makan siang kami diizinkan pulang."
+    jump end
 
 label end:
     return
