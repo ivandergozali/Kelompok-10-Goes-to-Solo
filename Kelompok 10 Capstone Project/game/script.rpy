@@ -29,32 +29,6 @@ init python:
     today = date.today()
     d1 = today.strftime("%A, %d/%B/%Y")
 
-label start:
-    with dissolve
-    scene bg 1
-    show screen buku
-    H "Siang murid-murid semua."
-    "Sekarang aku sedang berada di Asrama Indonesia Merdeka, disini aku dipercaya sebagai pengajar ekonomi untuk melahirkan ekonom-ekonom saat bangsa ini merdeka nanti."
-    "Sekarang sudah 9 Agustus 1945, aku sangat yakin bahwa Indonesia akan merdeka sebentar lagi."
-    "Aku sedang mengajar tentang ekonomi kerakyatan dan salah satu murid ada yang bertanya padaku"
-    M "Darimana bung mempelajari hal ini semua?"
-    H "Pertanyaan yang bagus, pemikiran saya ini berdasarkan tiga pilar, yaitu tradisi Minang, Islam, dan sosialisme Eropa." 
-    extend " Biar saya jelaskan satu per satu."
-    H "Budaya Minangkabau mengajarkan saya bahwa harta bukanlah sumber kekayaan bagi sepeser orang saja tetapi sebagai sumber kemakmuran masyarakatnya," 
-    extend " sehingga budaya Minangkabau menentang adanya praktek memperkaya diri sendiri."
-    H "Sosialisme di Eropa berkembang dengan terjadinya Revolusi Industri disana, tokoh-tokoh seperti Marx dan Engels-lah yang mematangkan teori sosialisme ini."
-    H "Sosialisme bisa diraih dengan dua cara, cara kekerasan disebut sosialisme revolusioner dan cara demokrasi dengan partai perwakilan buruh disebut sosialisme demokratis."
-    H "Paham sosialisme ini tidak berasal dari Marx saja, bahkan Islam juga mengajarkan sosialisme." 
-    extend " Ayat-ayat seperti QS. Al-Maun Ayat 1-7, Al-Humazah Ayat 1-3 mengajari kita tentang tercelanya orang-orang yang memperkaya diri sendiri."
-    H "Sehingga ekonomi yang saya dambakan dalam Indonesia nanti adalah perekonomian yang bersifat kebersamaan, kerakyatan, dan kooperasi agar rakyat bisa hidup makmur."
-    "Tak lama kemudian, waktu mengajarku sudah habis, saatnya aku pulang."
-    H "Baik murid-murid sekalian, mungkin sekian dari saya untuk hari ini, Assalamualaikum."
-    scene bg 2
-    "Hatta meninggalkan ruang kelas"
-    scene black
-    with dissolve
-    jump scene2
-
 screen buku:
     vbox:
         xpos 1225
@@ -496,6 +470,32 @@ screen bacaan2:
         vbox:    
             xpos 490 ypos 120
             text "lorem lorem lorem" size 20 color "#690d1b"
+
+label start:
+    with dissolve
+    scene bg 1
+    show screen buku
+    H "Siang murid-murid semua."
+    "Sekarang aku sedang berada di Asrama Indonesia Merdeka, disini aku dipercaya sebagai pengajar ekonomi untuk melahirkan ekonom-ekonom saat bangsa ini merdeka nanti."
+    "Sekarang sudah 9 Agustus 1945, aku sangat yakin bahwa Indonesia akan merdeka sebentar lagi."
+    "Aku sedang mengajar tentang ekonomi kerakyatan dan salah satu murid ada yang bertanya padaku"
+    M "Darimana bung mempelajari hal ini semua?"
+    H "Pertanyaan yang bagus, pemikiran saya ini berdasarkan tiga pilar, yaitu tradisi Minang, Islam, dan sosialisme Eropa." 
+    extend " Biar saya jelaskan satu per satu."
+    H "Budaya Minangkabau mengajarkan saya bahwa harta bukanlah sumber kekayaan bagi sepeser orang saja tetapi sebagai sumber kemakmuran masyarakatnya," 
+    extend " sehingga budaya Minangkabau menentang adanya praktek memperkaya diri sendiri."
+    H "Sosialisme di Eropa berkembang dengan terjadinya Revolusi Industri disana, tokoh-tokoh seperti Marx dan Engels-lah yang mematangkan teori sosialisme ini."
+    H "Sosialisme bisa diraih dengan dua cara, cara kekerasan disebut sosialisme revolusioner dan cara demokrasi dengan partai perwakilan buruh disebut sosialisme demokratis."
+    H "Paham sosialisme ini tidak berasal dari Marx saja, bahkan Islam juga mengajarkan sosialisme." 
+    extend " Ayat-ayat seperti QS. Al-Maun Ayat 1-7, Al-Humazah Ayat 1-3 mengajari kita tentang tercelanya orang-orang yang memperkaya diri sendiri."
+    H "Sehingga ekonomi yang saya dambakan dalam Indonesia nanti adalah perekonomian yang bersifat kebersamaan, kerakyatan, dan kooperasi agar rakyat bisa hidup makmur."
+    "Tak lama kemudian, waktu mengajarku sudah habis, saatnya aku pulang."
+    H "Baik murid-murid sekalian, mungkin sekian dari saya untuk hari ini, Assalamualaikum."
+    scene bg 2
+    "Hatta meninggalkan ruang kelas"
+    scene black
+    with dissolve
+    jump scene2
 
 label scene2:
     scene bg 3
