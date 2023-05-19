@@ -1,5 +1,5 @@
 ﻿# The script of the game goes in this file.
-# Test
+
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
@@ -10,17 +10,29 @@ define Sj = Character("Sjahrir", color="#F8DC71", who_bold=True, who_outlines=[(
 define D = Character("Driver", color="#99DAEC", who_bold=True, who_outlines=[(1, "#000")])
 define S = Character("Soekarno", color="#F18E76", who_bold=True, who_outlines=[(1, "#000")])
 define R = Character("Radjiman", color="#af2c40", who_bold=True, who_outlines=[(1, "#000")])
-define RnS = Character("Radjiman & Soekarno", color="#55c023", who_bold=True, who_outlines=[(1, "#000")])
 define T = Character("Terauchi", color="#5fb9c9", who_bold=True, who_outlines=[(1, "#000")])
+define RnS = Character("Radjiman & Soekarno", color="#55c023", who_bold=True, who_outlines=[(1, "#000")])
 
 # The game starts here.
 style screentext:
     color "#9e5f12"
     size 18
 
+style buku_tb:
+    background Frame("images/Icon/buku 1_idle.png")
+    hover_background Frame("images/Icon/buku 1_hover.png")
+
+init python:
+    from datetime import date
+    import locale
+    locale.setlocale(locale.LC_TIME, 'id_ID')
+    today = date.today()
+    d1 = today.strftime("%A, %d/%B/%Y")
+
 label start:
     with dissolve
     scene bg 1
+    show screen buku
     H "Siang murid-murid semua."
     "Sekarang aku sedang berada di Asrama Indonesia Merdeka, disini aku dipercaya sebagai pengajar ekonomi untuk melahirkan ekonom-ekonom saat bangsa ini merdeka nanti."
     "Sekarang sudah 9 Agustus 1945, aku sangat yakin bahwa Indonesia akan merdeka sebentar lagi."
@@ -42,6 +54,448 @@ label start:
     scene black
     with dissolve
     jump scene2
+
+screen buku:
+    vbox:
+        xpos 1225
+        ypos 10
+        button:
+            style "buku_tb" xysize (45,156)
+            action [Play("sound","audio/SFX/klik.mp3"), Hide("buku"), Show("pilihanbuku")]
+
+screen pilihanbuku:
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 942 ysize 638
+        xpos 630
+        background Frame("images/Icon/buku 2.png")
+        vbox:    
+            xpos 570 ypos 65
+            text "[d1]" size 20 color "#ff1212" bold True
+        vbox:
+            xalign 0.5 xpos 260 ypos 120
+            spacing 30
+            hbox:
+                spacing 40
+                vbox:
+                    imagebutton:
+                        auto "images/Icon/karakter_%s.png" 
+                        action [Play("sound","audio/SFX/klik.mp3"), Hide("pilihanbuku"), Show("karakter1")]
+                    text "Karakter" color "#000000"  xalign 0.5 ypos 10
+                vbox:
+                    imagebutton:
+                        auto "images/Icon/organisasi_%s.png" 
+                        action [Play("sound","audio/SFX/klik.mp3"), Hide("pilihanbuku"), Show("organisasi1")]
+                    text "Organisasi" color "#000000" xalign 0.5 ypos 10
+            hbox:
+                spacing 40
+                vbox:
+                    imagebutton:
+                        auto "images/Icon/peristiwa_%s.png" 
+                        action [Play("sound","audio/SFX/klik.mp3"), Hide("pilihanbuku"), Show("peristiwa1")]
+                    text "Peristiwa" color "#000000" xalign 0.5 ypos 10
+                vbox:
+                    imagebutton:
+                        auto "images/Icon/negara_%s.png" 
+                        action [Play("sound","audio/SFX/klik.mp3"), Hide("pilihanbuku"), Show("negara1")]
+                    text "Negara" color "#000000" xalign 0.5 ypos 10
+        vbox:
+            xalign 0.5 xpos 600 ypos 120
+            spacing 30
+            hbox:
+                spacing 40
+                vbox:
+                    imagebutton:
+                        auto "images/Icon/bacaan_%s.png" 
+                        action [Play("sound","audio/SFX/klik.mp3"), Hide("pilihanbuku"), Show("bacaan1")]
+                    text "Bacaan" color "#000000" xalign 0.5 ypos 10
+        vbox:
+            xpos 860 ypos 50
+            imagebutton:
+                auto "images/Icon/close_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("pilihanbuku"), Show("buku")]
+
+screen karakter1:
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 942 ysize 638
+        xpos 630
+        background Frame("images/Icon/buku 2.png")
+        hbox:
+            xpos 860 ypos 50
+            imagebutton:
+                auto "images/Icon/close_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("karakter1"), Show("buku")]
+        hbox:
+            xpos 25 ypos 50
+            imagebutton:
+                auto "images/Icon/home_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("karakter1"), Show("pilihanbuku")]
+        hbox:
+            xpos 35 ypos 450
+            imagebutton:
+                auto "images/Icon/previous_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("karakter1"), Show("karakter2")]
+        hbox:
+            xpos 850 ypos 450
+            imagebutton:
+                auto "images/Icon/next_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("karakter1"), Show("karakter2")]
+        hbox:
+            text "Marx dan Engels" size 30 color "#690d1b" xpos 120 ypos 60 
+        vbox:    
+            xpos 50 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"   
+        hbox:
+            text "Douglas McArthur" size 30 color "#690d1b" xpos 550 ypos 60
+        vbox:    
+            xpos 490 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"
+
+screen karakter2:
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 942 ysize 638
+        xpos 630
+        background Frame("images/Icon/buku 2.png")
+        hbox:
+            xpos 860 ypos 50
+            imagebutton:
+                auto "images/Icon/close_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("karakter2"), Show("buku")]
+        hbox:
+            xpos 25 ypos 50
+            imagebutton:
+                auto "images/Icon/home_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("karakter2"), Show("pilihanbuku")]
+        hbox:
+            xpos 35 ypos 450
+            imagebutton:
+                auto "images/Icon/previous_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("karakter2"), Show("karakter1")]
+        hbox:
+            xpos 850 ypos 450
+            imagebutton:
+                auto "images/Icon/next_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("karakter2"), Show("karakter1")]
+        hbox:
+            text "Lorem" size 30 color "#690d1b" xpos 200 ypos 60 
+        vbox:    
+            xpos 50 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"   
+        hbox:
+            text "Lorem" size 30 color "#690d1b" xpos 650 ypos 60
+        vbox:    
+            xpos 490 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"
+
+screen organisasi1:
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 942 ysize 638
+        xpos 630
+        background Frame("images/Icon/buku 2.png")
+        hbox:
+            xpos 860 ypos 50
+            imagebutton:
+                auto "images/Icon/close_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("organisasi1"), Show("buku")]
+        hbox:
+            xpos 25 ypos 50
+            imagebutton:
+                auto "images/Icon/home_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("organisasi1"), Show("pilihanbuku")]
+        hbox:
+            xpos 35 ypos 450
+            imagebutton:
+                auto "images/Icon/previous_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("organisasi1"), Show("organisasi2")]
+        hbox:
+            xpos 850 ypos 450
+            imagebutton:
+                auto "images/Icon/next_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("organisasi1"), Show("organisasi2")]
+        hbox:
+            text "BPUPKI" size 30 color "#690d1b" xpos 190 ypos 60 
+        vbox:    
+            xpos 50 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"   
+        hbox:
+            text "Kempeitai" size 30 color "#690d1b" xpos 600 ypos 60
+        vbox:    
+            xpos 490 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"
+
+screen organisasi2:
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 942 ysize 638
+        xpos 630
+        background Frame("images/Icon/buku 2.png")
+        hbox:
+            xpos 860 ypos 50
+            imagebutton:
+                auto "images/Icon/close_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("organisasi2"), Show("buku")]
+        hbox:
+            xpos 25 ypos 50
+            imagebutton:
+                auto "images/Icon/home_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("organisasi2"), Show("pilihanbuku")]
+        hbox:
+            xpos 35 ypos 450
+            imagebutton:
+                auto "images/Icon/previous_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("organisasi2"), Show("organisasi1")]
+        hbox:
+            xpos 850 ypos 450
+            imagebutton:
+                auto "images/Icon/next_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("organisasi2"), Show("organisasi1")]
+        hbox:
+            text "Lorem" size 30 color "#690d1b" xpos 200 ypos 60 
+        vbox:    
+            xpos 50 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"   
+        hbox:
+            text "Lorem" size 30 color "#690d1b" xpos 650 ypos 60
+        vbox:    
+            xpos 490 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"
+
+screen peristiwa1:
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 942 ysize 638
+        xpos 630
+        background Frame("images/Icon/buku 2.png")
+        hbox:
+            xpos 860 ypos 50
+            imagebutton:
+                auto "images/Icon/close_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("peristiwa1"), Show("buku")]
+        hbox:
+            xpos 25 ypos 50
+            imagebutton:
+                auto "images/Icon/home_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("peristiwa1"), Show("pilihanbuku")]
+        hbox:
+            xpos 35 ypos 450
+            imagebutton:
+                auto "images/Icon/previous_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("peristiwa1"), Show("peristiwa2")]
+        hbox:
+            xpos 850 ypos 450
+            imagebutton:
+                auto "images/Icon/next_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("peristiwa1"), Show("peristiwa2")]
+        hbox:
+            text "Bom Atom Hiroshima" size 25 color "#690d1b" xpos 125 ypos 60 
+        vbox:    
+            xpos 50 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"   
+        hbox:
+            text "Invasi Rusia ke Mancuko" size 25 color "#690d1b" xpos 530 ypos 60
+        vbox:    
+            xpos 490 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"
+
+screen peristiwa2:
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 942 ysize 638
+        xpos 630
+        background Frame("images/Icon/buku 2.png")
+        hbox:
+            xpos 860 ypos 50
+            imagebutton:
+                auto "images/Icon/close_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("peristiwa2"), Show("buku")]
+        hbox:
+            xpos 25 ypos 50
+            imagebutton:
+                auto "images/Icon/home_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("peristiwa2"), Show("pilihanbuku")]
+        hbox:
+            xpos 35 ypos 450
+            imagebutton:
+                auto "images/Icon/previous_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("peristiwa2"), Show("peristiwa1")]
+        hbox:
+            xpos 850 ypos 450
+            imagebutton:
+                auto "images/Icon/next_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("peristiwa2"), Show("peristiwa1")]
+        hbox:
+            text "Bom Atom Nagasaki" size 25 color "#690d1b" xpos 125 ypos 60 
+        vbox:    
+            xpos 50 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"   
+        hbox:
+            text "Lorem" size 25 color "#690d1b" xpos 650 ypos 60
+        vbox:    
+            xpos 490 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"
+
+screen negara1:
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 942 ysize 638
+        xpos 630
+        background Frame("images/Icon/buku 2.png")
+        hbox:
+            xpos 860 ypos 50
+            imagebutton:
+                auto "images/Icon/close_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("negara1"), Show("buku")]
+        hbox:
+            xpos 25 ypos 50
+            imagebutton:
+                auto "images/Icon/home_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("negara1"), Show("pilihanbuku")]
+        hbox:
+            xpos 35 ypos 450
+            imagebutton:
+                auto "images/Icon/previous_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("negara1"), Show("negara2")]
+        hbox:
+            xpos 850 ypos 450
+            imagebutton:
+                auto "images/Icon/next_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("negara1"), Show("negara2")]
+        hbox:
+            text "Jepang" size 30 color "#690d1b" xpos 200 ypos 60 
+        vbox:    
+            xpos 50 ypos 120
+            text "Selama Perang Dunia II, Jepang belum" size 20 color "#690d1b" 
+            text "menjadi negara anime yang dipenuhi" size 20 color "#690d1b" 
+            text "dengan maid dan catgirl. Jepang selama" size 20 color "#690d1b" 
+            text "Perang Dunia II belum mengenal hentai" size 20 color "#690d1b" 
+            text "karena Jepang sedang sibuk berusaha" size 20 color "#690d1b" 
+            text "mendominasi Asia termasuk Indonesia" size 20 color "#690d1b" 
+            text "yang waktu itu namanya masih Hindia" size 20 color "#690d1b" 
+            text "Belanda. Kedatangan Jepang pada saat" size 20 color "#690d1b" 
+            text "itu bukan membawa budaya wibu pada" size 20 color "#690d1b" 
+            text "rakyat, melainkan memanfaatkan keada-" size 20 color "#690d1b" 
+            text "an untuk memenangkan Perang Pasifik" size 20 color "#690d1b" 
+            text "melawan Amerika Serikat dan kronco-" size 20 color "#690d1b" 
+            text "kronconya." size 20 color "#690d1b" 
+        hbox:
+            text "Rusia" size 30 color "#690d1b" xpos 650 ypos 60 
+        vbox:    
+            xpos 490 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"
+
+screen negara2:
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 942 ysize 638
+        xpos 630
+        background Frame("images/Icon/buku 2.png")
+        hbox:
+            xpos 860 ypos 50
+            imagebutton:
+                auto "images/Icon/close_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("negara2"), Show("buku")]
+        hbox:
+            xpos 25 ypos 50
+            imagebutton:
+                auto "images/Icon/home_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("negara2"), Show("pilihanbuku")]
+        hbox:
+            xpos 35 ypos 450
+            imagebutton:
+                auto "images/Icon/previous_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("negara2"), Show("negara1")]
+        hbox:
+            xpos 850 ypos 450
+            imagebutton:
+                auto "images/Icon/next_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("negara2"), Show("negara1")]
+        hbox:
+            text "Belanda" size 30 color "#690d1b" xpos 185 ypos 60 
+        vbox:    
+            xpos 50 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"   
+        hbox:
+            text "Lorem" size 30 color "#690d1b" xpos 650 ypos 60
+        vbox:    
+            xpos 490 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"
+
+screen bacaan1:
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 942 ysize 638
+        xpos 630
+        background Frame("images/Icon/buku 2.png")
+        hbox:
+            xpos 860 ypos 50
+            imagebutton:
+                auto "images/Icon/close_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("bacaan1"), Show("buku")]
+        hbox:
+            xpos 25 ypos 50
+            imagebutton:
+                auto "images/Icon/home_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("bacaan1"), Show("pilihanbuku")]
+        hbox:
+            xpos 35 ypos 450
+            imagebutton:
+                auto "images/Icon/previous_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("bacaan1"), Show("bacaan2")]
+        hbox:
+            xpos 850 ypos 450
+            imagebutton:
+                auto "images/Icon/next_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("bacaan1"), Show("bacaan2")]
+        hbox:
+            text "QS. Al-Maun 1-7" size 30 color "#690d1b" xpos 130 ypos 60 
+        vbox:    
+            xpos 50 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"   
+        hbox:
+            text "QS. Al-Humazah 1-3" size 30 color "#690d1b" xpos 525 ypos 60
+        vbox:    
+            xpos 490 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"
+
+screen bacaan2:
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 942 ysize 638
+        xpos 630
+        background Frame("images/Icon/buku 2.png")
+        hbox:
+            xpos 860 ypos 50
+            imagebutton:
+                auto "images/Icon/close_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("bacaan2"), Show("buku")]
+        hbox:
+            xpos 25 ypos 50
+            imagebutton:
+                auto "images/Icon/home_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("bacaan2"), Show("pilihanbuku")]
+        hbox:
+            xpos 35 ypos 450
+            imagebutton:
+                auto "images/Icon/previous_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("bacaan2"), Show("bacaan1")]
+        hbox:
+            xpos 850 ypos 450
+            imagebutton:
+                auto "images/Icon/next_%s.png" 
+                action [Play("sound","audio/SFX/klik.mp3"), Hide("bacaan2"), Show("bacaan1")]
+        hbox:
+            text "Lorem" size 30 color "#690d1b" xpos 200 ypos 60 
+        vbox:    
+            xpos 50 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"   
+        hbox:
+            text "Lorem" size 30 color "#690d1b" xpos 650 ypos 60
+        vbox:    
+            xpos 490 ypos 120
+            text "lorem lorem lorem" size 20 color "#690d1b"
 
 label scene2:
     scene bg 3
