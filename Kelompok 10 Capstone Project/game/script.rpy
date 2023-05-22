@@ -7,10 +7,15 @@ define H = Character("Hatta", color="#CD6247", who_bold=True, who_outlines=[(1, 
 define M = Character("Murid", color="#EE8A79", who_bold=True, who_outlines=[(1, "#000")])
 define N = Character("Nomura", color="#B6AAA6", who_bold=True, who_outlines=[(1, "#000")])
 define Sj = Character("Sjahrir", color="#F8DC71", who_bold=True, who_outlines=[(1, "#000")])
-define D = Character("Driver", color="#99DAEC", who_bold=True, who_outlines=[(1, "#000")])
 define S = Character("Soekarno", color="#F18E76", who_bold=True, who_outlines=[(1, "#000")])
 define R = Character("Radjiman", color="#af2c40", who_bold=True, who_outlines=[(1, "#000")])
 define T = Character("Terauchi", color="#5fb9c9", who_bold=True, who_outlines=[(1, "#000")])
+define AS = Character("Achmad Soebardjo", color="#99DAEC", who_bold=True, who_outlines=[(1, "#000")])
+define Ma = Character("Maeda", color="#32a946", who_bold=True, who_outlines=[(1, "#000")])
+define SS = Character("Soebadio Sastrosatomo", color="#a227d3", who_bold=True, who_outlines=[(1, "#000")])
+define Si = Character("Soekarni", color="#ca7e8e", who_bold=True, who_outlines=[(1, "#000")])
+define Mi = Character("Miyoshi", color="#e4da27", who_bold=True, who_outlines=[(1, "#000")])
+define Ni = Character("Nishimura", color="#ee7811", who_bold=True, who_outlines=[(1, "#000")])
 define RnS = Character("Radjiman & Soekarno", color="#55c023", who_bold=True, who_outlines=[(1, "#000")])
 
 # The game starts here.
@@ -649,6 +654,102 @@ label scene10:
     "Mereka juga mengulang lagi bahwa apa yang disampaikan Terauchi merupakan keputusan Tokyo dan PPKI diperbolehkan bekerja sampai memerdekakan Indonesia."
     "Pidato itu dapat sambutan meriah dari sesama petinggi Dai Nippon."
     "Setelah makan siang kami diizinkan pulang."
+    jump scene11
+
+label scene11:
+    "Aku sampai rumah pukul 14:00, disana sudah ada Sjahrir menungguku."
+    "Aku bersalaman dengannya kemudian duduk berhadapan dengannya."
+    Sj "Jadi, bagaimana soal kemerdekaan kita?"
+    H "Jadi, bagaimana soal kemerdekaan kita?"
+    Sj "Bung, aku sudah dengar di radio bahwa Nippon sudah meminta damai pada Sekutu."
+    Sj "Sebaiknya kemerdekaan tidak diselenggarakan oleh PPKI, karena itu adalah organisasi buatan Nippon."
+    Sj "Jika PPKI yang memerdekakan Indonesia, Sekutu akan melihat bahwa Indonesia adalah negara bentukan Nippon."
+    Sj "Setelah itu Sekutu akan mendaratkan pasukannya di Indonesia dengan tujuan mengembalikannya ke Belanda."
+    Sj "Sebaiknya Soekarno-lah yang menyatakan kemerdekaan sebagai pemimpin rakyat dan atas nama rakyat dan diberitakan kemana-mana melalui radio."
+    Sj "Jangan sampai usaha kita selama ini sia-sia Bung."
+    H "Aku setuju denganmu kalau kemerdekaan harus dilakukan segera."
+    H "Tetapi saku tidak yakin Soekarno akan setuju dengan rencanamu."
+    H "Sebagai ketua PPKI, Soekarno tidak dapat meninggalkan organisasi yang dia ketuai meskipun membawa nama rakyat Indonesia sekalipun."
+    H "Soekarno nanti hanya akan merapas hak PPKI, aku yakin Soekarno tidak akan bersedia melakukan itu."
+    Sj "Maka disitulah peran Bung meyakinkan Bung Karno."
+    H "Baiklah, aku telepon Bung Karno dulu."
+    "Hatta menelefon Soekarno"
+    H "Assalamualaikum Bung."
+    S "Waalaikumsalam Bung Hatta, ada apa?"
+    H "Bolehkah aku dan Sjahrir ke rumah Bung? Kami ada masalah genting yang membutuhkan Bung."
+    S "Baiklah, silahkan jika Bung dan Sjahrir ingin ke rumahku."
+    H "Baik terima kasih Bung, kami berangkat sekarang."
+    H "Bung Karno mengizinkan kita ke rumahnya, mari kita kesana sekarang."
+    Sj "Baik, aku mengikutimu Bung."
+    jump scene12
+
+label scene12:
+    "Setelah bersalaman dan duduk, Soekarno membuka pembicaraan"
+    S "Soal apa yang saudara-saudara bawa kemari?"
+    "Sjahrir mengulangi apa yang dia katakan tadi saat berada di rumahku."
+    Sj "Memang di Saigon kami menduga, setelah Letnan Kolonel Nomura melapor ke kita kalau Rusia sudah menyerbu Mancuko, Jepang pasti akan bertekuk lutut."
+    S "Akan tetapi begitu lekasnya terjadi aku belum percaya sekalipun Saudara Sjahrir mendengarkan berita luar negeri yang kebanyakan dikuasai oleh Sekutu."
+    S "Oleh karena itu, aku ingin mengecek terlebih dahulu dari Gunseikanbu."
+    S "Besok kami berdua, Bung Hatta dan aku, akan pergi ke sana."
+    S "Aku juga tidak setuju dengan pendapat saudara tentang memerdekakan Indonesia atas nama rakyat Indonesia dan melangkahi PPKI."
+    S "Aku tidak berhak bertindak sendiri, hak itu adalah hak PPKI yang kuketuai."
+    S "Alangkah janggalnya di mata orang, setelah kesempatan terbuka untuk mengucapkan kemerdekaan Indonesia, aku bertindak sendiri melangkahi PPKI yang kuketuai."
+    "Sjahrir terlihat pasrah pasca mendengarkan perkataan Soekarno karena cita-cita proklamasi yang menyimpang ini tidak dapat dilaksanakan."
+    "Karena tidak ada yang dibicarakan lagi, aku dan Sjahrir pulang ke rumah."
+    jump scene14
+
+label scene14:
+    "Sesampainya kami di Istana Gunseikanbu, kami terkejut mendapati tidak ada pejabat sama sekali disini."
+    "Kami bertanya pada penjaga kantor dan mereka bilang semua pejabat sedang dipanggil ke Gunseireibu."
+    "Hal ini hanya memperkuat fakta yang disampaikan Sjahrir itu benar."
+    "Kami bertiga berdiskusi untuk memutuskan tujuan kita selanjutnya."
+    S "Bagaimana ini Bung, kita tidak dapat apa-apa dari Gunseikanbu ini."
+    H "Menurutku kita masih harus mencari kebenaran yang dari orang Nippon sendiri."
+    AS "Saya ada usul, bagaimana kalau kita ke rumah Laksamada Maeda?"
+    S "Aku setuju, mari kita kesana sekarang juga."
+    jump scene15
+
+label scene15:
+    "Kedatangan kami disambut dengan lagi-lagi ucapan selamat atas apa yang kami dapatkan di Dalat."
+    "Soekarno membuka percakapan dengan terus terang."
+    S "Apakah benar berita yang beredar diluar sana bahwa Dai Nippon sudah meminta damai dengan Sekutu Tuan Maeda?"
+    "Mendengar pertanyaan itu Maeda terdiam, cukup lama."
+    "Aku memberi isyarat kepada Soekarno bahwa berita yang dibawa Sjahrir itu benar, Soekarno membalas dengan menganggukan kepalanya."
+    "Dengan berat hati dan muka yang sedih, Maeda akhirnya angkat suara."
+    Ma "Memang benar berita itu disiarkan oleh sekutu."
+    Ma "Akan tetapi kami disini belum mendapatkan kabar dari Tokyo. Sebab itu, berita tersebut belum bisa kami anggap benar."
+    Ma "Hanya instruksi dari Tokyo yang menjadi pegangan kami."
+    "Setelah mendapatkan informasi itu, kami berterima kasih kepada Laksamada Maeda."
+    jump scene16
+
+label scene16:
+    "Kami meninggalkan rumah Laksamada Maeda dengan keyakinan bahwa Dai Nippon benar-benar menyerah."
+    H "Bung, menurutku kita besok mengadakan rapat PPKI, selagi seluruh anggota PPKI sedang berada di Jakarta."
+    S "Aku setuju Bung, besok 16 Agustus PPKI akan rapat."
+    H "Baik Bung, Bung Subardjo tolong besok undang semua anggota PPKI yang terkumpul di Hotel des Indes untuk pukul 10:00 bertemu di Kantor Dewan Sanyo Kaigi di Pejambon."
+    AS "Siap Bung."
+    "Setelah itu kami berpisah dan pulang ke rumah masing-masing."
+    jump scene17
+
+label scene17:
+    "Di sore harinya ada pemuda yang menunjungiku, yaitu Soebadio Sastrosatomo dan rekannya."
+    SS "Sore Bung, kami dapat kabar bahwa Nippon sudah menyerah pada Sekutu!"
+    SS "Bung harus segera meyakinkan Bung Karno bahwa kemerdekaan Indonesia janganlah dinyatakan oleh PPKI, nantinya kita hanya akan dianggap antek Nippon oleh Sekutu."
+    SS "Tetapi Bung Karnolah yang memerdekakan Indonesia sebagai pemimpin rakyat, atas nama rakyat, dan disebarkan ke seluruh dunia dengan radio!"
+    H "Aku tidak setuju dengan rencana kalian."
+    H "Dai Nippon dengan perantaranya Marsekal Terauchi di Dalat telah mengakui kemerdekaan Indonesia yang pelaksanaannya akan diselenggarakan oleh PPKI besok pagi pukul 10:00 di Pejambon."
+    SS "Hal itu dihalangi dan tidak boleh terjadi!"
+    SS "Bung Karno sendiri yang harus mengucapkannya di radio atas nama rakyat Indonesia!"
+    H "Bung Karno tidak akan mau melakukan apa yang kalian tuntut, Bung Karno tidak mau dan tidak bisa merampas hak PPKI."
+    H "Dan juga maupun Bung Karno menyatakan kemerdekaan sebagai wakil rakyat maupun PPKI hasilnya akan tetap saja sama, Bung Karno telah dicap pengkhianat oleh Belanda semenjak kita bekerja sama dengan Dai Nippon."
+    "Kami bertengkar lebih dari setengah jam, kami sama-sama gagal meyakinkan satu sama lain."
+    "Pemuda menyebut pendirian mereka revolusioner, sedangkan aku dengan pendirianku yang rasional dan tidak buang-buang tenaga."
+    "Akhirnya mereka menyerah dan berusaha meninggalkanku selagi berkata"
+    SS "Di saat revolusi kami rupanya tidak dapat membawa Bung serta, Bung tidak revolusioner."
+    H "Aku juga sebenarnya ingin mengadakan revolusi, tapi agar suatu revolusi berhasil, kita perlu organisasi yang matang terlebih dahulu."
+    H "Tindakan yang akan engkau lakukan itu bukanlah sebuah revolusi, tetapi putsch, seperti yang Hitler lakukan di Munchen 1923 tetapi gagal."
+    SS "Bung Hatta tidak bisa diharapkan untuk revolusi!"
+    "Mereka keluar setelah kubuat emosi mereka semakin naik."
     jump end
 
 label end:
