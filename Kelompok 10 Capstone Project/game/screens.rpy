@@ -136,7 +136,8 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/textbox1.png", xalign=0.5, yalign=1.0)
+#    background Frame("gui/textbox1.png")
 
 style namebox:
     xpos gui.name_xpos
@@ -145,7 +146,7 @@ style namebox:
     ypos gui.name_ypos
     ysize gui.namebox_height
 
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    background Frame("gui/namebox1.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
 
 style say_label:
@@ -243,20 +244,55 @@ screen quick_menu():
 
     if quick_menu:
 
-        hbox:
+        vbox:
             style_prefix "quick"
+            xpos 1150 ypos 700
+            xalign 0.5 yalign 0.95
+            spacing 5
+            button:
+                text "MENU" size 15 xalign 0.5 yalign 0.5
+                xysize (140,40)
+                style "button_tb"
+                action ShowMenu("main_menu")
 
-            xalign 0.5
-            yalign 1.0
+            button:
+                text "SIMPAN" size 15 xalign 0.5 yalign 0.5
+                xysize (140,40)
+                style "button_tb"
+                action ShowMenu("save")
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            button:
+                text "MUAT" size 15 xalign 0.5 yalign 0.5
+                xysize (140,40)
+                style "button_tb"
+                action ShowMenu("load")
+
+            button:
+                text "PENGATURAN" size 15 xalign 0.5 yalign 0.5
+                xysize (140,40)
+                style "button_tb"
+                action ShowMenu("preferences")
+
+            button:
+                text "KELUAR" size 15 xalign 0.5 yalign 0.5
+                xysize (140,40)
+                style "button_tb"
+                action Quit()
+
+#        hbox:
+#            style_prefix "quick"
+#
+#            xalign 0.5
+#            yalign 1.0
+
+#            textbutton _("Back") action Rollback()
+#            textbutton _("History") action ShowMenu('history')
+#            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+#            textbutton _("Auto") action Preference("auto-forward", "toggle")
+#            textbutton _("Save") action ShowMenu('save')
+#            textbutton _("Q.Save") action QuickSave()
+#            textbutton _("Q.Load") action QuickLoad()
+#            textbutton _("Prefs") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -284,51 +320,61 @@ style quick_button_text:
 ##
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
-
 screen navigation():
 
     vbox:
         style_prefix "navigation"
-
-        xpos gui.navigation_xpos
-        yalign 0.5
-
-        spacing gui.navigation_spacing
-
+        xpos 180 ypos 570
+        xalign 0.5 yalign 0.95
+        spacing 10
         if main_menu:
-
-            textbutton _("Start") action Start()
-
+            button:
+                text "MULAI" xalign 0.5 yalign 0.5
+                xysize (175,55)
+                style "button_tb"
+                action Start()
+        
         else:
+            button:
+                text "MULAI" xalign 0.5 yalign 0.5
+                xysize (175,55)
+                style "button_tb"
+                action Start()
 
-            textbutton _("History") action ShowMenu("history")
+        button:
+            text "MUAT" xalign 0.5 yalign 0.5
+            xysize (175,55)
+            style "button_tb"
+            action ShowMenu("load")
 
-            textbutton _("Save") action ShowMenu("save")
+        button:
+            text "PENGATURAN" xalign 0.5 yalign 0.5
+            xysize (175,55)
+            style "button_tb"
+            action ShowMenu("preferences")
 
-        textbutton _("Load") action ShowMenu("load")
+        button:
+            text "KREDIT" xalign 0.5 yalign 0.5
+            xysize (175,55)
+            style "button_tb"
+            action ShowMenu("about")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        button:
+            text "KELUAR" xalign 0.5 yalign 0.5
+            xysize (175,55)
+            style "button_tb"
+            action Quit()
 
-        if _in_replay:
-
-            textbutton _("End Replay") action EndReplay(confirm=True)
-
-        elif not main_menu:
-
-            textbutton _("Main Menu") action MainMenu()
-
-        textbutton _("About") action ShowMenu("about")
-
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+#        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+#            textbutton _("Help") action ShowMenu("help")
 
-        if renpy.variant("pc"):
+#        if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+#            textbutton _("Quit") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -385,7 +431,7 @@ style main_menu_frame:
     xsize 280
     yfill True
 
-    background "gui/overlay/main_menu.png"
+#    background "gui/overlay/main_menu1.png"
 
 style main_menu_vbox:
     xalign 1.0
@@ -546,21 +592,36 @@ screen about():
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("About"), scroll="viewport"):
-
-        style_prefix "about"
-
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 1280 ysize 720
+        background im.Scale("images/kredit.png",1280,720)
         vbox:
-
-            label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+            xsize 360
+            xpos 200
+            ypos 380
+            xalign 0.5 yalign 0.5
 
             ## gui.about is usually set in options.rpy.
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]") color "#4E4E50"
+        vbox:
+            xpos 180 ypos 670
+            xalign 0.5 yalign 0.95
+            spacing 10
+            button:
+                text "KEMBALI" xalign 0.5 yalign 0.5
+                xysize (175,55)
+                style "button_tb"
+                action Return()
 
+            button:
+                text "KELUAR" xalign 0.5 yalign 0.5
+                xysize (175,55)
+                style "button_tb"
+                action Quit()
 
 style about_label is gui_label
 style about_label_text is gui_label_text
@@ -582,6 +643,10 @@ style about_label_text:
 screen save():
 
     tag menu
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 1280 ysize 720
+        background im.Scale("images/simpan.png",1280,720)
 
     use file_slots(_("Save"))
 
@@ -589,84 +654,100 @@ screen save():
 screen load():
 
     tag menu
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 1280 ysize 720
+        background im.Scale("images/muat.png",1280,720)
 
     use file_slots(_("Load"))
 
 
 screen file_slots(title):
 
-    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+        ## The grid of file slots.
+        grid gui.file_slot_cols gui.file_slot_rows:
+            style_prefix "slot"
 
-    use game_menu(title):
+            xalign 0.5
+            yalign 0.5
 
-        fixed:
+            spacing gui.slot_spacing
 
-            ## This ensures the input will get the enter event before any of the
-            ## buttons do.
-            order_reverse True
+            for i in range(gui.file_slot_cols * gui.file_slot_rows):
 
-            ## The page name, which can be edited by clicking on a button.
-            button:
-                style "page_label"
+                $ slot = i + 1
 
-                key_events True
-                xalign 0.5
-                action page_name_value.Toggle()
+                button:
+                    xpos 195
+                    ypos 10
+                    action FileAction(slot)
 
-                input:
-                    style "page_label_text"
-                    value page_name_value
+                    has vbox
 
-            ## The grid of file slots.
-            grid gui.file_slot_cols gui.file_slot_rows:
-                style_prefix "slot"
+                    add FileScreenshot(slot) xalign 0.5
+                
+                    text FileTime(slot, format=_("{#file_time}%A, %d %B %Y, %H:%M"), empty=_("Slot Kosong")):
+                    #text FileTime(slot, format=_("{#file_time}[d4]"), empty=_("Slot Kosong")):
+                        style "slot_time_text"
+                        ypos 15
 
-                xalign 0.5
-                yalign 0.5
+#                    text FileSaveName(slot):
+#                        style "slot_name_text"
 
-                spacing gui.slot_spacing
-
-                for i in range(gui.file_slot_cols * gui.file_slot_rows):
-
-                    $ slot = i + 1
-
+                    key "save_delete" action FileDelete(slot)
+                    
                     button:
-                        action FileAction(slot)
+                        xpos 85
+                        ypos 5
+                        text "Delete" size 18 xalign 0.5 yalign 0.5
+                        xysize (85,35)
+                        style "button_tb"
+                        action FileDelete(slot)
 
-                        has vbox
+        ## Buttons to access other pages.
+        hbox:
+            xpos 840
+            ypos 670
+            style_prefix "page"
 
-                        add FileScreenshot(slot) xalign 0.5
+            xalign 0.5
+            yalign 1.0
 
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
-                            style "slot_time_text"
+            spacing gui.page_spacing
 
-                        text FileSaveName(slot):
-                            style "slot_name_text"
+#            textbutton _("<") action FilePagePrevious()
 
-                        key "save_delete" action FileDelete(slot)
+#                if config.has_autosave:
+#                    textbutton _("{#auto_page}A") action FilePage("auto")
 
-            ## Buttons to access other pages.
-            hbox:
-                style_prefix "page"
+#                if config.has_quicksave:
+#                    textbutton _("{#quick_page}Q") action FilePage("quick")
 
-                xalign 0.5
-                yalign 1.0
+            ## range(1, 10) gives the numbers from 1 to 9.
+            for page in range(1, 6):
+                button:
+                    text "[page]" xalign 0.5 yalign 0.5
+                    xysize (55,55)
+                    style "button_tb"
+                    action FilePage(page)
 
-                spacing gui.page_spacing
+#            textbutton _(">") action FilePageNext()
 
-                textbutton _("<") action FilePagePrevious()
+        vbox:
+            xpos 180 ypos 670
+            xalign 0.5 yalign 0.95
+            spacing 10
+            button:
+                text "KEMBALI" xalign 0.5 yalign 0.5
+                xysize (175,55)
+                style "button_tb"
+                action Return()
 
-                if config.has_autosave:
-                    textbutton _("{#auto_page}A") action FilePage("auto")
-
-                if config.has_quicksave:
-                    textbutton _("{#quick_page}Q") action FilePage("quick")
-
-                ## range(1, 10) gives the numbers from 1 to 9.
-                for page in range(1, 10):
-                    textbutton "[page]" action FilePage(page)
-
-                textbutton _(">") action FilePageNext()
+            button:
+                text "KELUAR" xalign 0.5 yalign 0.5
+                xysize (175,55)
+                style "button_tb"
+                action Quit()
 
 
 style page_label is gui_label
@@ -712,58 +793,38 @@ screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
+    frame:
+        xalign 0.5 yalign 0.5
+        xsize 1280 ysize 720
+        background im.Scale("images/pengaturan.png",1280,720)
+
+        null height (4 * gui.pref_spacing)
 
         vbox:
+            xpos 450
+            ypos 250
 
             hbox:
                 box_wrap True
-
-                if renpy.variant("pc") or renpy.variant("web"):
-
-                    vbox:
-                        style_prefix "radio"
-                        label _("Display")
-                        textbutton _("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
-
-                vbox:
-                    style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
-
-                ## Additional vboxes of type "radio_pref" or "check_pref" can be
-                ## added here, to add additional creator-defined preferences.
-
-            null height (4 * gui.pref_spacing)
-
-            hbox:
                 style_prefix "slider"
-                box_wrap True
+                spacing -30
 
                 vbox:
 
-                    label _("Text Speed")
+                    label _("Kecepatan Teks")
 
                     bar value Preference("text speed")
-
-                    label _("Auto-Forward Time")
-
-                    bar value Preference("auto-forward time")
-
+                
                 vbox:
-
                     if config.has_music:
-                        label _("Music Volume")
+                        label _("Volume Musik")
 
                         hbox:
                             bar value Preference("music volume")
 
                     if config.has_sound:
 
-                        label _("Sound Volume")
+                        label _("Volume Efek Suara")
 
                         hbox:
                             bar value Preference("sound volume")
@@ -771,9 +832,8 @@ screen preferences():
                             if config.sample_sound:
                                 textbutton _("Test") action Play("sound", config.sample_sound)
 
-
                     if config.has_voice:
-                        label _("Voice Volume")
+                        label _("Volume Suara")
 
                         hbox:
                             bar value Preference("voice volume")
@@ -784,10 +844,49 @@ screen preferences():
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
 
-                        textbutton _("Mute All"):
+                        button:
+                            xpos -7
+                            ypos 10
+                            text "Mute Semua Volume" xalign 0.5 yalign 0.5
+                            xysize (260,55)
+                            style "button_tb"
                             action Preference("all mute", "toggle")
-                            style "mute_all_button"
 
+                ## Additional vboxes of type "radio_pref" or "check_pref" can be
+                ## added here, to add additional creator-defined preferences.
+            if renpy.variant("pc") or renpy.variant("web"):
+
+                vbox:
+                    style_prefix "radio"
+                    label _("Display")
+                    ypos -160
+                    spacing 10
+                    button:
+                        text "Window" xalign 0.5 yalign 0.5
+                        xysize (180,55)
+                        style "button_tb"
+                        action Preference("display", "window")
+                    button:
+                        text "Fullscreen" xalign 0.5 yalign 0.5
+                        xysize (180,55)
+                        style "button_tb"
+                        action Preference("display", "fullscreen")
+
+        vbox:
+            xpos 180 ypos 670
+            xalign 0.5 yalign 0.95
+            spacing 10
+            button:
+                text "KEMBALI" xalign 0.5 yalign 0.5
+                xysize (175,55)
+                style "button_tb"
+                action Return()
+
+            button:
+                text "KELUAR" xalign 0.5 yalign 0.5
+                xysize (175,55)
+                style "button_tb"
+                action Quit()
 
 style pref_label is gui_label
 style pref_label_text is gui_label_text
