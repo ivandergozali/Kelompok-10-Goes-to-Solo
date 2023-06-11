@@ -839,9 +839,9 @@ screen preferences():
                         button:
                             xpos -7
                             ypos 10
-                            text "Mute Semua Volume" xalign 0.5 yalign 0.5
-                            xysize (260,55)
-                            style "button_tb"
+                            text "Mute Semua" xalign 0.5 yalign 0.5
+                            xysize (200,55)
+                            style ("button1_tb")
                             action Preference("all mute", "toggle")
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be

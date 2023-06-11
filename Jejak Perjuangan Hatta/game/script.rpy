@@ -17,1025 +17,21 @@ define Si = Character("SOEKARNI", xpos = 95, color="#2E2C2B", namebox_background
 define Mi = Character("MIYOSHI", xpos = 72, color="#2E2C2B", namebox_background = Frame("gui/namebox1.png", xpos = -10, ypos = -8, xsize = 170, ysize = 70))
 define Ni = Character("NISHIMURA", xpos = 113, color="#2E2C2B", namebox_background = Frame("gui/namebox1.png", xpos = 12, ypos = -8, xsize = 205, ysize = 70))
 define W = Character("WIKANA", xpos = 75, color="#2E2C2B", namebox_background = Frame("gui/namebox1.png", xpos = -9, ypos = -8, xsize = 170, ysize = 70))
-define blink = 0
-
-image notifikasi:
-    "notif 1"
-    pause 0.6
-    "notif 2"
-    pause 0.6
-    repeat
-    
-# Character Sprite
-image hatta talk:
-    "hatta 1"
-    pause 0.18
-    "hatta 2" 
-    pause 0.18
-    "hatta 4" 
-    pause 0.18
-    "hatta 5" 
-    pause 0.18
-    "hatta 6" 
-    pause 0.18
-    "hatta 7" 
-    pause 0.18
-    "hatta 8" 
-    pause 0.18
-    "hatta 9" 
-    pause 0.18
-    "hatta 10" 
-    pause 0.18
-    "hatta 11" 
-    pause 0.18
-    "hatta 12" 
-    pause 0.18
-    "hatta 13" 
-    pause 0.18
-    "hatta 14" 
-    pause 0.18
-    "hatta 15" 
-    pause 0.18
-    "hatta 17" 
-    pause 0.18
-    "hatta 18" 
-    pause 0.18
-    repeat
-
-image hatta silent:
-    "hatta 1"
-    pause 3.0
-    "hatta 11"
-    pause 0.3
-    repeat
-
-image nomura talk:
-    "nomura 1"
-    pause 0.18
-    "nomura 2" 
-    pause 0.18
-    "nomura 3" 
-    pause 0.18
-    "nomura 4" 
-    pause 0.18
-    "nomura 5" 
-    pause 0.18
-    "nomura 6" 
-    pause 0.18
-    "nomura 7" 
-    pause 0.18
-    "nomura 8" 
-    pause 0.18
-    "nomura 9" 
-    pause 0.18
-    "nomura 10" 
-    pause 0.18
-    "nomura 11" 
-    pause 0.18
-    "nomura 12" 
-    pause 0.18
-    "nomura 13" 
-    pause 0.18
-    "nomura 14" 
-    pause 0.18
-    "nomura 15" 
-    pause 0.18
-    "nomura 16" 
-    pause 0.18
-    "nomura 17" 
-    pause 0.18
-    "nomura 18" 
-    pause 0.18
-    "nomura 20" 
-    pause 0.18
-    "nomura 21" 
-    pause 0.18
-    "nomura 22" 
-    pause 0.18
-    "nomura 23" 
-    pause 0.18
-    "nomura 24" 
-    pause 0.18
-    "nomura 25" 
-    pause 0.18
-    "nomura 26" 
-    pause 0.18
-    "nomura 27" 
-    pause 0.18
-    "nomura 28" 
-    pause 0.18
-    "nomura 29" 
-    pause 0.18
-    "nomura 30" 
-    pause 0.18
-    "nomura 31" 
-    pause 0.18
-    "nomura 32" 
-    pause 0.18
-    "nomura 33" 
-    pause 0.18
-    "nomura 34" 
-    pause 0.18
-    repeat
-
-image nomura silent:
-    "nomura 10"
-    pause 3.0
-    "nomura 9"
-    pause 0.3
-    repeat
-
-image sjahrir talk:
-    "sjahrir 1"
-    pause 0.18
-    "sjahrir 2" 
-    pause 0.18
-    "sjahrir 3" 
-    pause 0.18
-    "sjahrir 4" 
-    pause 0.18
-    "sjahrir 5" 
-    pause 0.18
-    "sjahrir 6" 
-    pause 0.18
-    "sjahrir 7" 
-    pause 0.18
-    "sjahrir 8" 
-    pause 0.18
-    "sjahrir 9" 
-    pause 0.18
-    "sjahrir 10" 
-    pause 0.18
-    "sjahrir 12" 
-    pause 0.18
-    "sjahrir 13" 
-    pause 0.18
-    "sjahrir 14" 
-    pause 0.18
-    "sjahrir 15" 
-    pause 0.18
-    "sjahrir 16" 
-    pause 0.18
-    "sjahrir 17" 
-    pause 0.18
-    "sjahrir 18" 
-    pause 0.18
-    "sjahrir 19" 
-    pause 0.18
-    "sjahrir 20" 
-    pause 0.18
-    "sjahrir 21" 
-    pause 0.18
-    "sjahrir 22" 
-    pause 0.18
-    "sjahrir 23" 
-    pause 0.18
-    "sjahrir 24" 
-    pause 0.18
-    "sjahrir 25" 
-    pause 0.18
-    "sjahrir 26" 
-    pause 0.18
-    repeat
-
-image sjahrir silent:
-    "sjahrir 24"
-    pause 3.0
-    "sjahrir 23"
-    pause 0.3
-    repeat
-
-image soekarno talk:
-    "soekarno 1"
-    pause 0.18
-    "soekarno 2" 
-    pause 0.18
-    "soekarno 3" 
-    pause 0.18
-    "soekarno 4" 
-    pause 0.18
-    "soekarno 5" 
-    pause 0.18
-    "soekarno 6" 
-    pause 0.18
-    "soekarno 7" 
-    pause 0.18
-    "soekarno 8" 
-    pause 0.18
-    "soekarno 9" 
-    pause 0.18
-    "soekarno 10" 
-    pause 0.18
-    "soekarno 11" 
-    pause 0.18
-    "soekarno 12" 
-    pause 0.18
-    "soekarno 13" 
-    pause 0.18
-    "soekarno 14" 
-    pause 0.18
-    "soekarno 15" 
-    pause 0.18
-    "soekarno 16" 
-    pause 0.18
-    "soekarno 17" 
-    pause 0.18
-    "soekarno 18" 
-    pause 0.18
-    "soekarno 19" 
-    pause 0.18
-    "soekarno 20" 
-    pause 0.18
-    "soekarno 21" 
-    pause 0.18
-    "soekarno 22" 
-    pause 0.18
-    "soekarno 24" 
-    pause 0.18
-    "soekarno 25" 
-    pause 0.18
-    "soekarno 26" 
-    pause 0.18
-    "soekarno 27" 
-    pause 0.18
-    repeat
-
-image soekarno silent:
-    "soekarno 26"
-    pause 3.0
-    "soekarno 11"
-    pause 0.3
-    repeat
-
-image radjiman talk:
-    "radjiman 1"
-    pause 0.18
-    "radjiman 2" 
-    pause 0.18
-    "radjiman 3" 
-    pause 0.18
-    "radjiman 4" 
-    pause 0.18
-    "radjiman 5" 
-    pause 0.18
-    "radjiman 6" 
-    pause 0.18
-    "radjiman 8" 
-    pause 0.18
-    "radjiman 9" 
-    pause 0.18
-    "radjiman 10" 
-    pause 0.18
-    "radjiman 11" 
-    pause 0.18
-    "radjiman 12" 
-    pause 0.18
-    "radjiman 13" 
-    pause 0.18
-    "radjiman 14" 
-    pause 0.18
-    "radjiman 15" 
-    pause 0.18
-    "radjiman 16" 
-    pause 0.18
-    "radjiman 17" 
-    pause 0.18
-    "radjiman 18" 
-    pause 0.18
-    repeat
-
-image radjiman silent:
-    "radjiman 15"
-    pause 3.0
-    "radjiman 14"
-    pause 0.3
-    repeat
-
-image terauchi talk:
-    "terauchi 1"
-    pause 0.18
-    "terauchi 2" 
-    pause 0.18
-    "terauchi 3" 
-    pause 0.18
-    "terauchi 4" 
-    pause 0.18
-    "terauchi 5" 
-    pause 0.18
-    "terauchi 6" 
-    pause 0.18
-    "terauchi 7" 
-    pause 0.18
-    "terauchi 8" 
-    pause 0.18
-    "terauchi 9" 
-    pause 0.18
-    "terauchi 10" 
-    pause 0.18
-    "terauchi 11" 
-    pause 0.18
-    "terauchi 12" 
-    pause 0.18
-    "terauchi 14" 
-    pause 0.18
-    "terauchi 15" 
-    pause 0.18
-    "terauchi 16" 
-    pause 0.18
-    "terauchi 17" 
-    pause 0.18
-    "terauchi 18" 
-    pause 0.18
-    "terauchi 19" 
-    pause 0.18
-    "terauchi 21" 
-    pause 0.18
-    "terauchi 22" 
-    pause 0.18
-    "terauchi 23" 
-    pause 0.18
-    "terauchi 24" 
-    pause 0.18
-    "terauchi 25" 
-    pause 0.18
-    "terauchi 26" 
-    pause 0.18
-    "terauchi 27" 
-    pause 0.18
-    repeat
-
-image terauchi silent:
-    "terauchi 12"
-    pause 3.0
-    "terauchi 8"
-    pause 0.3
-    repeat
-
-image soebardjo talk:
-    "soebardjo 1"
-    pause 0.18
-    "soebardjo 2" 
-    pause 0.18
-    "soebardjo 3" 
-    pause 0.18
-    "soebardjo 4" 
-    pause 0.18
-    "soebardjo 5" 
-    pause 0.18
-    "soebardjo 6" 
-    pause 0.18
-    "soebardjo 7" 
-    pause 0.18
-    "soebardjo 9" 
-    pause 0.18
-    "soebardjo 10" 
-    pause 0.18
-    "soebardjo 11" 
-    pause 0.18
-    "soebardjo 12" 
-    pause 0.18
-    "soebardjo 13" 
-    pause 0.18
-    "soebardjo 14" 
-    pause 0.18
-    "soebardjo 15" 
-    pause 0.18
-    "soebardjo 16" 
-    pause 0.18
-    "soebardjo 17" 
-    pause 0.18
-    "soebardjo 18" 
-    pause 0.18
-    "soebardjo 19" 
-    pause 0.18
-    "soebardjo 20" 
-    pause 0.18
-    "soebardjo 21" 
-    pause 0.18
-    "soebardjo 22" 
-    pause 0.18
-    "soebardjo 23" 
-    pause 0.18
-    "soebardjo 24" 
-    pause 0.18
-    "soebardjo 25" 
-    pause 0.18
-    repeat
-
-image soebardjo silent:
-    "soebardjo 16"
-    pause 3.0
-    "soebardjo 17"
-    pause 0.3
-    repeat
-
-image maeda talk:
-    "maeda 1"
-    pause 0.18
-    "maeda 2" 
-    pause 0.18
-    "maeda 3" 
-    pause 0.18
-    "maeda 4" 
-    pause 0.18
-    "maeda 5" 
-    pause 0.18
-    "maeda 6" 
-    pause 0.18
-    "maeda 8" 
-    pause 0.18
-    "maeda 9" 
-    pause 0.18
-    "maeda 10" 
-    pause 0.18
-    "maeda 11" 
-    pause 0.18
-    "maeda 12" 
-    pause 0.18
-    "maeda 13" 
-    pause 0.18
-    "maeda 14" 
-    pause 0.18
-    "maeda 15" 
-    pause 0.18
-    "maeda 16" 
-    pause 0.18
-    "maeda 17" 
-    pause 0.18
-    repeat
-
-image maeda silent:
-    "maeda 15"
-    pause 3.0
-    "maeda 14"
-    pause 0.3
-    repeat
-
-image soebadio talk:
-    "soebadio 1"
-    pause 0.18
-    "soebadio 2" 
-    pause 0.18
-    "soebadio 3" 
-    pause 0.18
-    "soebadio 4" 
-    pause 0.18
-    "soebadio 5" 
-    pause 0.18
-    "soebadio 6" 
-    pause 0.18
-    "soebadio 7" 
-    pause 0.18
-    "soebadio 8" 
-    pause 0.18
-    "soebadio 9" 
-    pause 0.18
-    "soebadio 10" 
-    pause 0.18
-    "soebadio 11" 
-    pause 0.18
-    "soebadio 12" 
-    pause 0.18
-    "soebadio 13" 
-    pause 0.18
-    "soebadio 14" 
-    pause 0.18
-    "soebadio 15" 
-    pause 0.18
-    "soebadio 16" 
-    pause 0.18
-    "soebadio 17" 
-    pause 0.18
-    repeat
-
-image soebadio silent:
-    "soebadio 7"
-    pause 3.0
-    "soebadio 9"
-    pause 0.3
-    repeat
-
-image soekarni talk:
-    "soekarni 1"
-    pause 0.18
-    "soekarni 2" 
-    pause 0.18
-    "soekarni 3" 
-    pause 0.18
-    "soekarni 4" 
-    pause 0.18
-    "soekarni 5" 
-    pause 0.18
-    "soekarni 6" 
-    pause 0.18
-    "soekarni 7" 
-    pause 0.18
-    "soekarni 8" 
-    pause 0.18
-    "soekarni 9" 
-    pause 0.18
-    "soekarni 11" 
-    pause 0.18
-    "soekarni 12" 
-    pause 0.18
-    "soekarni 13" 
-    pause 0.18
-    "soekarni 14" 
-    pause 0.18
-    "soekarni 15" 
-    pause 0.18
-    "soekarni 17" 
-    pause 0.18
-    "soekarni 18" 
-    pause 0.18
-    "soekarni 19" 
-    pause 0.18
-    "soekarni 20" 
-    pause 0.18
-    "soekarni 21" 
-    pause 0.18
-    "soekarni 22" 
-    pause 0.18
-    "soekarni 23" 
-    pause 0.18
-    "soekarni 24" 
-    pause 0.18
-    "soekarni 25" 
-    pause 0.18
-    repeat
-
-image soekarni silent:
-    "soekarni 23"
-    pause 3.0
-    "soekarni 24"
-    pause 0.3
-    repeat
-
-image miyoshi talk:
-    "miyoshi 1"
-    pause 0.18
-    "miyoshi 2" 
-    pause 0.18
-    "miyoshi 3" 
-    pause 0.18
-    "miyoshi 4" 
-    pause 0.18
-    "miyoshi 5" 
-    pause 0.18
-    "miyoshi 6" 
-    pause 0.18
-    "miyoshi 7" 
-    pause 0.18
-    "miyoshi 8" 
-    pause 0.18
-    "miyoshi 9" 
-    pause 0.18
-    "miyoshi 10" 
-    pause 0.18
-    "miyoshi 11" 
-    pause 0.18
-    "miyoshi 12" 
-    pause 0.18
-    "miyoshi 13" 
-    pause 0.18
-    "miyoshi 14" 
-    pause 0.18
-    "miyoshi 15" 
-    pause 0.18
-    "miyoshi 16" 
-    pause 0.18
-    "miyoshi 17" 
-    pause 0.18
-    "miyoshi 18" 
-    pause 0.18
-    "miyoshi 20" 
-    pause 0.18
-    "miyoshi 21" 
-    pause 0.18
-    "miyoshi 22" 
-    pause 0.18
-    "miyoshi 23" 
-    pause 0.18
-    repeat
-
-image miyoshi silent:
-    "miyoshi 23"
-    pause 3.0
-    "miyoshi 9"
-    pause 0.3
-    repeat
-
-image nishimura talk:
-    "nishimura 1"
-    pause 0.18
-    "nishimura 2" 
-    pause 0.18
-    "nishimura 3" 
-    pause 0.18
-    "nishimura 4" 
-    pause 0.18
-    "nishimura 5" 
-    pause 0.18
-    "nishimura 7" 
-    pause 0.18
-    "nishimura 8" 
-    pause 0.18
-    "nishimura 9" 
-    pause 0.18
-    "nishimura 10" 
-    pause 0.18
-    "nishimura 11" 
-    pause 0.18
-    "nishimura 12" 
-    pause 0.18
-    "nishimura 15" 
-    pause 0.18
-    "nishimura 16" 
-    pause 0.18
-    "nishimura 17" 
-    pause 0.18
-    "nishimura 18" 
-    pause 0.18
-    "nishimura 20" 
-    pause 0.18
-    "nishimura 21" 
-    pause 0.18
-    "nishimura 22" 
-    pause 0.18
-    "nishimura 23" 
-    pause 0.18
-    repeat
-
-image nishimura silent:
-    "nishimura 23"
-    pause 3.0
-    "nishimura 22"
-    pause 0.3
-    repeat
-
-image wikana talk:
-    "wikana 1"
-    pause 0.18
-    "wikana 2" 
-    pause 0.18
-    "wikana 3" 
-    pause 0.18
-    "wikana 5" 
-    pause 0.18
-    "wikana 1"
-    pause 0.18
-    "wikana 2" 
-    pause 0.18
-    "wikana 3" 
-    pause 0.18
-    "wikana 5" 
-    pause 0.18
-    "wikana 1"
-    pause 0.18
-    "wikana 2" 
-    pause 0.18
-    "wikana 3" 
-    pause 0.18
-    "wikana 4" 
-    pause 0.18
-    "wikana 5" 
-    pause 0.18
-    "wikana 1"
-    pause 0.18
-    "wikana 2" 
-    pause 0.18
-    "wikana 3" 
-    pause 0.18
-    "wikana 5" 
-    pause 0.18
-    repeat
-
-image wikana silent:
-    "wikana 2"
-    pause 3.0
-    "wikana 4"
-    pause 0.3
-    repeat
 
 # The game starts here.
-style screentext:
-    color "#9e5f12"
-    size 18
-
 style button_tb:
     background Frame("images/Icon/button_idle.png")
     hover_background Frame("images/Icon/button_hover.png")
 
-init python:
-    from datetime import datetime
-    import locale
-    locale.setlocale(locale.LC_TIME, 'id_ID')
-    today = datetime.today()
-    d1 = today.strftime("%A")
-    d2 = today.strftime("%d")
-    d3 = today.strftime("%B, %Y")
+style button1_tb:
+    background Frame("images/Icon/button_idle.png")
+    hover_background Frame("images/Icon/button_hover.png")
+    selected_idle_background Frame("images/Icon/button_selected.png")
+    selected_hover_background Frame("images/Icon/button_hover.png")
 
 init:
     #untuk disable rollback
     $config.rollback_enabled = False
-
-screen tanggal:
-    frame:
-        xalign 0.5 yalign 0.5
-        xpos 135 ypos 130
-        button:
-            xsize 150 ysize 150
-            background Frame("images/Icon/kalender.png")
-            vbox:
-                xalign 0.5    
-                text "[d1]" ypos 5 xalign 0.5 size 20 font "fonts/LumiosTypewriter-Old.ttf" color "#ffffff" bold True    
-                
-                text "[d2]" ypos -10 xalign 0.5 size 80 font "fonts/AbrilFatface-Regular.otf" color "#000000"
-                
-                text "[d3]" ypos -25 xalign 0.5 size 15 font "fonts/Trocchi.otf" color "#000000"
-
-screen buku:
-    frame:
-        xalign 0.5 yalign 0.5
-        xpos 1190 ypos 90
-        vbox:
-            imagebutton:
-                if blink == 0:
-                    idle "buku 1"
-                elif blink == 1:
-                    idle "notifikasi"
-                action [SetVariable("blink", 0), SetVariable("quick_menu", False), Hide("buku"), Show("pilihanbuku")]
-
-screen pilihanbuku:
-    frame:
-        xalign 0.5 yalign 0.5
-        xsize 1280 ysize 720
-        background Frame("images/Icon/buku 2.png")
-        vbox:
-            xalign 0.5 xpos 870 ypos 170
-            spacing 15  
-            button:
-                text "Karakter" size 36 font "fonts/AbrilFatface-Regular.otf" color "#000000" xalign 0.5
-                action [Hide("pilihanbuku"), Show("karakter1")]   
-            button:
-                text "Peristiwa" size 28 hover_underline True color "#000000" xalign 0.5
-                action [Hide("pilihanbuku"), Show("peristiwa1")]
-            button:
-                text "Organisasi" size 28 hover_underline True color "#000000" xalign 0.5
-                action [Hide("pilihanbuku"), Show("organisasi1")]
-            button:
-                text "Negara" size 28 hover_underline True color "#000000" xalign 0.5
-                action [Hide("pilihanbuku"), Show("negara1")]
-            button:
-                text "Bacaan" size 28 hover_underline True color "#000000" xalign 0.5
-                action [Hide("pilihanbuku"), Show("bacaan1")]
-        vbox:
-            xpos 350 ypos 560
-            imagebutton:
-                idle "close"
-                action [SetVariable("quick_menu", True), Hide("pilihanbuku"), Show("buku")]
-    frame:
-        xalign 0.5 yalign 0.5
-        xpos 135 ypos 130
-        button:
-            xsize 150 ysize 150
-            background Frame("images/Icon/kalender.png")
-            vbox:
-                xalign 0.5    
-                text "[d1]" ypos 5 xalign 0.5 size 20 font "fonts/LumiosTypewriter-Old.ttf" color "#ffffff" bold True    
-                
-                text "[d2]" ypos -10 xalign 0.5 size 80 font "fonts/AbrilFatface-Regular.otf" color "#000000"
-                
-                text "[d3]" ypos -25 xalign 0.5 size 15 font "fonts/Trocchi.otf" color "#000000"
-
-screen karakter1:
-    frame:
-        xalign 0.5 yalign 0.5
-        xsize 1280 ysize 720
-        background Frame("images/Icon/buku 2.png")        
-        vbox:
-            xalign 0.5 xpos 930 ypos 170
-            spacing 15  
-            button:
-                text "Karakter" size 36 font "fonts/AbrilFatface-Regular.otf" color "#000000" xalign 0.5
-                action [Hide("karakter1"), Show("karakter1")]   
-            button:
-                text "Marx dan Engels" size 28 hover_underline True color "#000000" xalign 0.5
-                action [Hide("karakter1"), Show("peristiwa1")]
-            button:
-                text "Adolf Hitler" size 28 hover_underline True color "#000000" xalign 0.5
-                action [Hide("karakter1"), Show("adolfhitler")]
-            button:
-                text "Douglas MacArthur" size 28 hover_underline True color "#000000" xalign 0.5
-                action [Hide("karakter1"), Show("negara1")]
-            button:
-                text "Chester W. Nimitz" size 28 hover_underline True color "#000000" xalign 0.5
-                action [Hide("karakter1"), Show("bacaan1")]
-        vbox:
-            xpos 350 ypos 560
-            imagebutton:
-                idle "close"
-                action [SetVariable("quick_menu", True), Hide("karakter1"), Show("buku")]
-        vbox:
-            xpos 410 ypos 560
-            imagebutton:
-                idle "home"
-                action [Hide("karakter1"), Show("pilihanbuku")]
-    frame:
-        xalign 0.5 yalign 0.5
-        xpos 135 ypos 130
-        button:
-            xsize 150 ysize 150
-            background Frame("images/Icon/kalender.png")
-            vbox:
-                xalign 0.5    
-                text "[d1]" ypos 5 xalign 0.5 size 20 font "fonts/LumiosTypewriter-Old.ttf" color "#ffffff" bold True    
-                
-                text "[d2]" ypos -10 xalign 0.5 size 80 font "fonts/AbrilFatface-Regular.otf" color "#000000"
-                
-                text "[d3]" ypos -25 xalign 0.5 size 15 font "fonts/Trocchi.otf" color "#000000"
-
-screen adolfhitler:
-    frame:
-        xalign 0.5 yalign 0.5
-        xsize 1280 ysize 720
-        background Frame("images/Icon/adolf hitler.png")        
-        vbox:
-            xpos 350 ypos 560
-            imagebutton:
-                idle "close"
-                action [SetVariable("quick_menu", True), Hide("adolfhitler"), Show("buku")]
-        vbox:
-            xpos 410 ypos 560
-            imagebutton:
-                idle "home"
-                action [Hide("adolfhitler"), Show("pilihanbuku")]
-        vbox:
-            xpos 470 ypos 560
-            imagebutton:
-                idle "back"
-                action [Hide("adolfhitler"), Show("karakter1")]
-    frame:
-        xalign 0.5 yalign 0.5
-        xpos 135 ypos 130
-        button:
-            xsize 150 ysize 150
-            background Frame("images/Icon/kalender.png")
-            vbox:
-                xalign 0.5    
-                text "[d1]" ypos 5 xalign 0.5 size 20 font "fonts/LumiosTypewriter-Old.ttf" color "#ffffff" bold True    
-                
-                text "[d2]" ypos -10 xalign 0.5 size 80 font "fonts/AbrilFatface-Regular.otf" color "#000000"
-                
-                text "[d3]" ypos -25 xalign 0.5 size 15 font "fonts/Trocchi.otf" color "#000000"
-
-screen organisasi1:
-    frame:
-        xalign 0.5 yalign 0.5
-        xsize 942 ysize 638
-        xpos 630
-        background Frame("images/Icon/buku 2.png")
-        hbox:
-            text "BPUPKI" size 30 color "#690d1b" xpos 190 ypos 60 
-        vbox:    
-            xpos 50 ypos 120
-            text "lorem lorem lorem" size 20 color "#690d1b"   
-        hbox:
-            text "Kempeitai" size 30 color "#690d1b" xpos 600 ypos 60
-        vbox:    
-            xpos 490 ypos 120
-            text "lorem lorem lorem" size 20 color "#690d1b"
-
-screen organisasi2:
-    frame:
-        xalign 0.5 yalign 0.5
-        xsize 942 ysize 638
-        xpos 630
-        background Frame("images/Icon/buku 2.png")
-        hbox:
-            text "Lorem" size 30 color "#690d1b" xpos 200 ypos 60 
-        vbox:    
-            xpos 50 ypos 120
-            text "lorem lorem lorem" size 20 color "#690d1b"   
-        hbox:
-            text "Lorem" size 30 color "#690d1b" xpos 650 ypos 60
-        vbox:    
-            xpos 490 ypos 120
-            text "lorem lorem lorem" size 20 color "#690d1b"
-
-screen peristiwa1:
-    frame:
-        xalign 0.5 yalign 0.5
-        xsize 942 ysize 638
-        xpos 630
-        background Frame("images/Icon/buku 2.png")
-        hbox:
-            text "Bom Atom Hiroshima" size 25 color "#690d1b" xpos 125 ypos 60 
-        vbox:    
-            xpos 50 ypos 120
-            text "lorem lorem lorem" size 20 color "#690d1b"   
-        hbox:
-            text "Invasi Rusia ke Mancuko" size 25 color "#690d1b" xpos 530 ypos 60
-        vbox:    
-            xpos 490 ypos 120
-            text "lorem lorem lorem" size 20 color "#690d1b"
-
-screen peristiwa2:
-    frame:
-        xalign 0.5 yalign 0.5
-        xsize 942 ysize 638
-        xpos 630
-        background Frame("images/Icon/buku 2.png")
-        hbox:
-            text "Bom Atom Nagasaki" size 25 color "#690d1b" xpos 125 ypos 60 
-        vbox:    
-            xpos 50 ypos 120
-            text "lorem lorem lorem" size 20 color "#690d1b"   
-        hbox:
-            text "Lorem" size 25 color "#690d1b" xpos 650 ypos 60
-        vbox:    
-            xpos 490 ypos 120
-            text "lorem lorem lorem" size 20 color "#690d1b"
-
-screen negara1:
-    frame:
-        xalign 0.5 yalign 0.5
-        xsize 942 ysize 638
-        xpos 630
-        background Frame("images/Icon/buku 2.png")
-        hbox:
-            text "Jepang" size 30 color "#690d1b" xpos 200 ypos 60 
-        vbox:    
-            xpos 50 ypos 120
-            text "Selama Perang Dunia II, Jepang belum" size 20 color "#690d1b" 
-            text "menjadi negara anime yang dipenuhi" size 20 color "#690d1b" 
-            text "dengan maid dan catgirl. Jepang selama" size 20 color "#690d1b" 
-            text "Perang Dunia II belum mengenal hentai" size 20 color "#690d1b" 
-            text "karena Jepang sedang sibuk berusaha" size 20 color "#690d1b" 
-            text "mendominasi Asia termasuk Indonesia" size 20 color "#690d1b" 
-            text "yang waktu itu namanya masih Hindia" size 20 color "#690d1b" 
-            text "Belanda. Kedatangan Jepang pada saat" size 20 color "#690d1b" 
-            text "itu bukan membawa budaya wibu pada" size 20 color "#690d1b" 
-            text "rakyat, melainkan memanfaatkan keada-" size 20 color "#690d1b" 
-            text "an untuk memenangkan Perang Pasifik" size 20 color "#690d1b" 
-            text "melawan Amerika Serikat dan kronco-" size 20 color "#690d1b" 
-            text "kronconya." size 20 color "#690d1b" 
-        hbox:
-            text "Rusia" size 30 color "#690d1b" xpos 650 ypos 60 
-        vbox:    
-            xpos 490 ypos 120
-            text "lorem lorem lorem" size 20 color "#690d1b"
-
-screen negara2:
-    frame:
-        xalign 0.5 yalign 0.5
-        xsize 942 ysize 638
-        xpos 630
-        background Frame("images/Icon/buku 2.png")
-        hbox:
-            text "Belanda" size 30 color "#690d1b" xpos 185 ypos 60 
-        vbox:    
-            xpos 50 ypos 120
-            text "lorem lorem lorem" size 20 color "#690d1b"   
-        hbox:
-            text "Lorem" size 30 color "#690d1b" xpos 650 ypos 60
-        vbox:    
-            xpos 490 ypos 120
-            text "lorem lorem lorem" size 20 color "#690d1b"
-
-screen bacaan1:
-    frame:
-        xalign 0.5 yalign 0.5
-        xsize 942 ysize 638
-        xpos 630
-        background Frame("images/Icon/buku 2.png")
-        hbox:
-            text "QS. Al-Maun 1-7" size 30 color "#690d1b" xpos 130 ypos 60 
-        vbox:    
-            xpos 50 ypos 120
-            text "lorem lorem lorem" size 20 color "#690d1b"   
-        hbox:
-            text "QS. Al-Humazah 1-3" size 30 color "#690d1b" xpos 525 ypos 60
-        vbox:    
-            xpos 490 ypos 120
-            text "lorem lorem lorem" size 20 color "#690d1b"
-
-screen bacaan2:
-    frame:
-        xalign 0.5 yalign 0.5
-        xsize 942 ysize 638
-        xpos 630
-        background Frame("images/Icon/buku 2.png")
-        hbox:
-            text "Lorem" size 30 color "#690d1b" xpos 200 ypos 60 
-        vbox:    
-            xpos 50 ypos 120
-            text "lorem lorem lorem" size 20 color "#690d1b"   
-        hbox:
-            text "Lorem" size 30 color "#690d1b" xpos 650 ypos 60
-        vbox:    
-            xpos 490 ypos 120
-            text "lorem lorem lorem" size 20 color "#690d1b"
 
 label start:
     with dissolve
@@ -1432,9 +428,17 @@ label scene8:
     jump scene9
 
 label scene9:
+    show hatta silent at Position(xpos=475,ypos=120):
+        zoom 0.7
+    show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
+        zoom 0.75
     "Sudah banyak petinggi Jepang dan rakyat Indonesia yang menunggu kedatangan kami sesampainya kami di bandara."
     "Rakyat Indonesia meminta Soekarno berkata sesuatu."
+    show soekarno talk at Position(xpos=280,ypos=120) behind hatta:
+        zoom 0.75
     S "Apabila dulu saya katakan bahwa Indonesia akan merdeka sebelum jagung berbuah, sekarang dapat dikatakan Indonesia akan merdeka sebelum jagung berBunga."
+    show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
+        zoom 0.75
     "Seperti biasa, suara Soekarno lantang dan menggelegar."
     "Respon rakyat juga tidak kalah menggelegar."
     "“Hidup Indonesia!”, “Merdeka!”, “Indonesia Merdeka!”, dan masih banyak lagi."
@@ -1444,6 +448,8 @@ label scene9:
     jump scene10
 
 label scene10:
+    show hatta silent at Position(xpos=370,ypos=120):
+        zoom 0.7
     "Sesampainya kami disana, kami mendapat sambutan dan juga selamat dari petinggi-petinggi disana sekaligus makan siang."
     "Mereka juga mengulang lagi bahwa apa yang disampaikan Terauchi merupakan keputusan Tokyo dan PPKI diperbolehkan bekerja sampai memerdekakan Indonesia."
     "Pidato itu dapat sambutan meriah dari sesama petinggi Dai Nippon."
@@ -2180,22 +1186,20 @@ label scene26:
     "Semuanya setuju dan penulisanpun dimulai."
     scene black
     with dissolve
-    "Pembuatan Naskah Teks Proklamasi"
-    show hatta silent at Position(xpos=370,ypos=120):
-        zoom 0.7
-    show soebardjo silent at Position(xpos=130,ypos=100) behind hatta:
-        zoom 0.75
-    show soekarno silent at Position(xpos=570,ypos=120) behind hatta:
-        zoom 0.75
-    "Kalimat pertama diambil dari alinea ketiga rencana Pembukaan UUD tentang proklamasi menjadi “Kami bangsa Indonesia dengan ini menyatakan kemerdekaan Indonesia”, dengan ini akan terlihat bahwa Indonesia merdeka atas kemauannya sendiri."
-    "Selanjutnya harus ada komplemen yang menyatakan bagaimana caranya menyelenggarakan revolusi nasional sehingga aku mengucapkan"
-    "“Hal-hal yang mengenai pemindahan kekuasaan dan lain-lain diselenggarakan dengan cara seksama dan dalam tempo yang sesingkat-singkatnya.”"
-    "Setelah sedikit berbincang tentang naskah tersebut, naskah tersebut diketik oleh Sayuti Melik sebelum dibawa rapat."
-    scene black
-    with dissolve
-    jump scene27
+    hide screen tanggal
+    hide screen buku
+    $ quick_menu = False
+    scene proklamasi 1
+    "Pembuatan Naskah Teks Proklamasi Dimulai."
+    "Mari bantu Soekarno, Hatta dan Soebardjo untuk menyusun teks proklamasi."
+    call screen tampilsoal1
 
 label scene27:
+    scene black
+    with dissolve
+    show screen tanggal
+    show screen buku
+    $ quick_menu = True
     show hatta silent at Position(xpos=475,ypos=120):
         zoom 0.7
     show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
@@ -2237,8 +1241,20 @@ label scene27:
     jump scene28
 
 label scene28:
+    show hatta silent at Position(xpos=475,ypos=120):
+        zoom 0.7
+    show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
+        zoom 0.75
     "Sebelum rapat ditutup, Soekarno mengingatkan bahwa proklamasi akan dibacakan di rumah Soekarno jalan Pegangsaan Timur no. 56 pukul 10:00."
     "Dengan itu rapat berakhir kira-kira pukul 03:00 pagi."
+    scene black
+    with dissolve
+    show hatta silent at Position(xpos=370,ypos=120):
+        zoom 0.7
+    show soekarno silent at Position(xpos=160,ypos=120) behind hatta:
+        zoom 0.75
+    show maeda silent at Position(xpos=520,ypos=60) behind hatta:
+        zoom 0.8
     "Maeda sempat keluar dari kamar tidurnya untuk memberikan kami selamat atas apa yang kami capai saat ini."
     "Sebelum pulang aku berkata pada pemuda-pemuda golongan pers yang ada disana untuk siap memperbanyak teks proklamasi untuk disebar keseluruh Indonesia dan kalau bisa seluruh dunia."
     "Sebelum pulang juga aku sempatkan untuk sahur dan tidak lupa berterima kasih pada Laksamada Maeda atas jasanya selama ini."
@@ -2247,6 +1263,8 @@ label scene28:
     jump scene29
 
 label scene29:
+    show hatta silent at Position(xpos=370,ypos=120):
+        zoom 0.7
     "Setelah sampai di rumah, aku sholat subuh terlebih dahulu baru tidur."
     "Aku bangun pukul 08:30 dan segera siap-siap ke rumah Soekarno."
     "Pada pukul 09:50 aku berangkat menuju rumah Soekarno."
@@ -2255,10 +1273,22 @@ label scene29:
     jump scene30
 
 label scene30:
+    show hatta silent at Position(xpos=475,ypos=120):
+        zoom 0.7
+    show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
+        zoom 0.75
     "Aku sampai di rumah Soekarno pukul 09:55, disana sudah banyak rakyat menunggu."
     "Aku menyempatkan diri menghampiri Soekarno."
+    show hatta talk at Position(xpos=475,ypos=120):
+        zoom 0.7
     H "Bagaimana Bung, sudah siap?"
+    show hatta silent at Position(xpos=475,ypos=120):
+        zoom 0.7
+    show soekarno talk at Position(xpos=280,ypos=120) behind hatta:
+        zoom 0.75
     S "Siap."
+    show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
+        zoom 0.75
     "Kami bersama ke depan rumah Soekarno."
     "Aku dan Soekarno menghadapi ribuan rakyat Indonesia."
     "Soekarno membuka dengan pidato pembukaan."
@@ -2270,6 +1300,8 @@ label scene30:
     jump epilog
 
 label epilog:
+    show hatta silent at Position(xpos=370,ypos=120):
+        zoom 0.7
     "Dengan ini Indonesia sudah merdeka, dan aku tahu ini bukanlah akhir dari perjuangan kami."
     "Masih banyak pekerjaan yang harus kami lakukan, kemerdekaan hanyalah sebuah awalan baru bagi kami."
     "Aku juga tidak akan selamanya mengurus negeri ini, ada saatnya pekerjaan itu dilanjutkan oleh penerus-penerusku."
