@@ -4,6 +4,9 @@
 
 init offset = -1
 
+#init python:
+#    config.keymap['skip'].remove('K_LCTRL')
+
 
 ################################################################################
 ## Styles
@@ -137,7 +140,6 @@ style window:
     ysize gui.textbox_height
 
     background Image("gui/textbox1.png", xalign=0.5, yalign=1.0)
-#    background Frame("gui/textbox1.png")
 
 style namebox:
     xpos gui.name_xpos
@@ -246,53 +248,32 @@ screen quick_menu():
 
         vbox:
             style_prefix "quick"
-            xpos 1175 ypos 680
+            xpos 1175 ypos 683
             xalign 0.5 yalign 0.95
             spacing 7
             button:
-                text "MENU" bold True size 15 xalign 0.5 yalign 0.5
-                xysize (140,30)
+                text "MUNDUR" bold True size 16 xalign 0.5 yalign 0.5
+                xysize (150,40)
                 style "button_tb"
-                action MainMenu()
+                action Rollback()
 
             button:
-                text "SIMPAN" bold True size 15 xalign 0.5 yalign 0.5
-                xysize (140,30)
+                text "SIMPAN" bold True size 16 xalign 0.5 yalign 0.5
+                xysize (150,40)
                 style "button_tb"
                 action ShowMenu("save")
 
             button:
-                text "MUAT" bold True size 15 xalign 0.5 yalign 0.5
-                xysize (140,30)
-                style "button_tb"
-                action ShowMenu("load")
-
-            button:
-                text "PENGATURAN" bold True size 15 xalign 0.5 yalign 0.5
-                xysize (140,30)
+                text "PENGATURAN" bold True size 16 xalign 0.5 yalign 0.5
+                xysize (150,40)
                 style "button_tb"
                 action ShowMenu("preferences")
 
             button:
-                text "KELUAR" bold True size 15 xalign 0.5 yalign 0.5
-                xysize (140,30)
+                text "MENU" bold True size 16 xalign 0.5 yalign 0.5
+                xysize (150,40)
                 style "button_tb"
-                action Quit()
-
-#        hbox:
-#            style_prefix "quick"
-#
-#            xalign 0.5
-#            yalign 1.0
-
-#            textbutton _("Back") action Rollback()
-#            textbutton _("History") action ShowMenu('history')
-#            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-#            textbutton _("Auto") action Preference("auto-forward", "toggle")
-#            textbutton _("Save") action ShowMenu('save')
-#            textbutton _("Q.Save") action QuickSave()
-#            textbutton _("Q.Load") action QuickLoad()
-#            textbutton _("Prefs") action ShowMenu('preferences')
+                action MainMenu()
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -324,9 +305,8 @@ screen navigation():
 
     vbox:
         style_prefix "navigation"
-        xpos 180 ypos 570
-        xalign 0.5 yalign 0.95
-        spacing 10
+        xpos 60 ypos 550
+        spacing 12
         if main_menu:
             button:
                 text "MULAI" xalign 0.5 yalign 0.5
@@ -340,6 +320,10 @@ screen navigation():
             style "button_tb"
             action ShowMenu("load")
 
+    vbox:
+        style_prefix "navigation"
+        xpos 250 ypos 550
+        spacing 12
         button:
             text "PENGATURAN" xalign 0.5 yalign 0.5
             xysize (175,55)
@@ -350,24 +334,15 @@ screen navigation():
             text "KREDIT" xalign 0.5 yalign 0.5
             xysize (175,55)
             style "button_tb"
-            action ShowMenu("about")
+            action [ShowMenu("about"), Play("music","audio/BGM/ins_tanah_airku.mp3")]
 
+    vbox:
+        style_prefix "navigation"
+        xpos 1180 ypos 50
         button:
-            text "KELUAR" xalign 0.5 yalign 0.5
-            xysize (175,55)
-            style "button_tb"
+            xysize (50,50)
+            style "button4_tb"
             action Quit()
-
-#        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## Help isn't necessary or relevant to mobile devices.
-#            textbutton _("Help") action ShowMenu("help")
-
-#        if renpy.variant("pc"):
-
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
-#            textbutton _("Quit") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -423,8 +398,6 @@ style main_menu_version is main_menu_text
 style main_menu_frame:
     xsize 280
     yfill True
-
-#    background "gui/overlay/main_menu1.png"
 
 style main_menu_vbox:
     xalign 1.0
@@ -588,27 +561,29 @@ screen about():
     frame:
         xalign 0.5 yalign 0.5
         xsize 1280 ysize 720
-        background im.Scale("images/kredit.png",1280,720)
+        add "background1"
+        add "background6" xpos -4 ypos -5
         vbox:
             xsize 360
             xpos 200
             ypos 380
             xalign 0.5 yalign 0.5
 
-            ## gui.about is usually set in options.rpy.
-#            if gui.about:
-#                text "[gui.about!t]\n"
-
-#            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]") color "#4E4E50"
         vbox:
-            xpos 180 ypos 670
+            xpos 80 ypos 112
+            spacing -25
+            text "Jejak Perjuangan" size 27 font "fonts/AbrilFatface-Regular.otf" color "#4E4E50"
+            text "Hatta" size 66 font "fonts/AbrilFatface-Regular.otf" color "#C69D7B"
+
+        vbox:
+            xpos 164 ypos 670
             xalign 0.5 yalign 0.95
             spacing 10
             button:
                 text "KEMBALI" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
-                action Return()
+                action [Return(), Play("music","audio/BGM/ins_kampuang_nan_jauh_di_mato.mp3")]
 
             button:
                 text "KELUAR" xalign 0.5 yalign 0.5
@@ -639,7 +614,10 @@ screen save():
     frame:
         xalign 0.5 yalign 0.5
         xsize 1280 ysize 720
-        background im.Scale("images/simpan.png",1280,720)
+        background im.Scale("images/Menu/main_menu1.png",1280,720)
+        vbox:
+            xpos 970 ypos 20
+            text "SIMPAN" size 68 font "fonts/AbrilFatface-Regular.otf" color "#FFF6E9"
 
     use file_slots(_("Save"))
 
@@ -650,7 +628,10 @@ screen load():
     frame:
         xalign 0.5 yalign 0.5
         xsize 1280 ysize 720
-        background im.Scale("images/muat.png",1280,720)
+        background im.Scale("images/Menu/main_menu1.png",1280,720)
+        vbox:
+            xpos 1030 ypos 20
+            text "MUAT" size 68 font "fonts/AbrilFatface-Regular.otf" color "#FFF6E9"
 
     use file_slots(_("Load"))
 
@@ -681,6 +662,7 @@ screen file_slots(title):
                 
                     text FileTime(slot, format=_("{#file_time}%A, %d %B %Y, %H:%M"), empty=_("Slot Kosong")):
                         style "slot_time_text"
+                        color "#FFFFFF"
                         ypos 15
 
                     text FileSaveName(slot):
@@ -690,12 +672,18 @@ screen file_slots(title):
                     
                     button:
                         xpos 85
-                        ypos -10
+                        ypos -5
                         text "Hapus" size 18 xalign 0.5 yalign 0.5
                         xysize (85,35)
                         style "button_tb"
                         action FileDelete(slot)
 
+        vbox:
+            xpos 80 ypos 112
+            spacing -25
+            text "Jejak Perjuangan" size 27 font "fonts/AbrilFatface-Regular.otf" color "#4E4E50"
+            text "Hatta" size 66 font "fonts/AbrilFatface-Regular.otf" color "#C69D7B"
+        
         ## Buttons to access other pages.
         hbox:
             xpos 840
@@ -707,14 +695,6 @@ screen file_slots(title):
 
             spacing gui.page_spacing
 
-#            textbutton _("<") action FilePagePrevious()
-
-#                if config.has_autosave:
-#                    textbutton _("{#auto_page}A") action FilePage("auto")
-
-#                if config.has_quicksave:
-#                    textbutton _("{#quick_page}Q") action FilePage("quick")
-
             ## range(1, 10) gives the numbers from 1 to 9.
             for page in range(1, 6):
                 button:
@@ -723,10 +703,8 @@ screen file_slots(title):
                     style "button_tb"
                     action FilePage(page)
 
-#            textbutton _(">") action FilePageNext()
-
         vbox:
-            xpos 180 ypos 670
+            xpos 164 ypos 670
             xalign 0.5 yalign 0.95
             spacing 10
             button:
@@ -788,9 +766,19 @@ screen preferences():
     frame:
         xalign 0.5 yalign 0.5
         xsize 1280 ysize 720
-        background im.Scale("images/pengaturan.png",1280,720)
+        background im.Scale("images/Menu/main_menu1.png",1280,720)
 
         null height (4 * gui.pref_spacing)
+
+        vbox:
+            xpos 80 ypos 112
+            spacing -25
+            text "Jejak Perjuangan" size 27 font "fonts/AbrilFatface-Regular.otf" color "#4E4E50"
+            text "Hatta" size 66 font "fonts/AbrilFatface-Regular.otf" color "#C69D7B"
+
+        vbox:
+            xpos 770 ypos 20
+            text "PENGATURAN" size 68 font "fonts/AbrilFatface-Regular.otf" color "#FFF6E9"
 
         vbox:
             xpos 450
@@ -839,7 +827,7 @@ screen preferences():
                         button:
                             xpos -7
                             ypos 10
-                            text "Mute Semua" xalign 0.5 yalign 0.5
+                            text "MUTE SEMUA" xalign 0.5 yalign 0.5
                             xysize (200,55)
                             style ("button1_tb")
                             action Preference("all mute", "toggle")
@@ -854,18 +842,18 @@ screen preferences():
                     ypos -160
                     spacing 10
                     button:
-                        text "Window" xalign 0.5 yalign 0.5
-                        xysize (180,55)
+                        text "WINDOW" xalign 0.5 yalign 0.5
+                        xysize (195,55)
                         style "button_tb"
                         action Preference("display", "window")
                     button:
-                        text "Fullscreen" xalign 0.5 yalign 0.5
-                        xysize (180,55)
+                        text "LAYAR PENUH" xalign 0.5 yalign 0.5
+                        xysize (195,55)
                         style "button_tb"
                         action Preference("display", "fullscreen")
 
         vbox:
-            xpos 180 ypos 670
+            xpos 164 ypos 670
             xalign 0.5 yalign 0.95
             spacing 10
             button:
@@ -1235,13 +1223,13 @@ screen confirm(message, yes_action, no_action):
             spacing 30
 
             if message == gui.QUIT:
-                $ message = "Apakah anda yakin untuk meninggalkan permainan?"
+                $ message1 = "Apakah anda yakin untuk meninggalkan permainan?"
             elif message == gui.MAIN_MENU:
-                $ message = "Apakah anda yakin untuk kembali ke main menu?\n Kemajuan saat ini akan hilang!"
+                $ message2 = "Apakah anda yakin untuk kembali ke main menu?\n Kemajuan saat ini akan hilang!" 
             elif message == gui.DELETE_SAVE:
-                $ message = "Apakah anda yakin untuk manghapus save ini?"
+                $ message3 = "Apakah anda yakin untuk manghapus save ini?" 
             elif message == gui.OVERWRITE_SAVE:
-                $ message = "Apakah anda yakin untuk menimpa save ini?"
+                $ message4 = "Apakah anda yakin untuk menimpa save ini?"
 
             label _(message):
                 style "confirm_prompt"
@@ -1277,6 +1265,8 @@ style confirm_frame:
     padding gui.confirm_frame_borders.padding
     xalign .5
     yalign .5
+    xysize (600,300)
+
 
 style confirm_prompt_text:
     text_align 0.5
@@ -1305,6 +1295,7 @@ screen skip_indicator():
 
         hbox:
             spacing 6
+            xalign 0.5
 
             text _("Skipping")
 
@@ -1360,10 +1351,10 @@ screen notify(message):
     frame at notify_appear:
         ypos 0
         xalign 0.5
-        text "[message!tq]" size 20 xalign 0.5 font "fonts/AbrilFatface-Regular.otf"
+        text "[message!tq]" size 18 xalign 0.5 font "fonts/AbrilFatface-Regular.otf"
 
     timer 0.5 action [SetVariable("blink", 1)]
-    timer 5.0 action [Hide('notify')]
+    timer 3.0 action [Hide('notify')]
 
 
 transform notify_appear:

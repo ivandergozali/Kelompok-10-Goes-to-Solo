@@ -111,7 +111,7 @@ image nomura talk:
 
 image nomura silent:
     "nomura 10"
-    pause 3.0
+    pause 5.0
     "nomura 9"
     pause 0.3
     repeat
@@ -171,7 +171,7 @@ image sjahrir talk:
 
 image sjahrir silent:
     "sjahrir 24"
-    pause 3.0
+    pause 5.0
     "sjahrir 23"
     pause 0.3
     repeat
@@ -233,7 +233,7 @@ image soekarno talk:
 
 image soekarno silent:
     "soekarno 26"
-    pause 3.0
+    pause 4.0
     "soekarno 11"
     pause 0.3
     repeat
@@ -277,7 +277,7 @@ image radjiman talk:
 
 image radjiman silent:
     "radjiman 15"
-    pause 3.0
+    pause 6.0
     "radjiman 14"
     pause 0.3
     repeat
@@ -337,7 +337,7 @@ image terauchi talk:
 
 image terauchi silent:
     "terauchi 12"
-    pause 3.0
+    pause 5.0
     "terauchi 8"
     pause 0.3
     repeat
@@ -395,7 +395,7 @@ image soebardjo talk:
 
 image soebardjo silent:
     "soebardjo 16"
-    pause 3.0
+    pause 5.0
     "soebardjo 17"
     pause 0.3
     repeat
@@ -437,7 +437,7 @@ image maeda talk:
 
 image maeda silent:
     "maeda 15"
-    pause 3.0
+    pause 6.0
     "maeda 14"
     pause 0.3
     repeat
@@ -481,7 +481,7 @@ image soebadio talk:
 
 image soebadio silent:
     "soebadio 7"
-    pause 3.0
+    pause 4.0
     "soebadio 9"
     pause 0.3
     repeat
@@ -537,7 +537,7 @@ image soekarni talk:
 
 image soekarni silent:
     "soekarni 23"
-    pause 3.0
+    pause 6.0
     "soekarni 24"
     pause 0.3
     repeat
@@ -591,7 +591,7 @@ image miyoshi talk:
 
 image miyoshi silent:
     "miyoshi 23"
-    pause 3.0
+    pause 5.0
     "miyoshi 9"
     pause 0.3
     repeat
@@ -639,51 +639,43 @@ image nishimura talk:
 
 image nishimura silent:
     "nishimura 23"
-    pause 3.0
+    pause 7.0
     "nishimura 22"
     pause 0.3
     repeat
 
 image wikana talk:
     "wikana 1"
-    pause 0.18
+    pause 0.38
     "wikana 2" 
-    pause 0.18
+    pause 0.38
     "wikana 3" 
-    pause 0.18
-    "wikana 5" 
-    pause 0.18
+    pause 0.38
     "wikana 1"
-    pause 0.18
+    pause 0.38
     "wikana 2" 
-    pause 0.18
+    pause 0.38
     "wikana 3" 
-    pause 0.18
-    "wikana 5" 
-    pause 0.18
+    pause 0.38
     "wikana 1"
-    pause 0.18
+    pause 0.38
     "wikana 2" 
-    pause 0.18
+    pause 0.38
     "wikana 3" 
-    pause 0.18
+    pause 0.38
     "wikana 4" 
-    pause 0.18
-    "wikana 5" 
-    pause 0.18
+    pause 0.38
     "wikana 1"
-    pause 0.18
+    pause 0.38
     "wikana 2" 
-    pause 0.18
+    pause 0.38
     "wikana 3" 
-    pause 0.18
-    "wikana 5" 
-    pause 0.18
+    pause 0.38
     repeat
 
 image wikana silent:
     "wikana 2"
-    pause 3.0
+    pause 6.0
     "wikana 4"
     pause 0.3
     repeat

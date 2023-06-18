@@ -49,7 +49,6 @@ define gui.hover_muted_color = '#eac199'
 
 ## The colors used for dialogue and menu choice text.
 define gui.text_color = '#2E2C2B'
-#define gui.text_color = '#404040'
 define gui.interface_text_color = '#404040'
 
 
@@ -65,7 +64,7 @@ define gui.text_font = "fonts/LumiosTypewriter-Old.ttf"
 define gui.name_text_font = "fonts/AbrilFatface-Regular.otf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "fonts/LumiosTypewriter-Old.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 22
@@ -89,7 +88,7 @@ define gui.title_text_size = 50
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-define gui.main_menu_background = im.Scale("images/main_menu.png",1280,720)
+define gui.main_menu_background = Movie(play="video/main_menu.ogv", size=(1280,720), loop=True)
 define gui.game_menu_background = "gui/game_menu.png"
 
 
@@ -132,11 +131,11 @@ define gui.namebox_tile = False
 ## The placement of dialogue relative to the textbox. These can be a whole
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
-define gui.dialogue_xpos = 190
+define gui.dialogue_xpos = 175
 define gui.dialogue_ypos = 40
 
 ## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = 860
+define gui.dialogue_width = 930
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -292,10 +291,10 @@ define gui.frame_borders = Borders(4, 4, 4, 4)
 define gui.confirm_frame_borders = Borders(40, 40, 40, 40)
 
 ## The frame that is used as part of the skip screen.
-define gui.skip_frame_borders = Borders(16, 5, 50, 5)
+define gui.skip_frame_borders = Borders(16, 5, 16, 5)
 
 ## The frame that is used as part of the notify screen.
-define gui.notify_frame_borders = Borders(16, 5, 40, 5)
+define gui.notify_frame_borders = Borders(0, 10, 0, 0)
 
 ## Should frame backgrounds be tiled?
 define gui.frame_tile = False

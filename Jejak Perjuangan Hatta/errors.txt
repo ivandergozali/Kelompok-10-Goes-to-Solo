@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 2399: expected statement.
-    sceneblack
-              ^
+File "game/script.rpy", line 46: invalid syntax
+    im Scale("images/Screen/ended.png", 1280, 720)
+        ^
 
 Ren'Py Version: Ren'Py 8.1.0.23051307
-Sun Jun 11 15:53:18 2023
+Sat Jun 17 18:19:49 2023

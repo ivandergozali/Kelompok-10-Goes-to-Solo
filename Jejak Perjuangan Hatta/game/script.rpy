@@ -29,14 +29,32 @@ style button1_tb:
     selected_idle_background Frame("images/Icon/button_selected.png")
     selected_hover_background Frame("images/Icon/button_hover.png")
 
-init:
+style button2_tb:
+    background Frame("images/Icon/back_idle.png")
+    hover_background Frame("images/Icon/back_hover.png")
+
+style button3_tb:
+    background Frame("images/Icon/next_idle.png")
+    hover_background Frame("images/Icon/next_hover.png")
+
+style button4_tb:
+    background Frame("images/Icon/close_idle.png")
+    hover_background Frame("images/Icon/close_hover.png")
+
+image background1 = Movie(size=(1280,720), channel="movie", play="video/kredit.ogv", loop=True)
+image background4 = Movie(size=(1280,720), channel="movie", play="video/epilog.ogv", loop=True)
+image background5 = im.Scale("images/Screen/ended.png",1280,720)
+image background6 = im.Scale("images/Menu/main_menu2.png",1280,720)
+
+
+#init:
     #untuk disable rollback
-    $config.rollback_enabled = False
+#    $config.rollback_enabled = False
 
 label start:
     with dissolve
-    play music ins_tanah_airku
-    scene kelas
+    play music defaultmusikbgm fadein 3.0
+    scene asrama indonesia merdeka
     show screen tanggal
     show screen buku
     show hatta talk at Position(xpos=370,ypos=120):
@@ -54,9 +72,11 @@ label start:
     H "Budaya Minangkabau mengajarkan saya bahwa harta bukanlah sumber kekayaan bagi sepeser orang saja tetapi sebagai sumber kemakmuran masyarakatnya, sehingga budaya Minangkabau menentang adanya praktek memperkaya diri sendiri."
     H "Sosialisme di Eropa berkembang dengan terjadinya Revolusi Industri disana, tokoh-tokoh seperti Marx dan Engels-lah yang mematangkan teori sosialisme ini."
     $renpy.notify("Karakter Marx dan Engels telah ditambahkan ke direktori.")
+    $ unlock += 1
     H "Sosialisme bisa diraih dengan dua cara, cara kekerasan disebut sosialisme revolusioner dan cara demokrasi dengan partai perwakilan buruh disebut sosialisme demokratis."
     H "Paham sosialisme ini tidak berasal dari Marx saja, bahkan Islam juga mengajarkan sosialisme. Ayat-ayat seperti QS. Al-Maun Ayat 1-7, Al-Humazah Ayat 1-3 mengajari kita tentang tercelanya orang-orang yang memperkaya diri sendiri."
-    $renpy.notify("Bacaan QS. Al-Maun Ayat 1-7, Al-Humazah Ayat 1-3 telah ditambahkan ke direktori.")
+    $renpy.notify("Bacaan QS. Al-Maun Ayat 1-7 dan QS. Al-Humazah Ayat 1-3 telah ditambahkan ke direktori.")
+    $ unlock += 1
     H "Sehingga ekonomi yang saya dambakan dalam Indonesia nanti adalah perekonomian yang bersifat kebersamaan, kerakyatan, dan kooperasi agar rakyat bisa hidup makmur."
     "Tak lama kemudian, waktu mengajarku sudah habis, saatnya aku pulang."
     H "Baik murid-murid sekalian, mungkin sekian dari saya untuk hari ini, Assalamualaikum."
@@ -65,7 +85,8 @@ label start:
     jump scene2
 
 label scene2:
-    play music jap_sakura_sakura
+    play music musik2
+    scene depan asrama indonesia merdeka
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
     "Saat aku keluar asrama, ternyata sudah ada Letnan Kolonel Nomura yang menungguku, Nomura pasti ada keperluan denganku, maka dari itu aku menghampirinya."
@@ -113,7 +134,8 @@ label scene2:
     jump scene3
 
 label scene3:
-    scene perpustakaan
+    play music defaultmusikbgm fadein 3.0
+    scene rumah hatta
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
     "Sesampainya di rumah, aku langsung mempersiapkan diriku untuk berangkat nanti malam."
@@ -122,7 +144,10 @@ label scene3:
     "Setelah berbuka puasa sholat Maghrib, Sjahrir ingin berbicara denganku."
     scene black
     with dissolve
-    scene perpustakaan
+    jump scene3a
+    
+label scene3a:
+    scene rumah hatta
     show sjahrir talk at Position(xpos=280,ypos=95):
         zoom 0.65
     show hatta silent at Position(xpos=475,ypos=120) behind sjahrir:
@@ -143,6 +168,8 @@ label scene3:
     show sjahrir silent at Position(xpos=280,ypos=95):
         zoom 0.65
     H "Aku paham dengan kegelisahanmu, tapi bersabarlah sedikit, kita tidak bisa melakukan hal gegabah tanpa persetujuan PPKI."
+    $renpy.notify("Organisasi PPKI telah ditambahkan ke direktori.")
+    $ unlock += 1
     show sjahrir talk at Position(xpos=280,ypos=95):
         zoom 0.65
     show hatta silent at Position(xpos=475,ypos=120) behind sjahrir:
@@ -153,7 +180,8 @@ label scene3:
     show sjahrir silent at Position(xpos=280,ypos=95):
         zoom 0.65
     H "Bung, jangan lupakan BPUPKI organisasi buatan Dai Nippon itu, BPUPKI membantu kita dalam mempersiapkan pondasi negara kita jika Indonesia merdeka nanti."
-    $renpy.notify("Organisasi BPUPKI telah ditambahkan ke direktori.")
+    $renpy.notify("Organisasi BPUPKI dan peristiwa Sidang Pertama BPUPKI telah ditambahkan ke direktori.")
+    $ unlock += 1
     H "Percayalah bahwa aku bawa berita tanggal kemerdekaan saat pulang dari Dalat nanti, Bung lanjutkan saja perkerjaan Bung selama ini dan pantau terus radio sekutu."
     show sjahrir talk at Position(xpos=280,ypos=95):
         zoom 0.65
@@ -171,6 +199,7 @@ label scene3:
     jump scene4
 
 label scene4:
+    scene bandara kemayoran
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
     "Kami akhirnya sampai di Bandara Kemayoran."
@@ -229,12 +258,17 @@ label scene4:
     hide radjiman
     hide soekarno
     hide nomura
+    hide screen tanggal
+    with dissolve
     scene black
     "Pesawat tak lama kemudian lepas landas."
     with dissolve
+    scene black
     jump scene5
 
 label scene5:
+    play music airplane_takeoff
+    scene black
     "Perjalanan kami ke Dalat tidaklah lancar."
     "Perjalanan kami dipenuhi dengan kegelisahan, kecemasan, dan penundaan."
     "Selama perjalanan kami, kami menginap semalam di Singapura dan semalam di Saigon."
@@ -245,6 +279,10 @@ label scene5:
     jump scene6
 
 label scene6:
+    $ waktu += 1
+    play music musik2
+    scene kantor terauchi
+    show screen tanggal
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
     "Pada tepat pukul 10:00 kami bertemu dengan Marsekal Terauchi."
@@ -302,6 +340,7 @@ label scene6:
     jump scene7
 
 label scene7:
+    scene peristirahatan saigon
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
     "Pada pukul 16:30, Nomura datang menghampiri tempat kami."
@@ -338,7 +377,8 @@ label scene7:
     show nomura talk at Position(xpos=475,ypos=120) behind hatta:
         zoom 0.7
     N "Tuan Hatta, tentara Rusia sudah menyerang Mancuko, akan tetapi Tuan tenang saja, tentara Dai Nippon cukup kuat untuk menahannya."
-    $renpy.notify("Negara Rusia dan Mancuko telah ditambahkan ke direktori.")
+    $renpy.notify("Peristiwa Invasi Rusia di Asia, negara Rusia, dan Mancuko telah ditambahkan ke direktori.")
+    $ unlock += 1
     show nomura silent at Position(xpos=475,ypos=120) behind hatta:
         zoom 0.7
     "Aku tahu itu adalah sebuah kebohongan."
@@ -356,6 +396,10 @@ label scene7:
     "Lagi-lagi Nomura berbohong."
     scene black
     with dissolve
+    jump scene7a
+
+label scene7a:
+    scene peristirahatan saigon
     show soekarno talk at Position(xpos=160,ypos=120) behind hatta:
         zoom 0.75
     show nomura silent at Position(xpos=570,ypos=120) behind hatta:
@@ -379,6 +423,11 @@ label scene7:
     "Setelah itu Nomura pergi karena ingin bertemu beberapa petinggi Dai Nippon di Saigon."
     scene black
     with dissolve
+    jump scene7b
+
+label scene7b:
+    play music defaultmusikbgm fadein 3.0
+    scene peristirahatan saigon
     show hatta talk at Position(xpos=475,ypos=120):
         zoom 0.7
     show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
@@ -394,7 +443,8 @@ label scene7:
     show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
         zoom 0.75
     H "Dengan gempuran MacArthur dan Nimitz dari selatan dan Rusia dari utara, aku yakin Bung Dai Nippon akan tunduk kurang dari dua minggu."
-    $renpy.notify("Karakter MacArthur dan Nimitz telah ditambahkan ke direktori.")
+    $renpy.notify("Karakter Douglas MacArthur dan Chester W. Nimitz telah ditambahkan ke direktori.")
+    $ unlock += 1
     show soekarno talk at Position(xpos=280,ypos=120) behind hatta:
         zoom 0.75
     show hatta silent at Position(xpos=475,ypos=120):
@@ -414,11 +464,14 @@ label scene7:
     "Kami mengulangi pembicaraan kita saat dr. Radjiman masuk ke ruangan kami."
     "Beliau juga setuju bahwa dua minggu adalah waktu maksimal Dai Nippon dapat bertahan."
     "Malam ini kami bermalam di Saigon, besok kami kembali ke Singapura."
+    hide screen tanggal
     scene black
     with dissolve
     jump scene8
 
 label scene8:
+    play music airplane_takeoff
+    scene black
     "Paginya pukul 08:00, kami berangkat menuju Singapura"
     "Disana kami menginap lagi semalam."
     "Kami akhirnya berangkat kembali ke Jakarta dari Singapura pukul 09:00 lewat."
@@ -428,18 +481,25 @@ label scene8:
     jump scene9
 
 label scene9:
-    show hatta silent at Position(xpos=475,ypos=120):
+    play music defaultmusikbgm fadein 3.0
+    $ waktu += 1
+    scene bandara kemayoran
+    show screen tanggal
+    show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
-    show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
+    show soekarno silent at Position(xpos=160,ypos=120) behind hatta:
+        zoom 0.75
+    show radjiman silent at Position(xpos=530,ypos=115) behind hatta:
         zoom 0.75
     "Sudah banyak petinggi Jepang dan rakyat Indonesia yang menunggu kedatangan kami sesampainya kami di bandara."
     "Rakyat Indonesia meminta Soekarno berkata sesuatu."
-    show soekarno talk at Position(xpos=280,ypos=120) behind hatta:
+    show soekarno talk at Position(xpos=160,ypos=120) behind hatta:
         zoom 0.75
     S "Apabila dulu saya katakan bahwa Indonesia akan merdeka sebelum jagung berbuah, sekarang dapat dikatakan Indonesia akan merdeka sebelum jagung berBunga."
-    show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
+    show soekarno silent at Position(xpos=160,ypos=120) behind hatta:
         zoom 0.75
     "Seperti biasa, suara Soekarno lantang dan menggelegar."
+    play music crowd_cheer
     "Respon rakyat juga tidak kalah menggelegar."
     "“Hidup Indonesia!”, “Merdeka!”, “Indonesia Merdeka!”, dan masih banyak lagi."
     "Sebenarnya kami ingin pulang, tetapi petinggi Dai Nippon menyuruh kami ke Istana Gunseireikan terlebih dahulu."
@@ -448,8 +508,14 @@ label scene9:
     jump scene10
 
 label scene10:
+    play music defaultmusikbgm fadein 3.0
+    scene istana gunseireikan
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
+    show soekarno silent at Position(xpos=160,ypos=120) behind hatta:
+        zoom 0.75
+    show radjiman silent at Position(xpos=530,ypos=115) behind hatta:
+        zoom 0.75
     "Sesampainya kami disana, kami mendapat sambutan dan juga selamat dari petinggi-petinggi disana sekaligus makan siang."
     "Mereka juga mengulang lagi bahwa apa yang disampaikan Terauchi merupakan keputusan Tokyo dan PPKI diperbolehkan bekerja sampai memerdekakan Indonesia."
     "Pidato itu dapat sambutan meriah dari sesama petinggi Dai Nippon."
@@ -459,6 +525,7 @@ label scene10:
     jump scene11
 
 label scene11:
+    scene rumah hatta
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
     "Aku sampai rumah pukul 14:00, disana sudah ada Sjahrir menungguku."
@@ -504,7 +571,9 @@ label scene11:
         zoom 0.7
     show sjahrir silent at Position(xpos=280,ypos=95):
         zoom 0.65
+    play sound calling_1
     H "Baiklah, aku telepon Bung Karno dulu."
+    play sound pickupcall
     H "Assalamualaikum Bung."
     show hatta silent at Position(xpos=475,ypos=120) behind sjahrir:
         zoom 0.7
@@ -529,9 +598,10 @@ label scene11:
     jump scene12
 
 label scene12:
+    scene depan rumah soekarno 1
     show hatta talk at Position(xpos=370,ypos=120):
         zoom 0.7
-    show sjahrir silent at Position(xpos=160,ypos=95) behind hatta:
+    show sjahrir silent at Position(xpos=170,ypos=95) behind hatta:
         zoom 0.65
     show soekarno silent at Position(xpos=570,ypos=120) behind hatta:
         zoom 0.75
@@ -557,9 +627,12 @@ label scene12:
     "Karena tidak ada yang dibicarakan lagi, aku dan Sjahrir pulang ke rumah."
     scene black
     with dissolve
-    jump scene14
+    jump scene13
 
-label scene14:
+label scene13:
+    play music musik2
+    $ waktu += 1
+    scene istana gunseireikan
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
     show soekarno silent at Position(xpos=570,ypos=120) behind hatta:
@@ -590,9 +663,10 @@ label scene14:
     S "Aku setuju, mari kita kesana sekarang juga."
     scene black
     with dissolve
-    jump scene15
+    jump scene14
 
-label scene15:
+label scene14:
+    scene rumah maeda 1
     show hatta silent at Position(xpos=260,ypos=120):
         zoom 0.7
     show soekarno silent at Position(xpos=40,ypos=120) behind hatta:
@@ -621,9 +695,11 @@ label scene15:
     "Setelah mendapatkan informasi itu, kami berterima kasih kepada Laksamada Maeda."
     scene black
     with dissolve
-    jump scene16
+    jump scene15
 
-label scene16:
+label scene15:
+    play music defaultmusikbgm fadein 3.0
+    scene depan rumah maeda
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
     show soekarno silent at Position(xpos=570,ypos=120) behind hatta:
@@ -654,9 +730,11 @@ label scene16:
     "Setelah itu kami berpisah dan pulang ke rumah masing-masing."
     scene black
     with dissolve
-    jump scene17
+    jump scene16
 
-label scene17:
+label scene16:
+    play music its_coming
+    scene rumah hatta
     show soebadio silent at Position(xpos=250,ypos=115):
         zoom 0.75
     show hatta silent at Position(xpos=475,ypos=120) behind soebadio:
@@ -701,7 +779,8 @@ label scene17:
         zoom 0.7
     H "Aku juga sebenarnya ingin mengadakan revolusi, tapi agar suatu revolusi berhasil, kita perlu organisasi yang matang terlebih dahulu."
     H "Tindakan yang akan engkau lakukan itu bukanlah sebuah revolusi, tetapi putsch, seperti yang Hitler lakukan di Munchen 1923 tetapi gagal."
-    $renpy.notify("Karakter Hitler telah ditambahkan ke direktori.")
+    $renpy.notify("Peristiwa Beer Hall Putsch telah ditambahkan ke direktori.")
+    $ unlock += 1
     show hatta silent at Position(xpos=475,ypos=120) behind soebadio:
         zoom 0.7
     show soebadio talk at Position(xpos=250,ypos=115):
@@ -712,14 +791,19 @@ label scene17:
     "Mereka keluar setelah kubuat emosi mereka semakin naik."
     scene black
     with dissolve
-    jump scene18
+    jump scene17
 
-label scene18:
+label scene17:
+    scene rumah hatta
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
     "Pada malam hari kira-kira pukul 09:30, aku yang sedang mengetik naskah awal proklamasi untuk anggota PPKI tiba-tiba kedatangan Achmad Soebardjo."
     scene black
     with dissolve
+    jump scene17a
+
+label scene17a:
+    scene rumah hatta
     show soebardjo talk at Position(xpos=240,ypos=100):
         zoom 0.75
     show hatta silent at Position(xpos=475,ypos=120) behind soebardjo:
@@ -742,9 +826,10 @@ label scene18:
     H "Baik Bung mari kita kesana."
     scene black
     with dissolve
-    jump scene19
+    jump scene18
 
-label scene19:
+label scene18:
+    scene depan rumah soekarno 1
     show hatta silent at Position(xpos=260,ypos=120):
         zoom 0.7
     show soekarno silent at Position(xpos=40,ypos=120) behind hatta:
@@ -777,56 +862,72 @@ label scene19:
     show wikana silent at Position(xpos=780,ypos=150) behind soebardjo:
         zoom 0.57
     "Karena kondisi yang tegang dan tidak berujung ini, kami setuju untuk mengadakan istirahat terlebih dahulu."
+    scene black
+    with dissolve
+    jump scene18a
+
+label scene18a:
+    play music defaultmusikbgm
+    scene rumah soekarno
+    show hatta silent at Position(xpos=370,ypos=120):
+        zoom 0.7
+    show soekarno silent at Position(xpos=160,ypos=120) behind hatta:
+        zoom 0.75
+    show soebardjo silent at Position(xpos=560,ypos=100) behind hatta:
+        zoom 0.75
     "Dalam istirahat itu kami berdiskusi tanpa para pemuda."
-    show hatta talk at Position(xpos=260,ypos=120):
+    show hatta talk at Position(xpos=370,ypos=120):
         zoom 0.7
     H "Bagaimana menurutmu Bung tentang para pemuda diluar sana?"
-    show hatta silent at Position(xpos=260,ypos=120):
+    show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
-    show soekarno talk at Position(xpos=40,ypos=120) behind hatta:
+    show soekarno talk at Position(xpos=160,ypos=120) behind hatta:
         zoom 0.75
     S "Entahlah Bung, mereka mempunyai semangat, aku akui itu."
-    show soekarno silent at Position(xpos=40,ypos=120) behind hatta:
+    show soekarno silent at Position(xpos=160,ypos=120) behind hatta:
         zoom 0.75
-    show hatta talk at Position(xpos=260,ypos=120):
+    show hatta talk at Position(xpos=370,ypos=120):
         zoom 0.7
     H "Tapi semangat tanpa strategi dan perencanaan hanya akan berakhir tragis."
-    show hatta silent at Position(xpos=260,ypos=120):
+    show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
-    show soekarno talk at Position(xpos=40,ypos=120) behind hatta:
+    show soekarno talk at Position(xpos=160,ypos=120) behind hatta:
         zoom 0.75
     S "Benar Bung, tapi mereka sama sekali tidak mau mendengarkan kita."
-    show soekarno silent at Position(xpos=40,ypos=120) behind hatta:
+    show soekarno silent at Position(xpos=160,ypos=120) behind hatta:
         zoom 0.75
-    show soebardjo talk at Position(xpos=460,ypos=100) behind hatta:
+    show soebardjo talk at Position(xpos=560,ypos=100) behind hatta:
         zoom 0.75
     AS "Bagaimana kalau kita buat kesepakatan begini, jika mereka ingin proklamasi dilaksanakan malam ini juga, silahkan para pemuda itu cari tokoh yang bersedia."
-    show soebardjo silent at Position(xpos=460,ypos=100) behind hatta:
+    show soebardjo silent at Position(xpos=560,ypos=100) behind hatta:
         zoom 0.75
-    show soekarno talk at Position(xpos=40,ypos=120) behind hatta:
+    show soekarno talk at Position(xpos=160,ypos=120) behind hatta:
         zoom 0.75
     S "Idemu bagus Bung, bagaimana? Ada ide lain?"
-    show soekarno silent at Position(xpos=40,ypos=120) behind hatta:
+    show soekarno silent at Position(xpos=160,ypos=120) behind hatta:
         zoom 0.75
-    show hatta talk at Position(xpos=260,ypos=120):
+    show hatta talk at Position(xpos=370,ypos=120):
         zoom 0.7
     H "Menurutku itu sudah bagus, silahkan mereka cari pemimpin revolusi dengan cara mereka sendiri."
-    show hatta silent at Position(xpos=260,ypos=120):
+    show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
     "Kami kembali menghadap para pemuda."
-    show soekarno talk at Position(xpos=40,ypos=120) behind hatta:
+    show soekarno talk at Position(xpos=160,ypos=120) behind hatta:
         zoom 0.75
     S "Ini keputusan final kami, jika kalian tetap memaksa kemerdekaan dilaksanakan malam ini juga, silahkan cari pemimpin revolusi baru kalian."
-    show soekarno silent at Position(xpos=40,ypos=120) behind hatta:
+    show soekarno silent at Position(xpos=160,ypos=120) behind hatta:
         zoom 0.75
     "Para pemuda tampak tidak setuju, tetapi mereka juga tidak ada usulan."
     "Karena pertemuan ini hanya buang-buang waktu saja, pertemuan akhirnya dibubarkan."
     "Aku sendiri jadi gagal menyelesaikan naskah proklamasi yang sedang ku ketik tadi, biarlah, aku selesaikan besok pagi sebelum rapat PPKI."
     scene black
     with dissolve
-    jump scene20
+    jump scene19
 
-label scene20:
+label scene19:
+    play music its_coming
+    $ waktu += 1
+    scene rumah hatta
     show soekarni silent at Position(xpos=230,ypos=100):
         zoom 0.75
     show hatta silent at Position(xpos=485,ypos=120) behind soekarni:
@@ -857,18 +958,24 @@ label scene20:
     "Firasatku sangatlah buruk, aku membayangkan kehancurannya cita-cita kemerdekaan yang kami perjuangkan sejauh ini."
     "Bagaimana dengan PPKI yang akan rapat pukul 10:00 nanti? Jelas mereka tidak akan rapat tanpa pimpinan."
     "Aku akhirnya dibawa oleh Soekarni dalam mobil dan kami akhirnya berangkat."
+    hide screen tanggal
+    scene black
+    with dissolve
+    jump scene20
+
+label scene20:
+    play music mobil
+    scene black
+    "Kami singgah dulu ke rumah Soekarno dan tak lama kemudian Soekarno, Fatmawati, dan Guntur ikut bersama kami ke Rengasdengklok."
+    "Kami sempat dihentikan di Karawang untuk berpindah mobil, ternyata ini adalah siasat dari Soekarni dan temannya agar supir ini tidak tahu kami dibawa kemana."
     scene black
     with dissolve
     jump scene21
 
 label scene21:
-    "Kami singgah dulu ke rumah Soekarno dan tak lama kemudian Soekarno, Fatmawati, dan Guntur ikut bersama kami ke Rengasdengklok."
-    "Kami sempat dihentikan di Karawang untuk berpindah mobil, ternyata ini adalah siasat dari Soekarni dan temannya agar supir ini tidak tahu kami dibawa kemana."
-    scene black
-    with dissolve
-    jump scene22
-
-label scene22:
+    play music defaultmusikbgm
+    scene rumah rengasdengklok
+    show screen tanggal
     show soekarni silent at Position(xpos=230,ypos=100):
         zoom 0.75
     show hatta silent at Position(xpos=485,ypos=120) behind soekarni:
@@ -917,6 +1024,10 @@ label scene22:
     "Tak lama kemudian ia pergi."
     scene black
     with dissolve
+    jump scene21a
+
+label scene21a:
+    scene rumah rengasdengklok
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
     show soekarni silent at Position(xpos=550,ypos=100) behind hatta:
@@ -959,9 +1070,10 @@ label scene22:
     "Walaupun aku bilang begitu hanya untuk menertawai kondisi sekarang, ucapanku banyak diprotes sehingga malam itu juga kita pulang kembali ke Jakarta."
     scene black
     with dissolve
-    jump scene23
+    jump scene22
 
-label scene23:
+label scene22:
+    scene rumah hatta
     show hatta silent at Position(xpos=260,ypos=120):
         zoom 0.7
     show soekarno silent at Position(xpos=50,ypos=120) behind hatta:
@@ -987,6 +1099,8 @@ label scene23:
     show soekarni talk at Position(xpos=670,ypos=100) behind soebardjo:
         zoom 0.75
     Si "Kalau begitu aku minta Bung pinjami satu setel pakaian karena dengan baju Peta yang aku kenakan sekarang aku dapat ditangkap oleh Kempeitai."
+    $renpy.notify("Organisasi Kempeitai telah ditambahkan ke direktori.")
+    $ unlock += 1
     show soekarni silent at Position(xpos=670,ypos=100) behind soebardjo:
         zoom 0.75
     "Kami semua tertawa mendengar permintaan Soekarni itu."
@@ -1000,9 +1114,14 @@ label scene23:
     Si "Itu lain halnya Bung, menggempur Nippon dalam suatu revolusi aku berani. Tetapi akan ditangkap Nippon begitu saja karena pakaian Peta apa gunanya."
     show soekarni silent at Position(xpos=670,ypos=100) behind soebardjo:
         zoom 0.75
-    "Sambil tertawa, aku memimjamkannya salah satu setelan pakaianku."
+    "Sambil tertawa, aku meminjamkannya salah satu setelan pakaianku."
     scene black
     with dissolve
+    jump scene22a
+
+label scene22a:
+    play music musik2
+    scene rumah hatta
     show hatta silent at Position(xpos=260,ypos=120):
         zoom 0.7
     show soekarno silent at Position(xpos=50,ypos=120) behind hatta:
@@ -1011,7 +1130,9 @@ label scene23:
         zoom 0.75
     show soekarni silent at Position(xpos=670,ypos=100) behind soebardjo:
         zoom 0.75
+    play sound calling_2
     "Saat mereka ingin pulang, telepon rumahku berdering."
+    play sound pickupcall
     "Aku segera mengangkat telepon tersebut."
     Mi "Selamat malam Tuan Hatta, ini Miyoshi."
     show hatta talk at Position(xpos=260,ypos=120):
@@ -1032,9 +1153,10 @@ label scene23:
     "Aku memberi tahu hal ini kepada Soekarno sebelum dia pulang, dan dia akan ke rumahku sebelum pukul 22:00 kemudian kami berangkat bersama."
     scene black
     with dissolve
-    jump scene24
+    jump scene23
 
-label scene24:
+label scene23:
+    scene rumah maeda 1
     show hatta silent at Position(xpos=260,ypos=120):
         zoom 0.7
     show soekarno silent at Position(xpos=50,ypos=120) behind hatta:
@@ -1064,9 +1186,11 @@ label scene24:
     "Setelah setengah jam, kami ke rumah Nishimura dengan Miyoshi sebagai juru bahasa dan Maeda."
     scene black
     with dissolve
-    jump scene25
+    jump scene24
 
-label scene25:
+label scene24:
+    play music its_coming
+    scene rumah nishimura
     show hatta silent at Position(xpos=190,ypos=120) behind nishimura:
         zoom 0.7
     show soekarno silent at Position(xpos=-10,ypos=120) behind hatta:
@@ -1159,9 +1283,12 @@ label scene25:
     "Maeda sendiri sudah meninggalkan rapat dari tadi tanpa sepengetahuan kami semua."
     scene black
     with dissolve
-    jump scene26
+    jump scene25
 
-label scene26:
+label scene25:
+    play music suara_gemuruh
+    $ waktu += 1
+    scene rumah maeda 2
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
     show soebardjo silent at Position(xpos=130,ypos=100) behind hatta:
@@ -1171,6 +1298,19 @@ label scene26:
     "Sesampainya di rumah Laksamada Maeda, sudah banyak orang menunggu, kira-kira antara 40-50, semuanya tokoh-tokoh pergerakan dan juga anggota PPKI."
     "Belum lagi diluar banyak pemuda yang ikut menyaksikan."
     "Karena terlalu ramai, kami melanjutkan diskusi di ruang tamu kecil bersama Soekarno dan Achmad Soebardjo."
+    scene black
+    with dissolve
+    jump scene25a
+
+label scene25a:
+    play music defaultmusikbgm
+    scene rumah maeda 3
+    show hatta silent at Position(xpos=370,ypos=120):
+        zoom 0.7
+    show soebardjo silent at Position(xpos=130,ypos=100) behind hatta:
+        zoom 0.75
+    show soekarno silent at Position(xpos=570,ypos=120) behind hatta:
+        zoom 0.75
     "Di ruangan ini kami mendiskusikan naskah teks Proklamasi."
     show soekarno talk at Position(xpos=570,ypos=120) behind hatta:
         zoom 0.75
@@ -1191,15 +1331,14 @@ label scene26:
     $ quick_menu = False
     scene proklamasi 1
     "Pembuatan Naskah Teks Proklamasi Dimulai."
-    "Mari bantu Soekarno, Hatta dan Soebardjo untuk menyusun teks proklamasi."
-    call screen tampilsoal1
-
-label scene27:
+    "Mari bantu untuk menyusun teks proklamasi!"
     scene black
     with dissolve
-    show screen tanggal
-    show screen buku
-    $ quick_menu = True
+    call screen tampilsoal1
+
+label scene26:
+    play music suara_gemuruh
+    scene rumah maeda 2
     show hatta silent at Position(xpos=475,ypos=120):
         zoom 0.7
     show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
@@ -1212,35 +1351,17 @@ label scene27:
     "Suara gemuruh dan tak teratur menjawab “Setuju”."
     S "Benar-benar saudara semuanya setuju?"
     "Baru kali ini serentak mengucapkan “Setuju”."
-    show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
-        zoom 0.75
-    show hatta talk at Position(xpos=475,ypos=120):
-        zoom 0.7
-    H "Kalau saudara semuanya setuju, baiklah kita semuanya yang hadir disini menandatangani naskah Proklamasi Indonesia Merdeka ini sebagai suatu dokumen yang bersejarah."
-    H "Ini penting bagi anak cucu kita, mereka harus tahu siapa yang ikut memproklamasikan Indonesia merdeka."
-    H "Ambillah contoh kepada naskah proklamasi kemerdekaan Amerika Serikat dahulu, semuanya memutuskan untuk menandatangani keputusan mereka bersama."
-    show hatta silent at Position(xpos=475,ypos=120):
-        zoom 0.7
-    "Setelah aku berkata, rapat menjadi diam dan tidak ada yang berkomentar apapun tentang usulanku itu."
-    "Kemudian Soekarni maju dan mengutarakan pendapatnya."
-    scene black
+    hide screen tanggal
+    hide screen buku
+    $ quick_menu = False
+    play music defaultmusikbgm
+    scene black    
     with dissolve
-    show hatta silent at Position(xpos=370,ypos=120):
-        zoom 0.7
-    show soekarni talk at Position(xpos=130,ypos=100) behind hatta:
-        zoom 0.75
-    show soekarno silent at Position(xpos=570,ypos=120) behind hatta:
-        zoom 0.75
-    Si "Bukan kita semua yang hadir disini harus menandatangani naskah itu, cukuplah Bung Karno dan Bung Hatta saja yang menandatanganinya atas nama rakyat Indonesia."
-    show soekarni silent at Position(xpos=130,ypos=100) behind hatta:
-        zoom 0.75
-    "Ucapan itu didukung oleh peserta rapat dengan tepuk tangan yang riuh menunjukkan mereka semua setuju."
-    "Aku merasa sedikit kecewa dengan keputusan tersebut, tetapi aku juga tidak bisa berbuat apa apa."
-    scene black
-    with dissolve
-    jump scene28
+    call screen tampilsoal4
 
-label scene28:
+label scene27:
+    stop music
+    scene rumah maeda 2
     show hatta silent at Position(xpos=475,ypos=120):
         zoom 0.7
     show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
@@ -1249,6 +1370,10 @@ label scene28:
     "Dengan itu rapat berakhir kira-kira pukul 03:00 pagi."
     scene black
     with dissolve
+    jump scene27a
+
+label scene27a:
+    scene rumah maeda 2
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
     show soekarno silent at Position(xpos=160,ypos=120) behind hatta:
@@ -1260,9 +1385,10 @@ label scene28:
     "Sebelum pulang juga aku sempatkan untuk sahur dan tidak lupa berterima kasih pada Laksamada Maeda atas jasanya selama ini."
     scene black
     with dissolve
-    jump scene29
+    jump scene28
 
-label scene29:
+label scene28:
+    scene rumah hatta
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
     "Setelah sampai di rumah, aku sholat subuh terlebih dahulu baru tidur."
@@ -1270,9 +1396,10 @@ label scene29:
     "Pada pukul 09:50 aku berangkat menuju rumah Soekarno."
     scene black
     with dissolve
-    jump scene30
+    jump scene29
 
-label scene30:
+label scene29:
+    scene rumah soekarno
     show hatta silent at Position(xpos=475,ypos=120):
         zoom 0.7
     show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
@@ -1290,26 +1417,129 @@ label scene30:
     show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
         zoom 0.75
     "Kami bersama ke depan rumah Soekarno."
+    scene black
+    with dissolve
+    jump scene29a
+
+label scene29a:
+    scene depan rumah soekarno 2
+    show hatta silent at Position(xpos=475,ypos=120):
+        zoom 0.7
+    show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
+        zoom 0.75
     "Aku dan Soekarno menghadapi ribuan rakyat Indonesia."
     "Soekarno membuka dengan pidato pembukaan."
+    show soekarno talk at Position(xpos=280,ypos=120) behind hatta:
+        zoom 0.75
+    play sound proklamasi
     "Proklamasi dibacakan."
+    show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
+        zoom 0.75
+    play sound indonesia_raya
     "Setelah dibacakan, kami semua melakukan upacara penaikan bendera Merah Putih yang dijahit oleh Fatmawati dengan bahan seadanya dan diiringi lagu Indonesia Raya."
+    stop sound
+    play music crowd_cheer
     "Setelah itu rakyat bergemuruh kesenangan dan aku juga sadar, Indonesia sudah merdeka."
+    hide screen tanggal
+    hide screen buku
+    $ quick_menu = False
+    play music ins_tanah_airku
     scene black
     with dissolve
-    jump epilog
+    call screen epilog1
 
-label epilog:
-    show hatta silent at Position(xpos=370,ypos=120):
-        zoom 0.7
-    "Dengan ini Indonesia sudah merdeka, dan aku tahu ini bukanlah akhir dari perjuangan kami."
-    "Masih banyak pekerjaan yang harus kami lakukan, kemerdekaan hanyalah sebuah awalan baru bagi kami."
-    "Aku juga tidak akan selamanya mengurus negeri ini, ada saatnya pekerjaan itu dilanjutkan oleh penerus-penerusku."
-    "Aku berharap generasi-generasi penerusku tidak akan lupa apa yang aku perjuangkan selama ini dan menjaga hasil perjuanganku ini."
-    "Aku mungkin tidak akan hidup saat negeri ini makmur, tapi setidaknya aku tahu suatu saat itu akan terjadi di tangan generasi-generasi penerusku."
-    scene black
-    with dissolve
-    jump end
+screen epilog1:
+    frame:
+        xfill True
+        add "background4"
+        add "background5"
+        button:
+            background Frame("images/Kuis/empty.png")
+            action [Hide("epilog1"), Show("epilog2")]
+
+        hbox:
+            xpos 350
+            ypos 590
+            xsize 850
+            text "Dengan ini Indonesia sudah merdeka, dan aku tahu ini bukanlah akhir dari perjuangan kami." size 22
+
+screen epilog2:
+    frame:
+        add "background4"
+        add "background5"
+        button:
+            background Frame("images/Kuis/empty.png")
+            action [Hide("epilog2"), Show("epilog3")]
+
+        hbox:
+            xpos 350
+            ypos 590
+            xsize 850
+            text "Masih banyak pekerjaan yang harus kami lakukan, kemerdekaan hanyalah sebuah awalan baru bagi kami." size 22
+
+screen epilog3:
+    frame:
+        xsize 1280 ysize 720 
+        xfill True
+        add "background4"
+        add "background5"
+        button:
+            background Frame("images/Kuis/empty.png")
+            action [Hide("epilog3"), Show("epilog4")]
+
+        hbox:
+            xpos 350
+            ypos 590
+            xsize 850
+            text "Aku juga tidak akan selamanya mengurus negeri ini, ada saatnya pekerjaan itu dilanjutkan oleh penerus-penerusku." size 22
+
+screen epilog4:
+    frame:
+        xsize 1280 ysize 720 
+        xfill True
+        add "background4"
+        add "background5"
+        button:
+            background Frame("images/Kuis/empty.png")
+            action [Hide("epilog4"), Show("epilog5")]
+
+        hbox:
+            xpos 350
+            ypos 590
+            xsize 850
+            text "Aku berharap generasi-generasi penerusku tidak akan lupa apa yang aku perjuangkan selama ini dan menjaga hasil perjuanganku ini." size 22
+
+screen epilog5:
+    frame:
+        xsize 1280 ysize 720 
+        xfill True
+        add "background4"
+        add "background5"
+        button:
+            background Frame("images/Kuis/empty.png")
+            action [Hide("epilog5"), Show("epilog6")]
+
+        hbox:
+            xpos 350
+            ypos 590
+            xsize 850
+            text "Aku mungkin tidak akan hidup saat negeri ini makmur, tapi setidaknya aku tahu suatu saat itu akan terjadi di tangan generasi-generasi penerusku." size 22
+
+screen epilog6:
+    frame:
+        xsize 1280 ysize 720 
+        xfill True
+        add "background4"
+        add "background5"
+        button:
+            background Frame("images/Kuis/empty.png")
+            action [Hide("epilog6"), Jump("end")]
+
+        hbox:
+            xpos 350
+            ypos 590
+            xsize 850
+            text "Indonesia merdeka tidak ada gunanya bagi kita, apabila kita tidak sanggup untuk mempergunakannya memenuhi cita-cita rakyat kita: hidup bahagia dan makmur dalam pengertian jasmani maupun rohani." size 22
 
 label end:
     return
