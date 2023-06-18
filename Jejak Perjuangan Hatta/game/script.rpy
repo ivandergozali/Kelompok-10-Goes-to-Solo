@@ -1142,9 +1142,9 @@ label scene22a:
         zoom 0.7
     Mi "Ternyata Tuan sudah kembali dari Rengasdengklok, selamat datang kembali."
     Mi "Begini Tuan Hatta, Mayor Jenderal Nishimura ingin bertemu Tuan dan Tuan Soekarno malam ini juga."
-    "Mayor Jenderal Nishimura dari Sumobuco ingin bertemuku saat ini?"
     show hatta talk at Position(xpos=260,ypos=120):
         zoom 0.7
+    H "Mayor Jenderal Nishimura dari Sumobuco ingin bertemuku saat ini?"
     H "Baik Tuan Miyoshi, bagaimana kalau kita bertemu di rumah Laksamada Maeda pukul 22:00 nanti?"
     H "Setelah itu kita bersama-sama ke rumah Nishimura bersama-sama."
     show hatta silent at Position(xpos=260,ypos=120):
