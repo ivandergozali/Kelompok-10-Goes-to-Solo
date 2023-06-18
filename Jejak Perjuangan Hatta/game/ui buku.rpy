@@ -2444,7 +2444,7 @@ screen peristiwa2_2:
             text "Sidang Pertama \nBPUPKI" size 28 font "fonts/AbrilFatface-Regular.otf" color "#2E2C2B"
         vbox:
             xpos 385 ypos 180
-            add "images/Konnten/peristiwa sidang pertama bpupki.png"
+            add "images/Konten/peristiwa sidang pertama bpupki.png"
         vbox:
             xpos 385 ypos 390
             text "Sumber:\nhttps://id.wikipedia.org/wiki/Badan_Penyelidik_Usaha-\nUsaha_Persiapan_Kemerdekaan#Sidang_resmi_pertama" size 10 color "#000000" justify True
