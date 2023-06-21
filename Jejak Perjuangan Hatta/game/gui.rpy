@@ -414,64 +414,64 @@ define gui.language = "unicode"
 ## Mobile devices
 ################################################################################
 
-init python:
+#init python:
 
     ## This increases the size of the quick buttons to make them easier to touch
     ## on tablets and phones.
-    @gui.variant
-    def touch():
+#    @gui.variant
+#    def touch():
 
-        gui.quick_button_borders = Borders(40, 14, 40, 0)
+#        gui.quick_button_borders = Borders(40, 14, 40, 0)
 
     ## This changes the size and spacing of various GUI elements to ensure they
     ## are easily visible on phones.
-    @gui.variant
-    def small():
+#    @gui.variant
+#    def small():
 
         ## Font sizes.
-        gui.text_size = 22
-        gui.name_text_size = 30
-        gui.notify_text_size = 16
-        gui.interface_text_size = 22
-        gui.button_text_size = 22
-        gui.label_text_size = 24
+#        gui.text_size = 30
+#        gui.name_text_size = 36
+#        gui.notify_text_size = 25
+#        gui.interface_text_size = 30
+#        gui.button_text_size = 30
+#        gui.label_text_size = 34
 
         ## Adjust the location of the textbox.
-        gui.textbox_height = 185
-        gui.name_xpos = 250
-        gui.dialogue_xpos = 175
-        gui.dialogue_width = 880
+#        gui.textbox_height = 240
+#        gui.name_xpos = 80
+#        gui.dialogue_xpos = 90
+#        gui.dialogue_width = 1100
 
         ## Change the size and spacing of various things.
-        gui.slider_size = 36
+#        gui.slider_size = 36
 
-        gui.choice_button_width = 790
-        gui.choice_button_text_size = 22
+#        gui.choice_button_width = 1240
+#        gui.choice_button_text_size = 30
 
-        gui.navigation_spacing = 4
-        gui.pref_button_spacing = 0
+#        gui.navigation_spacing = 20
+#        gui.pref_button_spacing = 10
 
-        gui.history_height = 140
-        gui.history_text_width = 740
+#        gui.history_height = 190
+#        gui.history_text_width = 690
 
-        gui.quick_button_text_size = 14
+#        gui.quick_button_text_size = 20
 
         ## File button layout.
-        gui.file_slot_cols = 3
-        gui.file_slot_rows = 2
+#        gui.file_slot_cols = 2
+#        gui.file_slot_rows = 2
 
         ## NVL-mode.
-        gui.nvl_height = 115
+#        gui.nvl_height = 170
 
-        gui.nvl_name_width = 150
-        gui.nvl_name_xpos = 430
+#        gui.nvl_name_width = 305
+#        gui.nvl_name_xpos = 325
 
-        gui.nvl_text_width = 590
-        gui.nvl_text_xpos = 450
-        gui.nvl_text_ypos = 8
+#        gui.nvl_text_width = 915
+#        gui.nvl_text_xpos = 345
+#        gui.nvl_text_ypos = 5
 
-        gui.nvl_thought_width = 780
-        gui.nvl_thought_xpos = 240
+#        gui.nvl_thought_width = 1240
+#        gui.nvl_thought_xpos = 20
 
-        gui.nvl_button_width = 1240
-        gui.nvl_button_xpos = 450
+#        gui.nvl_button_width = 1240
+#        gui.nvl_button_xpos = 20
