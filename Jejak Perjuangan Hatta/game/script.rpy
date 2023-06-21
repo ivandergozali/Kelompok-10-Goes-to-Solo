@@ -41,10 +41,8 @@ style button4_tb:
     background Frame("images/Icon/close_idle.png")
     hover_background Frame("images/Icon/close_hover.png")
 
-image background1 = Movie(size=(1280,720), channel="movie", play="video/kredit.ogv", loop=True)
-image background4 = Movie(size=(1280,720), channel="movie", play="video/epilog.ogv", loop=True)
-image background5 = im.Scale("images/Screen/ended.png",1280,720)
-image background6 = im.Scale("images/Menu/main_menu2.png",1280,720)
+image background1 = Movie(size=(1280,720), channel="movie", play="video/epilog.ogv", loop=True)
+image background2 = im.Scale("images/Screen/ended.png",1280,720)
 
 
 #init:
@@ -57,7 +55,7 @@ label start:
     scene asrama indonesia merdeka
     show screen tanggal
     show screen buku
-    show hatta talk at Position(xpos=370,ypos=120):
+    show hatta talk  at Position(xpos=370,ypos=120):
         zoom 0.7
     H "Siang murid-murid semua."
     show hatta silent at Position(xpos=370,ypos=120):
@@ -78,7 +76,11 @@ label start:
     $renpy.notify("Bacaan QS. Al-Maun Ayat 1-7 dan QS. Al-Humazah Ayat 1-3 telah ditambahkan ke direktori.")
     $ unlock += 1
     H "Sehingga ekonomi yang saya dambakan dalam Indonesia nanti adalah perekonomian yang bersifat kebersamaan, kerakyatan, dan kooperasi agar rakyat bisa hidup makmur."
+    show hatta silent at Position(xpos=370,ypos=120):
+        zoom 0.7
     "Tak lama kemudian, waktu mengajarku sudah habis, saatnya aku pulang."
+    show hatta talk at Position(xpos=370,ypos=120):
+        zoom 0.7
     H "Baik murid-murid sekalian, mungkin sekian dari saya untuk hari ini, Assalamualaikum."
     scene black
     with dissolve
@@ -279,8 +281,8 @@ label scene5:
     jump scene6
 
 label scene6:
-    $ waktu += 1
     play music musik2
+    $ waktu += 1
     scene kantor terauchi
     show screen tanggal
     show hatta silent at Position(xpos=370,ypos=120):
@@ -599,7 +601,7 @@ label scene11:
 
 label scene12:
     scene depan rumah soekarno 1
-    show hatta talk at Position(xpos=370,ypos=120):
+    show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
     show sjahrir silent at Position(xpos=170,ypos=95) behind hatta:
         zoom 0.65
@@ -1006,7 +1008,16 @@ label scene21:
     show soekarni talk at Position(xpos=230,ypos=100):
         zoom 0.75
     Si "Baiklah."
+    show soekarni silent at Position(xpos=230,ypos=100):
+        zoom 0.75
     "Soekarni pergi dan hampir sejam ia kembali lagi."
+    scene black
+    with dissolve
+    scene rumah rengasdengklok
+    show hatta silent at Position(xpos=485,ypos=120) behind soekarni:
+        zoom 0.7
+    show soekarni talk at Position(xpos=230,ypos=100):
+        zoom 0.75
     Si "Saya sejauh ini tidak memperoleh kontak dari Jakarta dan Jakarta tidak memberi berita."
     show soekarni silent at Position(xpos=230,ypos=100):
         zoom 0.75
@@ -1348,8 +1359,14 @@ label scene26:
     show soekarno talk at Position(xpos=280,ypos=120) behind hatta:
         zoom 0.75
     S "Dapatkah saudara-saudara setuju dengan ini?"
+    show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
+        zoom 0.75
     "Suara gemuruh dan tak teratur menjawab “Setuju”."
+    show soekarno talk at Position(xpos=280,ypos=120) behind hatta:
+        zoom 0.75
     S "Benar-benar saudara semuanya setuju?"
+    show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
+        zoom 0.75
     "Baru kali ini serentak mengucapkan “Setuju”."
     hide screen tanggal
     hide screen buku
@@ -1451,8 +1468,8 @@ label scene29a:
 screen epilog1:
     frame:
         xfill True
-        add "background4"
-        add "background5"
+        add "background1"
+        add "background2"
         button:
             background Frame("images/Kuis/empty.png")
             action [Hide("epilog1"), Show("epilog2")]
@@ -1465,8 +1482,8 @@ screen epilog1:
 
 screen epilog2:
     frame:
-        add "background4"
-        add "background5"
+        add "background1"
+        add "background2"
         button:
             background Frame("images/Kuis/empty.png")
             action [Hide("epilog2"), Show("epilog3")]
@@ -1481,8 +1498,8 @@ screen epilog3:
     frame:
         xsize 1280 ysize 720 
         xfill True
-        add "background4"
-        add "background5"
+        add "background1"
+        add "background2"
         button:
             background Frame("images/Kuis/empty.png")
             action [Hide("epilog3"), Show("epilog4")]
@@ -1497,8 +1514,8 @@ screen epilog4:
     frame:
         xsize 1280 ysize 720 
         xfill True
-        add "background4"
-        add "background5"
+        add "background1"
+        add "background2"
         button:
             background Frame("images/Kuis/empty.png")
             action [Hide("epilog4"), Show("epilog5")]
@@ -1513,8 +1530,8 @@ screen epilog5:
     frame:
         xsize 1280 ysize 720 
         xfill True
-        add "background4"
-        add "background5"
+        add "background1"
+        add "background2"
         button:
             background Frame("images/Kuis/empty.png")
             action [Hide("epilog5"), Show("epilog6")]
@@ -1529,8 +1546,8 @@ screen epilog6:
     frame:
         xsize 1280 ysize 720 
         xfill True
-        add "background4"
-        add "background5"
+        add "background1"
+        add "background2"
         button:
             background Frame("images/Kuis/empty.png")
             action [Hide("epilog6"), Jump("end")]

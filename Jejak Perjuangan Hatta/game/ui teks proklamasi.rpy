@@ -1,14 +1,14 @@
 default skor = False
 
-image background2 = im.Scale("gui/namebox1.png", 150, 70)
-image background3 = im.Scale("gui/namebox1.png", 190, 70)
+image background3 = im.Scale("gui/namebox1.png", 150, 70)
+image background4 = im.Scale("gui/namebox1.png", 190, 70)
 
 screen tampilsoal1:
     frame:
         xsize 1280 ysize 720
         xfill True
         background Frame("images/Kuis/kuis 1.png")
-        add "background2" xpos 350 ypos 470
+        add "background3" xpos 350 ypos 470
         hbox:
             xpos 275
             ypos 130
@@ -54,7 +54,7 @@ screen salah1:
         xsize 1280 ysize 720 
         xfill True
         background Frame("images/Kuis/kuis 1.png")
-        add "background2" xpos 350 ypos 470
+        add "background3" xpos 350 ypos 470
         button:
             background Frame("images/Kuis/empty.png")
             action [Hide("salah1"), Show("tampilsoal1")]
@@ -89,7 +89,7 @@ screen tampilsoal2:
         xsize 1280 ysize 720
         xfill True
         background Frame("images/Kuis/kuis 1.png")
-        add "background2" xpos 350 ypos 470
+        add "background3" xpos 350 ypos 470
         hbox:
             xpos 275
             ypos 130
@@ -135,7 +135,7 @@ screen salah2:
         xsize 1280 ysize 720 
         xfill True
         background Frame("images/Kuis/kuis 1.png")
-        add "background2" xpos 350 ypos 470
+        add "background3" xpos 350 ypos 470
         button:
             background Frame("images/Kuis/empty.png")
             action [Hide("salah2"), Show("tampilsoal2")]
@@ -170,7 +170,7 @@ screen tampilsoal3:
         xsize 1280 ysize 720
         xfill True
         background Frame("images/Kuis/kuis 1.png")
-        add "background2" xpos 350 ypos 470
+        add "background3" xpos 350 ypos 470
         hbox:
             xpos 275
             ypos 130
@@ -216,7 +216,7 @@ screen salah3:
         xsize 1280 ysize 720 
         xfill True
         background Frame("images/Kuis/kuis 1.png")
-        add "background2" xpos 350 ypos 470
+        add "background3" xpos 350 ypos 470
         button:
             background Frame("images/Kuis/empty.png")
             action [Hide("salah3"), Show("tampilsoal3")]
@@ -251,7 +251,7 @@ screen tampilsoal4:
         xsize 1280 ysize 720
         xfill True
         background Frame("images/Kuis/kuis 1.png")
-        add "background2" xpos 350 ypos 470
+        add "background3" xpos 350 ypos 470
         hbox:
             xpos 275
             ypos 130
@@ -297,7 +297,7 @@ screen salah4:
         xsize 1280 ysize 720 
         xfill True
         background Frame("images/Kuis/kuis 2.png")
-        add "background3" xpos 350 ypos 470
+        add "background4" xpos 350 ypos 470
         button:
             background Frame("images/Kuis/empty.png")
             action [Hide("salah4"), Show("tampilsoal4")]
@@ -332,7 +332,7 @@ screen tampilsoal5:
         xsize 1280 ysize 720
         xfill True
         background Frame("images/Kuis/kuis 1.png")
-        add "background2" xpos 350 ypos 470
+        add "background3" xpos 350 ypos 470
         hbox:
             xpos 275
             ypos 130
@@ -378,7 +378,7 @@ screen salah5:
         xsize 1280 ysize 720 
         xfill True
         background Frame("images/Kuis/kuis 1.png")
-        add "background2" xpos 350 ypos 470
+        add "background3" xpos 350 ypos 470
         button:
             background Frame("images/Kuis/empty.png")
             action [Hide("salah5"), Show("tampilsoal5")]

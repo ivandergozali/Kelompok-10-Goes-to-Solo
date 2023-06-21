@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 46: invalid syntax
-    im Scale("images/Screen/ended.png", 1280, 720)
+File "game/screens.rpy", line 586: 'hide' is not a keyword argument or valid child of the button statement.
+    hide background1
         ^
 
 Ren'Py Version: Ren'Py 8.1.0.23051307
-Sat Jun 17 18:19:49 2023
+Mon Jun 19 20:42:02 2023

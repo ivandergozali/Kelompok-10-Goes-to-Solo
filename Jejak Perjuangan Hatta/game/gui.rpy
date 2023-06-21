@@ -135,7 +135,7 @@ define gui.dialogue_xpos = 175
 define gui.dialogue_ypos = 40
 
 ## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = 930
+define gui.dialogue_width = 880
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -429,49 +429,49 @@ init python:
     def small():
 
         ## Font sizes.
-        gui.text_size = 30
-        gui.name_text_size = 36
-        gui.notify_text_size = 25
-        gui.interface_text_size = 30
-        gui.button_text_size = 30
-        gui.label_text_size = 34
+        gui.text_size = 22
+        gui.name_text_size = 30
+        gui.notify_text_size = 16
+        gui.interface_text_size = 22
+        gui.button_text_size = 22
+        gui.label_text_size = 24
 
         ## Adjust the location of the textbox.
-        gui.textbox_height = 240
-        gui.name_xpos = 80
-        gui.dialogue_xpos = 90
-        gui.dialogue_width = 1100
+        gui.textbox_height = 185
+        gui.name_xpos = 250
+        gui.dialogue_xpos = 175
+        gui.dialogue_width = 880
 
         ## Change the size and spacing of various things.
         gui.slider_size = 36
 
-        gui.choice_button_width = 1240
-        gui.choice_button_text_size = 30
+        gui.choice_button_width = 790
+        gui.choice_button_text_size = 22
 
-        gui.navigation_spacing = 20
-        gui.pref_button_spacing = 10
+        gui.navigation_spacing = 4
+        gui.pref_button_spacing = 0
 
-        gui.history_height = 190
-        gui.history_text_width = 690
+        gui.history_height = 140
+        gui.history_text_width = 740
 
-        gui.quick_button_text_size = 20
+        gui.quick_button_text_size = 14
 
         ## File button layout.
-        gui.file_slot_cols = 2
+        gui.file_slot_cols = 3
         gui.file_slot_rows = 2
 
         ## NVL-mode.
-        gui.nvl_height = 170
+        gui.nvl_height = 115
 
-        gui.nvl_name_width = 305
-        gui.nvl_name_xpos = 325
+        gui.nvl_name_width = 150
+        gui.nvl_name_xpos = 430
 
-        gui.nvl_text_width = 915
-        gui.nvl_text_xpos = 345
-        gui.nvl_text_ypos = 5
+        gui.nvl_text_width = 590
+        gui.nvl_text_xpos = 450
+        gui.nvl_text_ypos = 8
 
-        gui.nvl_thought_width = 1240
-        gui.nvl_thought_xpos = 20
+        gui.nvl_thought_width = 780
+        gui.nvl_thought_xpos = 240
 
         gui.nvl_button_width = 1240
-        gui.nvl_button_xpos = 20
+        gui.nvl_button_xpos = 450

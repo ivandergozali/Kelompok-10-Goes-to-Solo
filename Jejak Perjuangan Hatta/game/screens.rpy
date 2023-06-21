@@ -555,14 +555,19 @@ screen about():
 
     tag menu
 
+    add Movie(size=(1280, 720))
+    on "show" action Play("movie", "video/kredit.ogv", loop=True)
+    on "hide" action Stop("movie")
+    on "replace" action Play("movie", "video/kredit.ogv", loop=True)
+    on "replaced" action Stop("movie")
+
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
     frame:
         xalign 0.5 yalign 0.5
         xsize 1280 ysize 720
-        add "background1"
-        add "background6" xpos -4 ypos -5
+        add "main_menu2" xpos -4 ypos -5 xysize(1280,720)
         vbox:
             xsize 360
             xpos 200
@@ -571,7 +576,7 @@ screen about():
 
         vbox:
             xpos 80 ypos 112
-            spacing -25
+            spacing -18
             text "Jejak Perjuangan" size 27 font "fonts/AbrilFatface-Regular.otf" color "#4E4E50"
             text "Hatta" size 66 font "fonts/AbrilFatface-Regular.otf" color "#C69D7B"
 
@@ -680,7 +685,7 @@ screen file_slots(title):
 
         vbox:
             xpos 80 ypos 112
-            spacing -25
+            spacing -18
             text "Jejak Perjuangan" size 27 font "fonts/AbrilFatface-Regular.otf" color "#4E4E50"
             text "Hatta" size 66 font "fonts/AbrilFatface-Regular.otf" color "#C69D7B"
         
@@ -772,7 +777,7 @@ screen preferences():
 
         vbox:
             xpos 80 ypos 112
-            spacing -25
+            spacing -18
             text "Jejak Perjuangan" size 27 font "fonts/AbrilFatface-Regular.otf" color "#4E4E50"
             text "Hatta" size 66 font "fonts/AbrilFatface-Regular.otf" color "#C69D7B"
 
@@ -790,7 +795,6 @@ screen preferences():
                 spacing -30
 
                 vbox:
-
                     label _("Kecepatan Teks")
 
                     bar value Preference("text speed")
@@ -1515,21 +1519,47 @@ screen quick_menu():
 
     if quick_menu:
 
-        hbox:
+        vbox:
             style_prefix "quick"
+            xpos 1175 ypos 683
+            xalign 0.5 yalign 0.95
+            spacing 7
+            button:
+                text "MUNDUR" bold True size 16 xalign 0.5 yalign 0.5
+                xysize (150,40)
+                style "button_tb"
+                action Rollback()
 
-            xalign 0.5
-            yalign 1.0
+            button:
+                text "SIMPAN" bold True size 16 xalign 0.5 yalign 0.5
+                xysize (150,40)
+                style "button_tb"
+                action ShowMenu("save")
 
-            textbutton _("Back") action Rollback()
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Menu") action ShowMenu()
+            button:
+                text "PENGATURAN" bold True size 16 xalign 0.5 yalign 0.5
+                xysize (150,40)
+                style "button_tb"
+                action ShowMenu("preferences")
 
+            button:
+                text "MENU" bold True size 16 xalign 0.5 yalign 0.5
+                xysize (150,40)
+                style "button_tb"
+                action MainMenu()
+
+
+#style window:
+#    variant "small"
+#    background "gui/phone/textbox1.png"
 
 style window:
-    variant "small"
-    background "gui/phone/textbox.png"
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+
+    background Image("gui/textbox1.png", xalign=0.5, yalign=1.0)
 
 style radio_button:
     variant "small"
@@ -1545,7 +1575,7 @@ style nvl_window:
 
 style main_menu_frame:
     variant "small"
-    background "gui/phone/overlay/main_menu.png"
+#    background "gui/phone/overlay/main_menu.png"
 
 style game_menu_outer_frame:
     variant "small"
@@ -1605,4 +1635,4 @@ style slider_vbox:
 
 style slider_slider:
     variant "small"
-    xsize 600
+    xsize 350
