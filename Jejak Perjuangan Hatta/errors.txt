@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 586: 'hide' is not a keyword argument or valid child of the button statement.
-    hide background1
-        ^
+File "game/ui tutorial.rpy", line 19: 'mundur' is not a keyword argument or valid child of the text statement.
+    text "Untuk mundur ke dialog sebelumnya, silahkan tekan tombol "mundur" di bagian pojok kanan bawah layar permainan." size 17 font "fonts/AbrilFatface-Regular.otf" color "#404040"   
+                                                                          ^
 
 Ren'Py Version: Ren'Py 8.1.0.23051307
-Mon Jun 19 20:42:02 2023
+Fri Jun 23 11:43:56 2023

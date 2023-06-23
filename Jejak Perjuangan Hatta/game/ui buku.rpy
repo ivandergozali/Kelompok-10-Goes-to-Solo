@@ -37,7 +37,7 @@ screen bantuan:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan"), Return()]
@@ -120,7 +120,7 @@ screen pilihanbuku:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("pilihanbuku"), Return()]
@@ -192,7 +192,7 @@ screen bantuan_karakter:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_karakter"), Return()]
@@ -339,7 +339,7 @@ screen karakter:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("karakter"), Return()]   
@@ -418,7 +418,7 @@ screen bantuan_karakter1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_karakter1"), Return()]
@@ -499,7 +499,7 @@ screen karakter1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("karakter1"), Return()]
@@ -585,7 +585,7 @@ screen bantuan_karakter2_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_karakter2_1"), Return()]
@@ -666,7 +666,7 @@ screen karakter2_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("karakter2_1"), Return()]
@@ -764,7 +764,7 @@ screen bantuan_karakter2_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_karakter2_2"), Return()]
@@ -845,7 +845,7 @@ screen karakter2_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("karakter2_2"), Return()]
@@ -943,7 +943,7 @@ screen bantuan_karakter3:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_karakter3"), Return()]
@@ -1024,7 +1024,7 @@ screen karakter3:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("karakter3"), Return()]
@@ -1110,7 +1110,7 @@ screen bantuan_karakter4:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_karakter4"), Return()]
@@ -1191,7 +1191,7 @@ screen karakter4:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("karakter3"), Return()]
@@ -1277,7 +1277,7 @@ screen bantuan_karakter5:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_karakter5"), Return()]
@@ -1358,7 +1358,7 @@ screen karakter5:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("karakter5"), Return()]
@@ -1444,7 +1444,7 @@ screen bantuan_karakter6:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_karakter6"), Return()]
@@ -1525,7 +1525,7 @@ screen karakter6:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("karakter5"), Return()]
@@ -1611,7 +1611,7 @@ screen bantuan_peristiwa:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_peristiwa"), Return()]
@@ -1758,7 +1758,7 @@ screen peristiwa:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("peristiwa"), Return()]   
@@ -1837,7 +1837,7 @@ screen bantuan_peristiwa1_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_peristiwa1_1"), Return()]
@@ -1918,7 +1918,7 @@ screen peristiwa1_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("peristiwa1_1"), Return()]
@@ -2016,7 +2016,7 @@ screen bantuan_peristiwa1_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_peristiwa1_2"), Return()]
@@ -2097,7 +2097,7 @@ screen peristiwa1_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("peristiwa1_2"), Return()]
@@ -2195,7 +2195,7 @@ screen bantuan_peristiwa2_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_peristiwa2_1"), Return()]
@@ -2276,7 +2276,7 @@ screen peristiwa2_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("peristiwa2_1"), Return()]
@@ -2374,7 +2374,7 @@ screen bantuan_peristiwa2_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_peristiwa2_2"), Return()]
@@ -2455,7 +2455,7 @@ screen peristiwa2_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("peristiwa2_2"), Return()]
@@ -2553,7 +2553,7 @@ screen bantuan_peristiwa3:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_peristiwa3"), Return()]
@@ -2634,7 +2634,7 @@ screen peristiwa3:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("peristiwa3"), Return()]
@@ -2720,7 +2720,7 @@ screen bantuan_peristiwa4_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_peristiwa4_1"), Return()]
@@ -2801,7 +2801,7 @@ screen peristiwa4_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("peristiwa4_1"), Return()]
@@ -2899,7 +2899,7 @@ screen bantuan_peristiwa4_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_peristiwa4_2"), Return()]
@@ -2980,7 +2980,7 @@ screen peristiwa4_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("peristiwa4_2"), Return()]
@@ -3078,7 +3078,7 @@ screen bantuan_organisasi:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_organisasi"), Return()]
@@ -3225,7 +3225,7 @@ screen organisasi:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("organisasi"), Return()]   
@@ -3304,7 +3304,7 @@ screen bantuan_organisasi1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_organisasi1"), Return()]
@@ -3385,7 +3385,7 @@ screen organisasi1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("organisasi1"), Return()]
@@ -3471,7 +3471,7 @@ screen bantuan_organisasi2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_organisasi2"), Return()]
@@ -3552,7 +3552,7 @@ screen organisasi2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("organisasi2"), Return()]
@@ -3638,7 +3638,7 @@ screen bantuan_organisasi3_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_organisasi3_1"), Return()]
@@ -3719,7 +3719,7 @@ screen organisasi3_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("organisasi3_1"), Return()]
@@ -3817,7 +3817,7 @@ screen bantuan_organisasi3_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_organisasi3_2"), Return()]
@@ -3898,7 +3898,7 @@ screen organisasi3_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("organisasi3_2"), Return()]
@@ -3996,7 +3996,7 @@ screen bantuan_organisasi4:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_organisasi4"), Return()]
@@ -4077,7 +4077,7 @@ screen organisasi4:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("organisasi4"), Return()]
@@ -4163,7 +4163,7 @@ screen bantuan_negara:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_negara"), Return()]
@@ -4284,7 +4284,7 @@ screen negara:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("negara"), Return()]   
@@ -4363,7 +4363,7 @@ screen bantuan_negara1_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_negara1_1"), Return()]
@@ -4444,7 +4444,7 @@ screen negara1_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("negara1_1"), Return()]
@@ -4542,7 +4542,7 @@ screen bantuan_negara1_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_negara1_2"), Return()]
@@ -4623,7 +4623,7 @@ screen negara1_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("negara1_2"), Return()]
@@ -4721,7 +4721,7 @@ screen bantuan_negara2_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_negara2_1"), Return()]
@@ -4802,7 +4802,7 @@ screen negara2_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("negara2_1"), Return()]
@@ -4900,7 +4900,7 @@ screen bantuan_negara2_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_negara2_2"), Return()]
@@ -4981,7 +4981,7 @@ screen negara2_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("negara2_2"), Return()]
@@ -5079,7 +5079,7 @@ screen bantuan_negara3_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_negara3_1"), Return()]
@@ -5160,7 +5160,7 @@ screen negara3_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("negara3_1"), Return()]
@@ -5258,7 +5258,7 @@ screen bantuan_negara3_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_negara3_2"), Return()]
@@ -5339,7 +5339,7 @@ screen negara3_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("negara3_2"), Return()]
@@ -5437,7 +5437,7 @@ screen bantuan_negara4_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_negara4_1"), Return()]
@@ -5518,7 +5518,7 @@ screen negara4_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("negara4_1"), Return()]
@@ -5616,7 +5616,7 @@ screen bantuan_negara4_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_negara4_2"), Return()]
@@ -5697,7 +5697,7 @@ screen negara4_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("negara4_2"), Return()]
@@ -5795,7 +5795,7 @@ screen bantuan_negara5_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_negara5_1"), Return()]
@@ -5876,7 +5876,7 @@ screen negara5_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("negara5_1"), Return()]
@@ -5974,7 +5974,7 @@ screen bantuan_negara5_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_negara5_2"), Return()]
@@ -6055,7 +6055,7 @@ screen negara5_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("negara5_2"), Return()]
@@ -6153,7 +6153,7 @@ screen bantuan_negara6_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_negara6_1"), Return()]
@@ -6234,7 +6234,7 @@ screen negara6_1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("negara6_1"), Return()]
@@ -6332,7 +6332,7 @@ screen bantuan_negara6_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_negara6_2"), Return()]
@@ -6413,7 +6413,7 @@ screen negara6_2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("negara6_2"), Return()]
@@ -6511,7 +6511,7 @@ screen bantuan_bacaan:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_bacaan"), Return()]
@@ -6614,7 +6614,7 @@ screen bacaan:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bacaan"), Return()]   
@@ -6693,7 +6693,7 @@ screen bantuan_bacaan1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_bacaan1"), Return()]
@@ -6774,7 +6774,7 @@ screen bacaan1:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bacaan1"), Return()]
@@ -6860,7 +6860,7 @@ screen bantuan_bacaan2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_bacaan2"), Return()]
@@ -6941,7 +6941,7 @@ screen bacaan2:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bacaan2"), Return()]
@@ -7027,7 +7027,7 @@ screen bantuan_bacaan3:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bantuan_bacaan3"), Return()]
@@ -7108,7 +7108,7 @@ screen bacaan3:
         vbox:
             xpos 65 ypos 600
             button:
-                text "KELUAR" xalign 0.5 yalign 0.5
+                text "TUTUP" xalign 0.5 yalign 0.5
                 xysize (175,55)
                 style "button_tb"
                 action [SetVariable("quick_menu", True), Hide("bacaan3"), Return()]

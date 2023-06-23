@@ -1,60 +1,76 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/screens.rpy", line 554, in prepare_screen
-    screen about():
-  File "game/screens.rpy", line 554, in prepare
-    screen about():
-  File "game/screens.rpy", line 567, in prepare
-    frame:
-  File "game/screens.rpy", line 567, in prepare
-    frame:
-  File "game/screens.rpy", line 583, in prepare
-    vbox:
-  File "game/screens.rpy", line 583, in prepare
-    vbox:
-  File "game/screens.rpy", line 587, in prepare
-    button:
-  File "game/screens.rpy", line 587, in prepare
-    button:
-  File "game/screens.rpy", line 591, in <module>
-    action [Return(), Stop("music","audio/BGM/ins_tanah_airku.mp3")]
-TypeError: __init__() takes 2 positional arguments but 3 were given
+While loading <renpy.display.im.Image object ('images/skip.png') at 0x0000000015e016d0>:
+  File "game/script.rpy", line 61, in script
+    H "Siang murid-murid semua."
+OSError: Couldn't find file 'images/skip.png'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "I:\RenPy\renpy-8.0.3-sdk\renpy\bootstrap.py", line 275, in bootstrap
-    renpy.main.main()
-  File "I:\RenPy\renpy-8.0.3-sdk\renpy\main.py", line 670, in main
-    run(restart)
-  File "I:\RenPy\renpy-8.0.3-sdk\renpy\main.py", line 93, in run
-    renpy.display.screen.prepare_screens()
-  File "I:\RenPy\renpy-8.0.3-sdk\renpy\display\screen.py", line 1003, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/screens.rpy", line 554, in prepare_screen
-    screen about():
-  File "game/screens.rpy", line 554, in prepare
-    screen about():
-  File "game/screens.rpy", line 567, in prepare
-    frame:
-  File "game/screens.rpy", line 567, in prepare
-    frame:
-  File "game/screens.rpy", line 583, in prepare
-    vbox:
-  File "game/screens.rpy", line 583, in prepare
-    vbox:
-  File "game/screens.rpy", line 587, in prepare
-    button:
-  File "game/screens.rpy", line 587, in prepare
-    button:
-  File "I:\RenPy\renpy-8.0.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/screens.rpy", line 591, in <module>
-    action [Return(), Stop("music","audio/BGM/ins_tanah_airku.mp3")]
-TypeError: __init__() takes 2 positional arguments but 3 were given
+  File "game/script.rpy", line 61, in script
+    H "Siang murid-murid semua."
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\ast.py", line 930, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\exports.py", line 1473, in say
+    who(what, *args, **kwargs)
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\character.py", line 1349, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\character.py", line 1000, in do_display
+    display_say(who,
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\character.py", line 690, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\display\core.py", line 3499, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\display\core.py", line 4089, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\display\core.py", line 2699, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 492, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\display\layout.py", line 886, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\display\layout.py", line 886, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\display\layout.py", line 886, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\display\screen.py", line 731, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\display\layout.py", line 886, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\display\layout.py", line 1371, in render
+    back = render(style.background, bw, bh, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\display\imagelike.py", line 277, in render
+    crend = render(image, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\display\im.py", line 676, in render
+    return cache.get(self, render=True)
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\display\im.py", line 330, in get
+    surf = image.load()
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\display\im.py", line 803, in load
+    raise e
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\display\im.py", line 757, in load
+    filelike = renpy.loader.load(self.filename, directory="images")
+  File "I:\RenPy\renpy-8.0.3-sdk\renpy\loader.py", line 833, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'images/skip.png'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.0.23051307
  
-Tue Jun 20 21:46:59 2023
+Fri Jun 23 11:20:27 2023

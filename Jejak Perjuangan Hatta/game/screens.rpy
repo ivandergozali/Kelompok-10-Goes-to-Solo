@@ -1355,7 +1355,7 @@ screen notify(message):
     frame at notify_appear:
         ypos 0
         xalign 0.5
-        text "[message!tq]" size 18 xalign 0.5 font "fonts/AbrilFatface-Regular.otf"
+        text "[message!tq]" size 16 xalign 0.5 font "fonts/AbrilFatface-Regular.otf"
 
     timer 0.5 action [SetVariable("blink", 1)]
     timer 3.0 action [Hide('notify')]

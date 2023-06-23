@@ -55,26 +55,34 @@ label start:
     scene asrama indonesia merdeka
     show screen tanggal
     show screen buku
+    show screen tutorial1
     show hatta talk  at Position(xpos=370,ypos=120):
         zoom 0.7
     H "Siang murid-murid semua."
+    hide screen tutorial1
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
     "Sekarang aku sedang berada di Asrama Indonesia Merdeka, disini aku dipercaya sebagai pengajar ekonomi untuk melahirkan ekonom-ekonom saat bangsa ini merdeka nanti."
+    show screen tutorial2
     "Sekarang sudah 9 Agustus 1945, aku sangat yakin bahwa Indonesia akan merdeka sebentar lagi."
+    hide screen tutorial2
+    show screen tutorial3
     "Aku sedang mengajar tentang ekonomi kerakyatan dan salah satu murid ada yang bertanya padaku."
+    hide screen tutorial3
+    show screen tutorial4
     M "Darimana Bung mempelajari hal ini semua?"
+    hide screen tutorial4
     show hatta talk at Position(xpos=370,ypos=120):
         zoom 0.7
     H "Pertanyaan yang bagus, pemikiran saya ini berdasarkan tiga pilar, yaitu tradisi Minang, Islam, dan sosialisme Eropa. Biar saya jelaskan satu per satu."
     H "Budaya Minangkabau mengajarkan saya bahwa harta bukanlah sumber kekayaan bagi sepeser orang saja tetapi sebagai sumber kemakmuran masyarakatnya, sehingga budaya Minangkabau menentang adanya praktek memperkaya diri sendiri."
-    H "Sosialisme di Eropa berkembang dengan terjadinya Revolusi Industri disana, tokoh-tokoh seperti Marx dan Engels-lah yang mematangkan teori sosialisme ini."
     $renpy.notify("Karakter Marx dan Engels telah ditambahkan ke direktori.")
     $ unlock += 1
+    H "Sosialisme di Eropa berkembang dengan terjadinya Revolusi Industri disana, tokoh-tokoh seperti Marx dan Engels-lah yang mematangkan teori sosialisme ini."
     H "Sosialisme bisa diraih dengan dua cara, cara kekerasan disebut sosialisme revolusioner dan cara demokrasi dengan partai perwakilan buruh disebut sosialisme demokratis."
-    H "Paham sosialisme ini tidak berasal dari Marx saja, bahkan Islam juga mengajarkan sosialisme. Ayat-ayat seperti QS. Al-Maun Ayat 1-7, Al-Humazah Ayat 1-3 mengajari kita tentang tercelanya orang-orang yang memperkaya diri sendiri."
-    $renpy.notify("Bacaan QS. Al-Maun Ayat 1-7 dan QS. Al-Humazah Ayat 1-3 telah ditambahkan ke direktori.")
+    $renpy.notify("Bacaan QS. Al-Maun Ayat 1-7 dan Bacaan QS. Al-Humazah Ayat 1-3 telah ditambahkan ke direktori.")
     $ unlock += 1
+    H "Paham sosialisme ini tidak berasal dari Marx saja, bahkan Islam juga mengajarkan sosialisme. Ayat-ayat seperti QS. Al-Maun Ayat 1-7, Al-Humazah Ayat 1-3 mengajari kita tentang tercelanya orang-orang yang memperkaya diri sendiri."
     H "Sehingga ekonomi yang saya dambakan dalam Indonesia nanti adalah perekonomian yang bersifat kebersamaan, kerakyatan, dan kooperasi agar rakyat bisa hidup makmur."
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
@@ -169,9 +177,9 @@ label scene3a:
         zoom 0.7
     show sjahrir silent at Position(xpos=280,ypos=95):
         zoom 0.65
-    H "Aku paham dengan kegelisahanmu, tapi bersabarlah sedikit, kita tidak bisa melakukan hal gegabah tanpa persetujuan PPKI."
     $renpy.notify("Organisasi PPKI telah ditambahkan ke direktori.")
     $ unlock += 1
+    H "Aku paham dengan kegelisahanmu, tapi bersabarlah sedikit, kita tidak bisa melakukan hal gegabah tanpa persetujuan PPKI."
     show sjahrir talk at Position(xpos=280,ypos=95):
         zoom 0.65
     show hatta silent at Position(xpos=475,ypos=120) behind sjahrir:
@@ -181,9 +189,9 @@ label scene3a:
         zoom 0.7
     show sjahrir silent at Position(xpos=280,ypos=95):
         zoom 0.65
-    H "Bung, jangan lupakan BPUPKI organisasi buatan Dai Nippon itu, BPUPKI membantu kita dalam mempersiapkan pondasi negara kita jika Indonesia merdeka nanti."
-    $renpy.notify("Organisasi BPUPKI dan peristiwa Sidang Pertama BPUPKI telah ditambahkan ke direktori.")
+    $renpy.notify("Organisasi BPUPKI dan Peristiwa Sidang Pertama BPUPKI telah ditambahkan ke direktori.")
     $ unlock += 1
+    H "Bung, jangan lupakan BPUPKI organisasi buatan Dai Nippon itu, BPUPKI membantu kita dalam mempersiapkan pondasi negara kita jika Indonesia merdeka nanti."
     H "Percayalah bahwa aku bawa berita tanggal kemerdekaan saat pulang dari Dalat nanti, Bung lanjutkan saja perkerjaan Bung selama ini dan pantau terus radio sekutu."
     show sjahrir talk at Position(xpos=280,ypos=95):
         zoom 0.65
@@ -378,9 +386,9 @@ label scene7:
     "Nomura akhirnya membicarakan apa yang sebenarnya ingin ia bicarakan."
     show nomura talk at Position(xpos=475,ypos=120) behind hatta:
         zoom 0.7
-    N "Tuan Hatta, tentara Rusia sudah menyerang Mancuko, akan tetapi Tuan tenang saja, tentara Dai Nippon cukup kuat untuk menahannya."
-    $renpy.notify("Peristiwa Invasi Rusia di Asia, negara Rusia, dan Mancuko telah ditambahkan ke direktori.")
+    $renpy.notify("Peristiwa Invasi Rusia di Asia, Negara Rusia, dan Negara Mancuko telah ditambahkan ke direktori.")
     $ unlock += 1
+    N "Tuan Hatta, tentara Rusia sudah menyerang Mancuko, akan tetapi Tuan tenang saja, tentara Dai Nippon cukup kuat untuk menahannya."
     show nomura silent at Position(xpos=475,ypos=120) behind hatta:
         zoom 0.7
     "Aku tahu itu adalah sebuah kebohongan."
@@ -391,8 +399,8 @@ label scene7:
         zoom 0.7
     show hatta silent at Position(xpos=280,ypos=120):
         zoom 0.7
-    N "Kami sudah yakin dari awal cepat atau lambat Rusia akan menyerang Dai Nippon, maka dari itu Dai Nippon sudah membuat fortifikasi-fortifikasi yang tidak dapat mereka tembus sebesar apapun kekuatan serangan mereka di Mancuko."
-    N "Tuan juga jangan melupakan semangat juang tentara Dai Nippon yang tak terpatahkan, dengan dua hal ini serangan Rusia sebesar apapun dapat kami halau."
+    N "Kami sudah yakin dari awal cepat atau lambat Rusia akan menyerang Dai Nippon, maka dari itu Dai Nippon sudah membuat fortifikasi-fortifikasi yang tidak dapat mereka tembus sebesar apa pun kekuatan serangan mereka di Mancuko."
+    N "Tuan juga jangan melupakan semangat juang tentara Dai Nippon yang tak terpatahkan, dengan dua hal ini serangan Rusia sebesar apa pun dapat kami halau."
     show nomura silent at Position(xpos=475,ypos=120) behind hatta:
         zoom 0.7
     "Lagi-lagi Nomura berbohong."
@@ -444,9 +452,9 @@ label scene7b:
         zoom 0.7
     show soekarno silent at Position(xpos=280,ypos=120) behind hatta:
         zoom 0.75
-    H "Dengan gempuran MacArthur dan Nimitz dari selatan dan Rusia dari utara, aku yakin Bung Dai Nippon akan tunduk kurang dari dua minggu."
-    $renpy.notify("Karakter Douglas MacArthur dan Chester W. Nimitz telah ditambahkan ke direktori.")
+    $renpy.notify("Karakter Douglas MacArthur dan Karakter Chester W. Nimitz telah ditambahkan ke direktori.")
     $ unlock += 1
+    H "Dengan gempuran MacArthur dan Nimitz dari selatan dan Rusia dari utara, aku yakin Bung Dai Nippon akan tunduk kurang dari dua minggu."
     show soekarno talk at Position(xpos=280,ypos=120) behind hatta:
         zoom 0.75
     show hatta silent at Position(xpos=475,ypos=120):
@@ -780,9 +788,9 @@ label scene16:
     show hatta talk at Position(xpos=475,ypos=120) behind soebadio:
         zoom 0.7
     H "Aku juga sebenarnya ingin mengadakan revolusi, tapi agar suatu revolusi berhasil, kita perlu organisasi yang matang terlebih dahulu."
-    H "Tindakan yang akan engkau lakukan itu bukanlah sebuah revolusi, tetapi putsch, seperti yang Hitler lakukan di Munchen 1923 tetapi gagal."
     $renpy.notify("Peristiwa Beer Hall Putsch telah ditambahkan ke direktori.")
     $ unlock += 1
+    H "Tindakan yang akan engkau lakukan itu bukanlah sebuah revolusi, tetapi putsch, seperti yang Hitler lakukan di Munchen 1923 tetapi gagal."
     show hatta silent at Position(xpos=475,ypos=120) behind soebadio:
         zoom 0.7
     show soebadio talk at Position(xpos=250,ypos=115):
@@ -1109,9 +1117,9 @@ label scene22:
         zoom 0.7
     show soekarni talk at Position(xpos=670,ypos=100) behind soebardjo:
         zoom 0.75
-    Si "Kalau begitu aku minta Bung pinjami satu setel pakaian karena dengan baju Peta yang aku kenakan sekarang aku dapat ditangkap oleh Kempeitai."
     $renpy.notify("Organisasi Kempeitai telah ditambahkan ke direktori.")
     $ unlock += 1
+    Si "Kalau begitu aku minta Bung pinjami satu setel pakaian karena dengan baju Peta yang aku kenakan sekarang aku dapat ditangkap oleh Kempeitai."
     show soekarni silent at Position(xpos=670,ypos=100) behind soebardjo:
         zoom 0.75
     "Kami semua tertawa mendengar permintaan Soekarni itu."
@@ -1284,7 +1292,7 @@ label scene24:
     H "Apakah itu janji dan perbuatan seorang Samurai!?"
     H "Dapatkah seorang Samurai menjilat musuhnya yang menang untuk memperoleh nasib yang kurang jelek!?"
     H "Apakah Samurai hanya hebat terhadap orang yang lemah di masa jayanya tetapi hilang semangatnya saat kalah?"
-    H "Baiklah, kami akan jalan terus apapun yang terjadi."
+    H "Baiklah, kami akan jalan terus apa pun yang terjadi."
     H "Mungkin kami akan menunjukkan kepada Tuan bagaimana jiwa Samurai semestinya menghadapi suasana yang berubah."
     show hatta silent at Position(xpos=280,ypos=120):
         zoom 0.7
@@ -1334,7 +1342,7 @@ label scene25a:
     H "Apabila aku mesti memikirkannya, lebih baik Bung menuliskan, aku mendiktekannya."
     show hatta silent at Position(xpos=370,ypos=120):
         zoom 0.7
-    "Semuanya setuju dan penulisanpun dimulai."
+    "Semuanya setuju dan penulisan pun dimulai."
     scene black
     with dissolve
     hide screen tanggal
