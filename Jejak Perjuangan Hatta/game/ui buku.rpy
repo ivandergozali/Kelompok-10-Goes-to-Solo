@@ -17,7 +17,7 @@ screen buku:
                     idle "buku 1"
                 elif blink == 1:
                     idle "notifikasi"
-                action [SetVariable("blink", 0), SetVariable("quick_menu", False), ShowMenu("pilihanbuku")]
+                action [SetVariable("quick_menu", False), ShowMenu("pilihanbuku")]
 
 screen bantuan:
     frame:
@@ -304,7 +304,7 @@ screen karakter:
                     action [Hide("karakter"), Show("karakter3")]
                 button:
                     text "Marx dan Engels" size 28 hover_underline True color "#000000"
-                    action [Hide("karakter"), Show("karakter4")]
+                    action [SetVariable("blink", 0), Hide("karakter"), Show("karakter4")]
                 button:
                     text "Douglas MacArthur" size 28 hover_underline True color "#7F7F7F"
                     action [Play("sound","audio/SFX/invalid.mp3")]
@@ -332,10 +332,10 @@ screen karakter:
                     action [Hide("karakter"), Show("karakter4")]
                 button:
                     text "Douglas MacArthur" size 28 hover_underline True color "#000000"
-                    action [Hide("karakter"), Show("karakter5")]
+                    action [SetVariable("blink", 0), Hide("karakter"), Show("karakter5")]
                 button:
                     text "Chester W. Nimitz" size 28 hover_underline True color "#000000"
-                    action [Hide("karakter"), Show("karakter6")]
+                    action [SetVariable("blink", 0), Hide("karakter"), Show("karakter6")]
         vbox:
             xpos 65 ypos 600
             button:
@@ -1711,7 +1711,7 @@ screen peristiwa:
                     action [Hide("peristiwa"), Show("peristiwa1_1")]
                 button:
                     text "Sidang Pertama \nBPUPKI" size 28 hover_underline True color "#000000" 
-                    action [Hide("peristiwa"), Show("peristiwa2_1")]
+                    action [SetVariable("blink", 0), Hide("peristiwa"), Show("peristiwa2_1")]
                 button:
                     text "Invasi Rusia di Asia" size 28 hover_underline True color "#7F7F7F"
                     action [Play("sound","audio/SFX/invalid.mp3")]
@@ -1733,7 +1733,7 @@ screen peristiwa:
                     action [Hide("peristiwa"), Show("peristiwa2_1")]
                 button:
                     text "Invasi Rusia di Asia" size 28 hover_underline True color "#000000"
-                    action [Hide("peristiwa"), Show("peristiwa3")]
+                    action [SetVariable("blink", 0), Hide("peristiwa"), Show("peristiwa3")]
                 button:
                     text "Beer Hall Putsch" size 28 hover_underline True color "#7F7F7F" 
                     action [Play("sound","audio/SFX/invalid.mp3")]
@@ -1754,7 +1754,7 @@ screen peristiwa:
                     action [Hide("peristiwa"), Show("peristiwa3")]
                 button:
                     text "Beer Hall Putsch" size 28 hover_underline True color "#000000" 
-                    action [Hide("peristiwa"), Show("peristiwa4_1")]
+                    action [SetVariable("blink", 0), Hide("peristiwa"), Show("peristiwa4_1")]
         vbox:
             xpos 65 ypos 600
             button:
@@ -3178,7 +3178,7 @@ screen organisasi:
                     action [Hide("organisasi"), Show("organisasi1")]
                 button:
                     text "PPKI" size 28 hover_underline True color "#000000" 
-                    action [Hide("organisasi"), Show("organisasi2")]
+                    action [SetVariable("blink", 0), Hide("organisasi"), Show("organisasi2")]
                 button:
                     text "BPUPKI" size 28 hover_underline True color "#7F7F7F"
                     action [Play("sound","audio/SFX/invalid.mp3")]
@@ -3200,7 +3200,7 @@ screen organisasi:
                     action [Hide("organisasi"), Show("organisasi2")]
                 button:
                     text "BPUPKI" size 28 hover_underline True color "#000000"
-                    action [Hide("organisasi"), Show("organisasi3_1")]
+                    action [SetVariable("blink", 0), Hide("organisasi"), Show("organisasi3_1")]
                 button:
                     text "Kempeitai" size 28 hover_underline True color "#7F7F7F" 
                     action [Play("sound","audio/SFX/invalid.mp3")]
@@ -3221,7 +3221,7 @@ screen organisasi:
                     action [Hide("organisasi"), Show("organisasi3_1")]
                 button:
                     text "Kempeitai" size 28 hover_underline True color "#000000" 
-                    action [Hide("organisasi"), Show("organisasi4")]
+                    action [SetVariable("blink", 0), Hide("organisasi"), Show("organisasi4")]
         vbox:
             xpos 65 ypos 600
             button:
@@ -4277,10 +4277,10 @@ screen negara:
                     action [Hide("negara"), Show("negara4_1")]
                 button:
                     text "Rusia" size 28 hover_underline True color "#000000"
-                    action [Hide("negara"), Show("negara5_1")]
+                    action [SetVariable("blink", 0), Hide("negara"), Show("negara5_1")]
                 button:
                     text "Mancuko" size 28 hover_underline True color "#000000"
-                    action [Hide("negara"), Show("negara6_1")]
+                    action [SetVariable("blink", 0), Hide("negara"), Show("negara6_1")]
         vbox:
             xpos 65 ypos 600
             button:
@@ -6607,10 +6607,10 @@ screen bacaan:
                     action [Hide("bacaan"), Show("bacaan1")]
                 button:
                     text "QS. Al-Maun Ayat 1-7" size 28 hover_underline True color "#000000" 
-                    action [Hide("bacaan"), Show("bacaan2")]
+                    action [SetVariable("blink", 0), Hide("bacaan"), Show("bacaan2")]
                 button:
                     text "QS. Al-Humazah Ayat \n1-3" size 28 hover_underline True color "#000000"
-                    action [Hide("bacaan"), Show("bacaan3")]
+                    action [SetVariable("blink", 0), Hide("bacaan"), Show("bacaan3")]
         vbox:
             xpos 65 ypos 600
             button:

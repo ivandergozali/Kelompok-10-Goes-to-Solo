@@ -1,12 +1,12 @@
-Fri Jun 23 22:09:54 2023
+Mon Jun 26 06:03:26 2023
 Windows-10-10.0.19045
 Ren'Py 8.1.0.23051307
  
 
-Bootstrap to the start of init.init. took 0.04s
+Bootstrap to the start of init.init. took 0.06s
 Early init. took 0.00s
 Loader init. took 0.04s
-Loading error handling. took 0.10s
+Loading error handling. took 0.11s
 Loading script. took 0.36s
 Loading save slot metadata. took 0.05s
 Loading persistent. took 0.00s
@@ -15,20 +15,41 @@ Loading analysis data. took 0.14s
 Analyze and compile ATL. took 0.03s
 Reloading save slot metadata. took 0.04s
 Index archives took 0.00s
-Dump and make backups. took 0.05s
+Dump and make backups. took 0.06s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
 Initial gc. took 0.07s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.35s
+Creating interface object. took 0.38s
 Cleaning stores took 0.00s
-Init translation took 0.08s
-Build styles took 0.00s
-Load screen analysis took 0.22s
+Init translation took 0.09s
+Build styles took 0.01s
+Load screen analysis took 0.25s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.47s
+Prepare screens took 0.53s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.19s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 527.56'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(898, 505) drawable=(898, 505)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.21s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
